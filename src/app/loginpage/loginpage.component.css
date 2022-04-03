@@ -1,148 +1,58 @@
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
 
 
-.hero-image {
-    background-image: url(../../assets/images/pexels-travel1.jpg);
-    /* background-color: #cccccc; */
-    height: 820px !important;
-    /* background-position: center; */
-       background-position: bottom;   
-    background-repeat: no-repeat;
-    background-size: auto;
-    position: relative;
-    /* object-fit: cover */
-    box-shadow: -1px -162px 113px -9px rgba(2,7,28,1) inset;
-    -webkit-box-shadow: -1px -162px 113px -9px rgba(2,7,28,1) inset;
-    -moz-box-shadow: -1px -162px 113px -9px rgba(2,7,28,1) inset;
-
-  }
-  
-  .hero-text {
-    text-align: center;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-  }
-
-
-  .Signin {
-    /* padding-left : 120px;
+.Signin {
+  /* padding-left : 120px;
     padding-right: 120px; */
-   padding-top     : 27px;
-   padding-bottom  : 27px;
-   width           : 300px;
-   border-radius   : 20px;
-   border          : 2px solid #F4707C;
-   background-color: #F4707C;
-   font-size       : 18px;
-   cursor          : pointer;
-   color           : #ffffff;
-   font-weight     : bold;
-   margin-top      : 22px;
-     /* display: block; */
- 
- }
- 
-.account{
-    text-decoration: underline;
-    padding-top: 10%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 300px;
+  border-radius: 20px;
+  border: 2px solid #F4707C;
+  background-color: #F4707C;
+  font-size: 18px;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  margin-top: 22px;
+  /* display: block; */
+
+}
+
+.account {
+  text-decoration: underline;
+  padding-top: 10%;
 }
 
 
-
-
-
-
-
-
-
-
-.img1 {
-
-    /* border-bottom-right-radius: 100px; */
-    /* display     : block;
-  
-    margin-left : 0;
-     margin-right: 0;
-     transform   : translate(0px, -100px) !important; */
-
-       background-image: url(../../assets/images/pexels-travel.jpg);
-  
-       /* background-image: url('img_girl.jpg'); */
-       background-repeat: no-repeat;
-       /* background-attachment: fixed;  */
-       /* background-size: 100% 100%; */
-  /* height: 100%; */
-  }
-  
-  .container {
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-    margin-top     : 3%;
-  }
-  
-  .login {
-     /* padding-left : 120px;
-     padding-right: 120px; */
-    padding-top     : 15px;
-    padding-bottom  : 15px;
-    width           : 330px;
-    border-radius   : 30px;
-    border          : 2px solid #0089d3;
-    background-color: white;
-    font-size       : 18px;
-    cursor          : pointer;
-    color           : #00A5FF;
-    font-weight     : bold;
-       /* display: block; */
-  
-  }
-  
-
-  .lets {
-     /* padding-left : 120px;
-     padding-right: 120px; */
-    padding-top     : 15px;
-    padding-bottom  : 15px;
-    width           : 330px;
-    border-radius   : 30px;
-    border          : 2px solid #1CC9C5;
-    background-color: white;
-    font-size       : 18px;
-    cursor          : pointer;
-    color           : #1CC9C5;
-    font-weight     : bold;
-    margin-top      : 22px;
-       /* display: block; */
-  
-  }
-  
-  
-  .container2 {
-    position   : relative;
-    text-align : left;
-    color      : rgb(255, 255, 255);
-    font-weight: bold;
-    font-size  : 50px !important
-  }
-  
-  .bottom-left {
-    position: absolute;
-    bottom  : 30px;
-    left    : 16px;
-  
-  }
-  
-  .scroll {
-    position: relative;
-    overflow-x: hidden;
-    overflow-y: hidden !important;
-    width: 100%;
-    height: 100vh;
-    box-shadow: -1px -162px 113px -9px rgba(2,7,28,1) inset;
-    -webkit-box-shadow: -1px -162px 113px -9px rgba(2,7,28,1) inset;
-    -moz-box-shadow: -1px -162px 113px -9px rgba(2,7,28,1) inset;
+.scroll {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden !important;
+  width: 100%;
+  height: 100vh;
+  box-shadow: -1px -162px 113px -9px rgba(2, 7, 28, 1) inset;
+  -webkit-box-shadow: -1px -162px 113px -9px rgba(2, 7, 28, 1) inset;
+  -moz-box-shadow: -1px -162px 113px -9px rgba(2, 7, 28, 1) inset;
 }
-  
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-box-shadow: -1px -162px 113px -9px rgb(2 7 28) inset;
+}
+
+
+.img{
+  width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
