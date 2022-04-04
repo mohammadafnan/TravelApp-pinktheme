@@ -40,7 +40,7 @@ input {
     border : 3px solid #EEEEEE;
     color  : #000000;
     background-color: #EEEEEE;
-    padding: 20px;
+    padding: 24px;
     border-radius: 20px;
     width: 100%;
 }
@@ -55,37 +55,58 @@ input {
     transform: translate(-65px, 0px);
     background-color: #F36F7C;
     border: 0;
-    height: 50px;
+    height: 55px;
     border-radius: 20px;
 }
 
 .btn1{
     background-color: #F36F7C;
     border: 0;
-    height: 50px;
+    height: 55px;
     border-radius: 20px;
+    margin-right: 3%;
 }
 .fa-plane{
     padding: 15px;
-    font-size: 14px;
+    font-size: 20px;
  color: whitesmoke;
 }
 
 .btn2{
-    background-color: #F36F7C;
+    background-color: #FCE2E5;
     border: 0;
-    height: 50px;
+    height: 55px;
     border-radius: 20px;
+    margin-right: 3%;
+}
+
+.fa-building{
+    padding: 15px;
+    font-size: 20px;
+ color: #F36F7C;
 }
 .btn3{
-    background-color: #F36F7C;
+    background-color: #FCE2E5;
     border: 0;
-    height: 50px;
+    height: 55px;
     border-radius: 20px;
+    margin-right: 3%;
+}
+
+.fa-camera{
+    padding: 15px;
+    font-size: 20px;
+ color: #F36F7C;
 }
 .btn4{
-    background-color: #F36F7C;
+    background-color: #FCE2E5;
     border: 0;
-    height: 50px;
+    height: 55px;
     border-radius: 20px;
+    margin-right: 3%;
+}
+.fa-bus{
+    padding: 15px;
+    font-size: 20px;
+ color: #F36F7C; 
 }
