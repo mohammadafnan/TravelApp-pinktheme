@@ -17,8 +17,8 @@ export class DashboardComponent implements OnInit {
     },
     {
       placename: "The tree sunset",
-      Country: "Greece",
-      image: "../../assets/images/pexels-travel1.jpg"
+      country: "Greece",
+      image: "../../assets/images/pexels-travel.jpg"
     },
     {
       placename: "The tree sunset",
@@ -28,11 +28,11 @@ export class DashboardComponent implements OnInit {
     {
       placename: "The tree sunset",
       country: "Greece",
-      image: "../../assets/images/pexels-travel1.jpg"
+      image: "../../assets/images/pexels-travel.jpg"
     },
     {
       placename: "The tree sunset",
-      Country: "Greece",
+      country: "Greece",
       image: "../../assets/images/pexels-travel1.jpg"
     }
   ];
