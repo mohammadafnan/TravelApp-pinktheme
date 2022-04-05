@@ -9,6 +9,35 @@ export class DashboardComponent implements OnInit {
 
   constructor() { }
 
+  tourData = [
+    {
+      placename: "The tree sunset",
+      country: "Greece",
+      image: "../../assets/images/pexels-travel1.jpg"
+    },
+    {
+      placename: "The tree sunset",
+      Country: "Greece",
+      image: "../../assets/images/pexels-travel1.jpg"
+    },
+    {
+      placename: "The tree sunset",
+      country: "Greece",
+      image: "../../assets/images/pexels-travel1.jpg"
+    },
+    {
+      placename: "The tree sunset",
+      country: "Greece",
+      image: "../../assets/images/pexels-travel1.jpg"
+    },
+    {
+      placename: "The tree sunset",
+      Country: "Greece",
+      image: "../../assets/images/pexels-travel1.jpg"
+    }
+  ];
+
+
   ngOnInit() {
   }
 
