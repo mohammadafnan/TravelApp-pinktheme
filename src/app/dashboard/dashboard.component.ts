@@ -11,24 +11,24 @@ export class DashboardComponent implements OnInit {
 
   tourData = [
     {
-      placename: "The tree sunset",
-      country: "Greece",
-      image: "../../assets/images/pexels-travel1.jpg"
+      placename: "The Baku ",
+      country: "Azerbaijan",
+      image: "../../assets/images/baku.png"
     },
     {
-      placename: "The tree sunset",
-      country: "Greece",
-      image: "../../assets/images/pexels-travel.jpg"
+      placename: "The Sultan Mosque",
+      country: "Turkey",
+      image: "../../assets/images/turkey.png"
     },
     {
-      placename: "The tree sunset",
-      country: "Greece",
-      image: "../../assets/images/pexels-travel1.jpg"
+      placename: "The Maldive",
+      country: "Maldive",
+      image: "../../assets/images/maldive.png"
     },
     {
-      placename: "The tree sunset",
-      country: "Greece",
-      image: "../../assets/images/pexels-travel.jpg"
+      placename: "The Germany",
+      country: "Germany",
+      image: "../../assets/images/Germany.png"
     },
     {
       placename: "The tree sunset",

@@ -216,6 +216,7 @@ a:hover {
     padding: 15px;
     font-size: 20px;
     color: #F36F7C;
+    display: inline;
 }
 
 .main {
