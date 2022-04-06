@@ -5,16 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginpageComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    Ng2SearchPipeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

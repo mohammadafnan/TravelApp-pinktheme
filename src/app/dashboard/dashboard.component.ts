@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
   constructor() { }
-
+  search: any;
   tourData = [
     {
       placename: "The Baku ",

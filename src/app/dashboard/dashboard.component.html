@@ -10,12 +10,11 @@
   </div>
 
   <div>
-    <h1 style="padding-top: 130px;padding-left: 5%;">Discover<br> world with us!</h1>
+    <h1 style="padding-top: 80px;padding-left: 4%;">Discover<br> world with us!</h1>
 
   </div>
-  <!-- <div class="container  "><input type="text"  placeholder="Search places">
-</div> -->
-  <div class="container"><input type="text" placeholder="Search.." name="search2">
+
+  <div class="container"><input type="text" placeholder="Search.." [(ngModel)]="search">
     <button type="submit" class="searchbtn"><i class="fa fa-search"></i></button>
   </div>
 
@@ -37,9 +36,9 @@
     </div>
   </div>
 
-
-  <div class="main">
-    <div *ngFor="let list of tourData ; let i = index" style="margin-right: 5%;">
+  <!-- *ngIf="(tourData | filter:search) as listdata" -->
+  <div class="main" *ngIf="(tourData | filter:search) as listdata">
+    <div *ngFor="let list of listdata ; let i = index" style="margin-right: 5%;">
       <div class="container1"> </div>
       <div class="hero-text">
         <h1 style="font-size:26px ;padding-left: 10%;">{{list.placename}}</h1>
