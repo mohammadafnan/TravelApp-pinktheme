@@ -236,10 +236,14 @@ a:hover {
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active 
+
+
 {
     background-color: #F36F7C;
     border-color: #F36F7C;
-    color: #EEEEEE !important;
+    /* color: #EEEEEE !important; */
+
+    
 }
 
 .btn-primary1:focus,
