@@ -232,3 +232,20 @@ a:hover {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 15px -7px !important;
 
 }
+
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active 
+{
+    background-color: #F36F7C;
+    border-color: #F36F7C;
+    color: #EEEEEE !important;
+}
+
+.btn-primary1:focus,
+.btn-primary1:active,
+.btn-primary1.active 
+{
+ 
+    color: #EEEEEE !important;
+}
