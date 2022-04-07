@@ -38,7 +38,8 @@
 
   <!-- *ngIf="(tourData | filter:search) as listdata" -->
   <div class="main" *ngIf="(tourData | filter:search) as listdata">
-    <div *ngFor="let list of listdata ; let i = index" style="margin-right: 5%;">
+    <div *ngFor="let list of listdata ; let i = index" style="margin-right: 5%;    cursor: pointer;
+    " (click)="gotodetail()">
       <div class="container1"> </div>
       <div class="hero-text">
         <h1 style="font-size:26px ;padding-left: 10%;">{{list.placename}}</h1>

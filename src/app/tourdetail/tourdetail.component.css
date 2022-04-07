@@ -1,0 +1,27 @@
+.roundimg {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50px;
+}
+
+
+.line1 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    border-radius: 20px
+}
+
+.line2 {
+    width: 25px;
+    height: 5px;
+    background-color: black;
+    margin-left: 9px;
+    border-radius: 20px
+}
+.fa-angle-left{
+    font-size: 40px;
+    cursor: pointer;
+}
