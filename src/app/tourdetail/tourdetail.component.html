@@ -19,16 +19,43 @@
 
   </div>
 
-<div class="main">
-  <div class="card " *ngFor="let list of tourdetail ; let i = index">
-    <div style="float: left;   margin: 20px;">
-      <img src={{list.image}} class="roundimg" />
-    </div>
-    <div style="    transform: translate(5px, -261px);">
-      <div class="b1">{{list.lable}}</div>
-      <div class="b2">{{list.rating}}<i class="fa fa-star"></i>
+  <div class="main">
+    <div class="card " *ngFor="let list of tourdetail ; let i = index">
+      <div style="float: left;   margin: 20px;">
+        <img src={{list.image}} class="roundimg" />
+      </div>
+      <div style="    transform: translate(5px, -261px);">
+        <div class="b1">{{list.lable}}</div>
+        <div class="b2">{{list.rating}}<i class="fa fa-star"></i>
+        </div>
       </div>
     </div>
   </div>
-</div>
+
+  <div class="container">
+    <div class="scrollmenu">
+      <a>About</a>
+      <a>Price</a>
+      <a>Images</a>
+    </div>
+  </div>
+
+  <div class="para">
+    <p>Without a doubt, Turkey is one of the world’s hottest tourist destinations. Ranking as the 6th most visited
+      country in the world in 2011, the total number of international tourists nearly doubled between 2004 and 2011.
+      During my travels, I constantly heard rave reviews for the country, and was super impressed myself by the beauty
+      and diversity of the country.</p>
+  </div>
+
+
+  <div>
+
+    <div style="float: left;   margin: 20px;">
+      <button class="price">$3000</button>
+    </div>
+    <div style="float:right; margin: 25px;">
+      <button class="buy">Buy now</button>
+    </div>
+  </div>
+
 </div>

@@ -20,15 +20,15 @@ export class TourdetailComponent implements OnInit {
       rating: "4.5",
       image: "../../assets/images/baku.png"
     }, {
-      lable: "The Instanbul<br> Turkey!",
+      lable: "The Instanbul Turkey!",
       rating: "4.5",
       image: "../../assets/images/Germany.png"
     }, {
-      lable: "The Instanbul<br> Turkey!",
+      lable: "The Instanbul Turkey!",
       rating: "4.5",
       image: "../../assets/images/maldive.png"
     }, {
-      lable: "The Instanbul<br> Turkey!",
+      lable: "The Instanbul Turkey!",
       rating: "4.5",
       image: "../../assets/images/pexels-travel1.jpg"
     }
