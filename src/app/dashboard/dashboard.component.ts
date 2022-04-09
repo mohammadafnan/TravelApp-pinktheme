@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
       image: "../../assets/images/baku.png"
     },
     {
-      placename: "The Sultan Mosque",
+      placename: "The Instanbul",
       country: "Turkey",
       image: "../../assets/images/turkey.png"
     },
