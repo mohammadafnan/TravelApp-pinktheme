@@ -38,20 +38,21 @@
     margin-bottom: 10%;
     margin-top: 105px;
 }
-.b1{
+
+.b1 {
     float: left;
     padding-top: 60%;
     padding-left: 5%;
 }
 
-.b2{
+.b2 {
     float: right;
     padding-top: 60%;
-    padding-right: 8%;  
+    padding-right: 8%;
     color: #F36F7C;
 }
 
-.fa-star{
+.fa-star {
     padding-left: 5px;
     color: #F36F7C;
 }
@@ -76,4 +77,15 @@
     margin-bottom: 10%;
 
     /* object-fit: cover; */
+}
+
+.main {
+    display: flex;
+    position: absolute;
+    overflow-x: scroll;
+    width: 100%;
+    overflow-y: hidden !important;
+    margin-top: 5% !important;
+    /* box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 15px -7px !important; */
+
 }
