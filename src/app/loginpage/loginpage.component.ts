@@ -17,4 +17,7 @@ export class LoginpageComponent implements OnInit {
   gotoDashboard() {
     this.Router.navigate(['/dashboard']);
   }
+  gotologinpage() {
+    this.Router.navigate(['/login']);
+  }
 }

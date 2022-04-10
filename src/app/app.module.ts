@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { TourdetailComponent } from './tourdetail/tourdetail.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { TourdetailComponent } from './tourdetail/tourdetail.component';
     LoginpageComponent,
     DashboardComponent,
     TourdetailComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
