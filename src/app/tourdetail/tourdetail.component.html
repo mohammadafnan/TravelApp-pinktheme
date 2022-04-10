@@ -34,18 +34,23 @@
 
   <div class="container">
     <div class="scrollmenu">
-      <a>About</a>
-      <a>Price Detail</a>
+      <a (click)="showtab()">About</a>
+      <a (click)="showtab()">Price Detail </a>
       <a>Images</a>
     </div>
   </div>
 
-  <div class="para">
+  <div class="para" *ngIf="show">
     <p>Without a doubt, Turkey is one of the world’s hottest tourist destinations. Ranking as the 6th most visited
       country in the world in 2011, the total number of international tourists nearly doubled between 2004 and 2011.
       During my travels, I constantly heard rave reviews for the country, and was super impressed myself by the beauty
       and diversity of the country.</p>
   </div>
+  <div class="para" *ngIf="!show">
+    <p>All services are avaialble</p>
+  </div>
+
+
 
 
   <div>
