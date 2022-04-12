@@ -8,8 +8,9 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router: Router) { }
   search: any;
+  show: String = 'tourlist'
   tourData = [
     {
       placename: "The Baku ",
@@ -38,11 +39,46 @@ export class DashboardComponent implements OnInit {
     }
   ];
 
+  hotelData = [
+    {
+      placename: "The Hotel ",
+      country: "Azerbaijan",
+      image: "../../assets/images/hotel1.jpg"
+    },
+    {
+      placename: "The Instanbul",
+      country: "Turkey",
+      image: "../../assets/images/turkey.png"
+    },
+    {
+      placename: "The Maldive",
+      country: "Maldive",
+      image: "../../assets/images/maldive.png"
+    },
+    {
+      placename: "The Germany",
+      country: "Germany",
+      image: "../../assets/images/Germany.png"
+    },
+    {
+      placename: "The tree sunset",
+      country: "Greece",
+      image: "../../assets/images/pexels-travel1.jpg"
+    }
+  ];
+
 
   ngOnInit() {
   }
-gotodetail(){
-  // tourdetail
-  this.router.navigate(['/tourdetail']);
-}
+  gotodetail() {
+    // tourdetail
+    this.router.navigate(['/tourdetail']);
+  }
+
+  gototourdata(text: any) {
+    this.show = text;
+  }
+  // showtab(text:any) {
+  //   this.show = text
+  // }
 }
