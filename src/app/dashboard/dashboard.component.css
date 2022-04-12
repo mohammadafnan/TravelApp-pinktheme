@@ -26,8 +26,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
-    margin-left: 40px;
+    margin-top: 26px;
+    /* margin-left: 40px;*/
 
 }
 
@@ -55,11 +55,13 @@ input {
 }
 
 .searchbtn {
-    transform: translate(-65px, 0px);
     background-color: #F36F7C;
     border: 0;
     height: 55px;
     border-radius: 20px;
+    position: absolute;
+    right: 8px;
+    top: 7px;
 }
 
 .btn1 {
