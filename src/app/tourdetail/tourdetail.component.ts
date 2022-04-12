@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./tourdetail.component.css']
 })
 export class TourdetailComponent implements OnInit {
-  show: boolean = false;
+  show: string = "Price";
   constructor(private router: Router) { }
   tourdetail = [
     {
@@ -42,7 +42,7 @@ export class TourdetailComponent implements OnInit {
     this.router.navigate(['/dashboard'])
   }
 
-  showtab() {
-    this.show =! this.show
+  showtab(text:any) {
+    this.show = text
   }
 }

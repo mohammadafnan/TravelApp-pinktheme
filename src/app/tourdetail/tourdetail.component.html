@@ -34,25 +34,26 @@
 
   <div class="container">
     <div class="scrollmenu">
-      <a (click)="showtab()">About</a>
-      <a (click)="showtab()">Price Detail </a>
-      <a>Images</a>
+      <a (click)="showtab('About')" [ngClass]="{'botline1': About != 'About', 'botline2' : About == 'Price' }">About</a>
+      <a (click)="showtab('Price')" [ngClass]="{'botline1': Price == 'About', 'botline2' : Price != 'Price' }">Price
+        Detail </a>
+      <!-- <a>Images</a> -->
     </div>
   </div>
 
-  <div class="para" *ngIf="show">
+  <div class="para" *ngIf="show == 'About'">
     <p>Without a doubt, Turkey is one of the world’s hottest tourist destinations. Ranking as the 6th most visited
       country in the world in 2011, the total number of international tourists nearly doubled between 2004 and 2011.
       During my travels, I constantly heard rave reviews for the country, and was super impressed myself by the beauty
       and diversity of the country.</p>
   </div>
-  <div class="para" *ngIf="!show">
-    <ol>
-      <li>10kg Bag Include</li>
-      <li>Meal include</li>
-      <li>2 person Include</li>
+  <div class="para" *ngIf="show == 'Price'">
+    <ul>
+      <li style="padding-bottom: 5px;">10kg Bag Include</li>
+      <li style="padding-bottom: 5px;">Meal include</li>
+      <li style="padding-bottom: 5px;">2 person Include</li>
 
-    </ol>
+    </ul>
   </div>
 
 

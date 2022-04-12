@@ -97,23 +97,40 @@ div.scrollmenu {
     white-space: nowrap;
 }
 
-a {
+/* a {
     display: inline-block;
     color: black;
     text-align: center;
     padding: 14px;
     text-decoration: none;
-}
-
-a:hover {
+} */
+.botline1 {
+    display: inline-block !important;
+    text-align: center;
+    padding: 14px !important;
+    text-decoration: none;
     background-color: white;
     color: #F36F7C !important;
     font-weight: bold;
-    border-bottom: 5px solid #F36F7C;
-
-    /* border-radius: 20px; */
-    cursor: pointer;
+    border-bottom: 5px solid #F36F7C !important;
+    cursor: pointer !important;
 }
+
+.botline2 {
+    display: inline-block !important;
+    color: black;
+    text-align: center;
+    padding: 14px !important;
+    text-decoration: none;
+}
+
+/* .line:hover {
+    background-color: white;
+    color: #F36F7C !important;
+    font-weight: bold;
+    border-bottom: 5px solid #F36F7C !important;
+    cursor: pointer;
+} */
 
 .container {
     display: flex;
@@ -161,4 +178,21 @@ a:hover {
     transform: translatey(-5px);
     font-weight: 600;
     font-size: 16px;
+}
+
+ul {
+    list-style: none;
+
+}
+
+ul li::before {
+    content: "\2022";
+    color: #F36F7C;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    /* margin-left: -1em; */
+    font-size: x-large;
+    /* padding-top: 15px; */
+
 }
