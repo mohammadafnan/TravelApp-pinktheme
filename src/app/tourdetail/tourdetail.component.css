@@ -112,7 +112,7 @@ div.scrollmenu {
     background-color: white;
     color: #F36F7C !important;
     font-weight: bold;
-    border-bottom: 5px solid #F36F7C !important;
+    border-bottom: 3px solid #F36F7C !important;
     cursor: pointer !important;
 }
 
@@ -122,6 +122,8 @@ div.scrollmenu {
     text-align: center;
     padding: 14px !important;
     text-decoration: none;
+    cursor: pointer !important;
+
 }
 
 /* .line:hover {
