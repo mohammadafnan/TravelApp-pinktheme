@@ -169,15 +169,15 @@ div.scrollmenu {
 }
 
 .buy {
-    padding-top: 12%;
-    padding-bottom: 12%;
+    padding-top: 22px;
+    padding-bottom: 22px;
     border: 2px solid #F36F7C;
     background-color: #F36F7C;
     border-radius: 20px;
-    margin-bottom: 5%;
+    margin-bottom: 20px;
     color: white;
-    width: 170px;
-    transform: translatey(-5px);
+    width: 100%;
+    /* transform: translatey(-5px); */
     font-weight: 600;
     font-size: 16px;
 }

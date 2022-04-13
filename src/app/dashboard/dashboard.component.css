@@ -65,7 +65,7 @@ input {
 }
 
 .btnn1 {
-    background-color: #F36F7C ;
+    background-color: #F36F7C;
     border: 0;
     height: 55px;
     border-radius: 20px;
@@ -102,13 +102,7 @@ input {
     font-size: 20px !important;
     color: #F36F7C !important;
 }
-.btn2 {
-    background-color: #FCE2E5;
-    border: 0;
-    height: 55px;
-    border-radius: 20px;
-    margin-right: 3%;
-}
+
 
 .fa-building {
     padding: 15px;
@@ -116,13 +110,7 @@ input {
     color: #F36F7C;
 }
 
-.btn3 {
-    background-color: #FCE2E5;
-    border: 0;
-    height: 55px;
-    border-radius: 20px;
-    margin-right: 3%;
-}
+
 
 .fa-camera {
     padding: 15px;
@@ -130,19 +118,20 @@ input {
     color: #F36F7C;
 }
 
-.btn4 {
-    background-color: #FCE2E5;
-    border: 0;
-    height: 55px;
-    border-radius: 20px;
-    margin-right: 3%;
-}
+
 
 .fa-bus {
     padding: 15px;
     font-size: 20px;
     color: #F36F7C;
 }
+
+.fa-percent {
+    padding: 15px;
+    font-size: 20px;
+    color: #F36F7C;
+}
+
 
 div.scrollmenu {
     background-color: white;

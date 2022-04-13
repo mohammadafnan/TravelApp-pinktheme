@@ -31,7 +31,7 @@
   </div>
 
   <div class="container">
-    <button [ngClass]="show == 'tourlist' ? 'btnn1':'btnn0'" (click)="gototourdata('tourlist')">
+    <button [ngClass]="show == 'tourlist' ? 'btnn1' : 'btnn0'" (click)="gototourdata('tourlist')">
       <i [ngClass]="show == 'tourlist' ? 'fa fa-plane enab' : 'fa fa-plane dis'"></i>
     </button>
     <!-- 
@@ -42,17 +42,17 @@ class = 'enab'
 class = 'dis'
   }
  -->
-    <button [ngClass]="show == 'hotellist' ? 'btnn1' : 'btnn0' " (click)="gototourdata('hotellist')">
+    <button [ngClass]="show == 'hotellist' ? 'btnn1' : 'btnn0'" (click)="gototourdata('hotellist')">
       <i [ngClass]="
           show == 'hotellist' ? 'fa fa-building enab' : 'fa fa-building dis'
         "></i>
     </button>
-    <button class="btn3"><i class="fa fa-camera"></i></button>
-    <button class="btn4"><i class="fa fa-bus"></i></button>
+    <button [ngClass]="show == 'buslist' ? 'btnn1' : 'btnn0'" (click)="gototourdata('buslist')">
+      <i [ngClass]="show == 'buslist' ? 'fa fa-bus enab' : 'fa fa-bus dis'"></i>
+    </button>
+    <button [ngClass]="show == 'offerlist' ? 'btnn1' : 'btnn0'" (click)="gototourdata('offerlist')"><i
+        [ngClass]="show == 'offerlist' ? 'fa fa-percent enab' : 'fa fa-percent dis'"></i></button>
   </div>
-
-  <!-- <button class="btn4 btn-primary"><i class="fa fa-bus btn-primary1"></i></button>
-  <button class="btn4 btn-primary"><i class="fa fa-bus btn-primary1"></i></button> -->
 
   <div class="container">
     <div class="scrollmenu">
@@ -98,4 +98,7 @@ class = 'dis'
       </div>
     </div>
   </div>
+
+  <div *ngIf="show == 'buslist'"></div>
+  <div *ngIf="show == 'offerlist'"></div>
 </div>

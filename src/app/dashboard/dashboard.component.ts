@@ -46,22 +46,22 @@ export class DashboardComponent implements OnInit {
       image: "../../assets/images/hotel1.jpg"
     },
     {
-      placename: "The Instanbul",
+      placename: "The Hotel",
       country: "Turkey",
-      image: "../../assets/images/hotel2.png"
+      image: "../../assets/images/hotel2.jpg"
     },
     {
-      placename: "The Maldive",
+      placename: "The Hotel",
       country: "Maldive",
-      image: "../../assets/images/hotel3.png"
+      image: "../../assets/images/hotel3.jpg"
     },
     {
-      placename: "The Germany",
+      placename: "The Hotel",
       country: "Germany",
-      image: "../../assets/images/hotel4.png"
+      image: "../../assets/images/hotel4.jpg"
     },
     {
-      placename: "The tree sunset",
+      placename: "The Hotel",
       country: "Greece",
       image: "../../assets/images/hotel5.jpg"
     }
