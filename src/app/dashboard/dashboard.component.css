@@ -64,21 +64,44 @@ input {
     top: 7px;
 }
 
-.btn1 {
-    background-color: #F36F7C;
+.btnn1 {
+    background-color: #F36F7C ;
     border: 0;
     height: 55px;
     border-radius: 20px;
     margin-right: 3%;
     box-shadow: rgb(0 0 0 / 57%) 0px 10px 15px -7px;
+    color: #FCE2E5 !important;
 }
 
-.fa-plane {
-    padding: 15px;
-    font-size: 20px;
-    color: whitesmoke;
+
+.btnn0 {
+    background-color: #FCE2E5;
+    border: 0;
+    height: 55px;
+    border-radius: 20px;
+    margin-right: 3%;
+    color: #F36F7C !important;
+    /* box-shadow: rgb(0 0 0 / 57%) 0px 10px 15px -7px; */
 }
 
+/* .fa-plane {
+    padding: 15px !important;
+    font-size: 20px !important;
+    color: whitesmoke !important;
+} */
+
+.enab {
+    padding: 15px !important;
+    font-size: 20px !important;
+    color: #ffffff !important;
+}
+
+.dis {
+    padding: 15px !important;
+    font-size: 20px !important;
+    color: #F36F7C !important;
+}
 .btn2 {
     background-color: #FCE2E5;
     border: 0;
@@ -237,21 +260,17 @@ a:hover {
 
 .btn-primary:focus,
 .btn-primary:active,
-.btn-primary.active 
-
-
-{
+.btn-primary.active {
     background-color: #F36F7C;
     border-color: #F36F7C;
     /* color: #EEEEEE !important; */
 
-    
+
 }
 
 .btn-primary1:focus,
 .btn-primary1:active,
-.btn-primary1.active 
-{
- 
+.btn-primary1.active {
+
     color: #EEEEEE !important;
 }

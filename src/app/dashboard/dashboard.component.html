@@ -1,35 +1,54 @@
 <div class="scroll">
   <div>
-    <div style="float: left;   margin: 20px;">
+    <div style="float: left; margin: 20px">
       <img src="../../assets/images/pexels-travel1.jpg" class="roundimg" />
     </div>
-    <div style="float:right; margin: 25px;">
+    <div style="float: right; margin: 25px">
       <div class="line1"></div>
       <div class="line2"></div>
     </div>
   </div>
 
   <div>
-    <h1 style="padding-top: 80px;padding-left: 4%;">Discover<br> world with us!</h1>
-
+    <h1 style="padding-top: 80px; padding-left: 4%">
+      Discover<br />
+      world with us!
+    </h1>
   </div>
 
   <div class="container">
-    <div style="display: flex;
-    /* margin-left: 50px; */
-    position: relative;
-    width: 75%;">
-      <input type="text" placeholder="Search.." [(ngModel)]="search">
-      <button type="submit" class="searchbtn"><i class="fa fa-search"></i></button>
+    <div style="
+        display: flex;
+        /* margin-left: 50px; */
+        position: relative;
+        width: 75%;
+      ">
+      <input type="text" placeholder="Search.." [(ngModel)]="search" />
+      <button type="submit" class="searchbtn">
+        <i class="fa fa-search"></i>
+      </button>
     </div>
   </div>
 
   <div class="container">
-    <button class="btn1" (click)="gototourdata('tourlist')"><i class="fa fa-plane"></i></button>
-    <button class="btn2" (click)="gototourdata('hotellist')"><i class="fa fa-building "></i></button>
+    <button [ngClass]="show == 'tourlist' ? 'btnn1':'btnn0'" (click)="gototourdata('tourlist')">
+      <i [ngClass]="show == 'tourlist' ? 'fa fa-plane enab' : 'fa fa-plane dis'"></i>
+    </button>
+    <!-- 
+  if(show == tourlist){
+class = 'enab'
+  }
+  else{
+class = 'dis'
+  }
+ -->
+    <button [ngClass]="show == 'hotellist' ? 'btnn1' : 'btnn0' " (click)="gototourdata('hotellist')">
+      <i [ngClass]="
+          show == 'hotellist' ? 'fa fa-building enab' : 'fa fa-building dis'
+        "></i>
+    </button>
     <button class="btn3"><i class="fa fa-camera"></i></button>
     <button class="btn4"><i class="fa fa-bus"></i></button>
-
   </div>
 
   <!-- <button class="btn4 btn-primary"><i class="fa fa-bus btn-primary1"></i></button>
@@ -41,34 +60,41 @@
       <a>Most viewed</a>
       <a>Hot tour</a>
       <a>All</a>
-
     </div>
   </div>
 
   <!-- *ngIf="(tourData | filter:search) as listdata" -->
   <div *ngIf="show == 'tourlist'">
-    <div class="main" *ngIf="(tourData | filter:search) as listdata">
-      <div *ngFor="let list of listdata ; let i = index" style="margin-right: 5%;    cursor: pointer;
-    " (click)="gotodetail()">
-        <div class="container1"> </div>
+    <div class="main" *ngIf="tourData | filter: search as listdata">
+      <div *ngFor="let list of listdata; let i = index" style="margin-right: 5%; cursor: pointer"
+        (click)="gotodetail()">
+        <div class="container1"></div>
         <div class="hero-text">
-          <h1 style="font-size:26px ;padding-left: 10%;">{{list.placename}}</h1>
-          <h1 style="font-size:20px"><i class="fa fa-map-marker "></i>{{list.country}}</h1>
+          <h1 style="font-size: 26px; padding-left: 10%">
+            {{ list.placename }}
+          </h1>
+          <h1 style="font-size: 20px">
+            <i class="fa fa-map-marker"></i>{{ list.country }}
+          </h1>
         </div>
-        <img src={{list.image}} class="img" alt="">
+        <img src="{{ list.image }}" class="img" alt="" />
       </div>
     </div>
   </div>
   <div *ngIf="show == 'hotellist'">
-    <div class="main" *ngIf="(hotelData | filter:search) as listdata ">
-      <div *ngFor="let list of listdata ; let i = index" style="margin-right: 5%;    cursor: pointer;
-    " (click)="gotodetail()">
-        <div class="container1"> </div>
+    <div class="main" *ngIf="hotelData | filter: search as listdata">
+      <div *ngFor="let list of listdata; let i = index" style="margin-right: 5%; cursor: pointer"
+        (click)="gotodetail()">
+        <div class="container1"></div>
         <div class="hero-text">
-          <h1 style="font-size:26px ;padding-left: 10%;">{{list.placename}}</h1>
-          <h1 style="font-size:20px"><i class="fa fa-map-marker "></i>{{list.country}}</h1>
+          <h1 style="font-size: 26px; padding-left: 10%">
+            {{ list.placename }}
+          </h1>
+          <h1 style="font-size: 20px">
+            <i class="fa fa-map-marker"></i>{{ list.country }}
+          </h1>
         </div>
-        <img src={{list.image}} class="img" alt="">
+        <img src="{{ list.image }}" class="img" alt="" />
       </div>
     </div>
   </div>
