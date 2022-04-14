@@ -99,6 +99,29 @@ class = 'dis'
     </div>
   </div>
 
-  <div *ngIf="show == 'buslist'"></div>
-  <div *ngIf="show == 'offerlist'"></div>
+  <div *ngIf="show == 'buslist'">
+    <div class="main" *ngIf="busData | filter: search as listdata">
+      <div *ngFor="let list of listdata; let i = index" style="margin-right: 5%; cursor: pointer"
+        (click)="gotodetail()">
+        <div class="container1"></div>
+        <div class="hero-text">
+          <h1 style="font-size: 26px; padding-left: 10%">
+            {{ list.placename }}
+          </h1>
+          <h1 style="font-size: 20px">
+            <i class="fa fa-map-marker"></i>{{ list.country }}
+          </h1>
+        </div>
+        <img src="{{ list.image }}" class="img" alt="" />
+      </div>
+    </div>
+  </div>
+  <div *ngIf="show == 'offerlist'">
+    <div style="display: flex; justify-content: center;align-items: center;">
+      <img src="./../../assets/images/offer2.jpg" width="100px" alt="" /><br>
+    </div>
+    <h3 style="text-align: center;">No offer here</h3>
+    <h4 style="text-align: center; color: gainsboro;    line-height: 0px;">Coming Soon</h4>
+
+  </div>
 </div>
