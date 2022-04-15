@@ -10,7 +10,7 @@
   </div>
 
   <div>
-    <h1 style="padding-top: 80px; padding-left: 4%">
+    <h1 style="padding-top: 80px; padding-left: 40px">
       Discover<br />
       world with us!
     </h1>
@@ -65,7 +65,7 @@ class = 'dis'
 
   <!-- *ngIf="(tourData | filter:search) as listdata" -->
   <div *ngIf="show == 'tourlist'">
-    <div class="main" *ngIf="tourData | filter: search as listdata">
+    <div class="main mymoveright" *ngIf="tourData | filter: search as listdata">
       <div *ngFor="let list of listdata; let i = index" style="margin-right: 5%; cursor: pointer"
         (click)="gotodetail()">
         <div class="container1"></div>
@@ -82,7 +82,7 @@ class = 'dis'
     </div>
   </div>
   <div *ngIf="show == 'hotellist'">
-    <div class="main" *ngIf="hotelData | filter: search as listdata">
+    <div class="main mymoveright" *ngIf="hotelData | filter: search as listdata">
       <div *ngFor="let list of listdata; let i = index" style="margin-right: 5%; cursor: pointer"
         (click)="gotodetail()">
         <div class="container1"></div>
@@ -100,7 +100,7 @@ class = 'dis'
   </div>
 
   <div *ngIf="show == 'buslist'">
-    <div class="main" *ngIf="busData | filter: search as listdata">
+    <div class="main mymoveright" *ngIf="busData | filter: search as listdata">
       <div *ngFor="let list of listdata; let i = index" style="margin-right: 5%; cursor: pointer"
         (click)="gotodetail()">
         <div class="container1"></div>
@@ -116,7 +116,7 @@ class = 'dis'
       </div>
     </div>
   </div>
-  <div *ngIf="show == 'offerlist'">
+  <div *ngIf="show == 'offerlist'" class="mymoveright">
     <div style="display: flex; justify-content: center;align-items: center;">
       <img src="./../../assets/images/offer2.jpg" width="100px" alt="" /><br>
     </div>

@@ -19,7 +19,7 @@
 
   </div>
 
-  <div class="main">
+  <div class="main mymoveright">
     <div class="card " *ngFor="let list of tourdetail ; let i = index">
       <div style="float: left;   margin: 20px;">
         <img src={{list.image}} class="roundimg" />
@@ -35,7 +35,7 @@
   <div class="container">
     <div class="scrollmenu">
       <a (click)="showtab('About')" [ngClass]="{'botline1': show == 'About', 'botline2' : show != 'About' }">About</a>
-      <a (click)="showtab('Price')" [ngClass]="{'botline1': show == 'Price', 'botline2' : show != 'Price' }">Price
+      <a (click)="showtab('Price')" [ngClass]="{'botline1': show == 'Price', 'botline2' : show != 'Price' }">
         Detail </a>
       <!-- <a>Images</a> -->
     </div>
@@ -68,7 +68,7 @@
       <button class="buy">Buynow $3000</button>
     </div> -->
     <div style="margin: 25px;">
-      <button class="buy">Buynow $3000</button>
+      <button class="buy">Book Now $3000</button>
     </div>
   </div>
 

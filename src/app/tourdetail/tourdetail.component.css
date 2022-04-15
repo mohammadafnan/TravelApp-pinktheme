@@ -199,7 +199,7 @@ ul li::before {
 
 }
 
-@keyframes mymoveright {
+/* @keyframes mymoveright {
     from {
         left: 300px;
     }
@@ -227,4 +227,4 @@ ul li::before {
 .mymoveleft{
     position: relative;
     animation: mymoveleft 0.5s;
-}
+} */

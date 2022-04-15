@@ -3,3 +3,33 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
   }
+
+  @keyframes mymoveright {
+    from {
+        left: 300px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
+
+.mymoveright {
+    position: relative;
+    animation: mymoveright 0.5s;
+}
+
+@keyframes mymoveleft {
+    from {
+        right: 300px;
+    }
+
+    to {
+        right: 0px;
+    }
+}
+
+.mymoveleft{
+    position: relative;
+    animation: mymoveleft 0.5s;
+}
