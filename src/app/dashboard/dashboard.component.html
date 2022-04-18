@@ -1,13 +1,35 @@
 <div class="scroll">
   <div>
-    <div style="float: left; margin: 20px">
+    <div style="    position: absolute;
+    margin: 20px;
+    z-index: 11;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 7px solid white;">
       <img src="../../assets/images/user1.jpg" class="roundimg" />
     </div>
-    <div style="float: right; margin: 25px">
+    <div style="float: right; margin: 25px ;cursor: pointer;" (click)="showsidebar()">
       <div class="line1"></div>
       <div class="line2"></div>
     </div>
   </div>
+
+  <div *ngIf="sidebarshow" (click)="showsidebar()" class="sidebarcontainer">
+    <div class="sidebar mymove-sidebarleft">
+      <div class="profile">
+        <h2>Alex John</h2>
+        <!-- <h3>Logout</h3> -->
+      </div>
+      <div class="sidemenu">
+        <h3 class="sidemenupad">Home</h3>
+        <h3 class="sidemenupad">Setting</h3>
+        <h3 class="sidemenupad" (click)="gotologout()">Logout</h3>
+      </div>
+
+    </div>
+  </div>
+
 
   <div>
     <h1 style="padding-top: 80px; padding-left: 40px">

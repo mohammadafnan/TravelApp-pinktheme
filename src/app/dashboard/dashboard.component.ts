@@ -7,8 +7,9 @@ import { Router } from "@angular/router";
   styleUrls: ["./dashboard.component.css"],
 })
 export class DashboardComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
   search: any;
+  sidebarshow: boolean = false;
   show: String = "tourlist";
   tourData = [
     {
@@ -93,16 +94,23 @@ export class DashboardComponent implements OnInit {
     },
   ];
 
-  ngOnInit() {}
+  ngOnInit() { }
+
+
   gotodetail() {
-    // tourdetail
     this.router.navigate(["/tourdetail"]);
+  }
+
+
+  gotologout() {
+    this.router.navigate(["/"]);
+
   }
 
   gototourdata(text: any) {
     this.show = text;
   }
-  // showtab(text:any) {
-  //   this.show = text
-  // }
+  showsidebar() {
+    this.sidebarshow = !this.sidebarshow;
+  }
 }
