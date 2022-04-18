@@ -8,7 +8,7 @@
 
 
 .line1 {
-    width: 35px;
+    width: 25px;
     height: 5px;
     background-color: black;
     margin: 6px 0;
@@ -16,7 +16,7 @@
 }
 
 .line2 {
-    width: 25px;
+    width: 15px;
     height: 5px;
     background-color: black;
     margin-left: 9px;
@@ -24,7 +24,7 @@
 }
 
 .fa-angle-left {
-    font-size: 40px;
+    font-size: 30px;
     cursor: pointer;
 }
 
