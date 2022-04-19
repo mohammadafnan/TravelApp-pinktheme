@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,8 +8,9 @@ import { Router } from '@angular/router';
 })
 export class SidebarComponent implements OnInit {
   sidebarshow: boolean = false;
-
+  @Input() show: boolean = false;
   constructor(private router: Router) { }
+
 
   ngOnInit() {
   }

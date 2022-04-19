@@ -1,15 +1,17 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { SidebarComponent } from "../sidebar/sidebar.component";
 
 @Component({
+  providers: [SidebarComponent],
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html",
   styleUrls: ["./dashboard.component.css"],
 })
+
 export class DashboardComponent implements OnInit {
   constructor(private router: Router) { }
   search: any;
-  sidebarshow: boolean = false;
   show: String = "tourlist";
   tourData = [
     {
@@ -102,19 +104,10 @@ export class DashboardComponent implements OnInit {
   }
 
 
-  gotologout() {
-    this.router.navigate(["/"]);
 
-  }
-
-  gotohome() {
-    this.router.navigate(["/dashboard"])
-  }
 
   gototourdata(text: any) {
     this.show = text;
   }
-  showsidebar() {
-    this.sidebarshow = !this.sidebarshow;
-  }
+
 }
