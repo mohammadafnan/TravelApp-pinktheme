@@ -107,6 +107,10 @@ export class DashboardComponent implements OnInit {
 
   }
 
+  gotohome() {
+    this.router.navigate(["/dashboard"])
+  }
+
   gototourdata(text: any) {
     this.show = text;
   }

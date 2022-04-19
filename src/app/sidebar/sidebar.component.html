@@ -1,0 +1,16 @@
+<div *ngIf="sidebarshow" (click)="showsidebar()" class="sidebarcontainer">
+  <div class="sidebar mymove-sidebarleft">
+    <div class="profile">
+      <div class="profileimg">
+        <img src="../../assets/images/user1.jpg" class="roundimg" />
+      </div>
+      <h2>Alex John</h2>
+    </div>
+    <div class="sidemenu">
+      <h3 class="sidemenupad" (click)="gotohome()">Home</h3>
+      <h3 class="sidemenupad">Setting</h3>
+      <h3 class="sidemenupad" (click)="gotologout()">Logout</h3>
+    </div>
+
+  </div>
+</div>

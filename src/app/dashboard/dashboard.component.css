@@ -304,12 +304,30 @@ a:hover {
     animation: mymoveleft 0.2s;
 }
 
+.topprofileimg{
+    position: absolute;
+    margin: 20px;
+    z-index: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 7px solid white;
+}
+
 .profile {
     left    : 114px !important;
     top     : 18px;
     position: absolute;
 }
 
+.profileimg {
+    position     : absolute;
+    right        : 135px;
+    width        : 50px;
+    height       : 50px;
+    border-radius: 50%;
+    border       : 7px solid white;
+}
 
 .sidemenu {
     position: absolute;
@@ -321,4 +339,3 @@ a:hover {
 .sidemenupad {
     padding-top: 15px;
 }
-
