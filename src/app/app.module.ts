@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { TourdetailComponent } from './tourdetail/tourdetail.component';
 import { LoginComponent } from './login/login.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     TourdetailComponent,
     LoginComponent,
     SidebarComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

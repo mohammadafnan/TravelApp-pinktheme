@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { GlobalVariablesService } from '../services/global-variables.service';
 
 @Component({
   selector: 'app-loginpage',
@@ -8,9 +9,10 @@ import { Router } from '@angular/router';
 })
 export class LoginpageComponent implements OnInit {
 
-  constructor(private Router: Router) { }
+  constructor(private Router: Router,public global:GlobalVariablesService) { }
 
   ngOnInit() {
+    this.global.currentRoute = this.Router.routerState.snapshot.url
   }
 
 

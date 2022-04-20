@@ -1,0 +1,9 @@
+<div *ngIf=" global.currentRoute != '/login' && global.currentRoute != '/home' ">
+  <div class="topprofileimg">
+    <img src="../../assets/images/user1.jpg" class="roundimg" />
+  </div>
+  <div style="float: right; margin: 25px ;cursor: pointer;" (click)="toggleSideBar() ">
+    <div class="line1"></div>
+    <div class="line2"></div>
+  </div>
+</div>

@@ -1,18 +1,23 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { GlobalVariablesService } from '../services/global-variables.service';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  styleUrls: ['./sidebar.component.css'],
+
 })
 export class SidebarComponent implements OnInit {
-  sidebarshow: boolean = false;
-  @Input() show: boolean = false;
-  constructor(private router: Router) { }
+  // sidebarshow: boolean = false;
+  // @Input() show: boolean = false;
+  @Input() showname: string;
+
+  constructor(private router: Router, public global: GlobalVariablesService) { }
 
 
   ngOnInit() {
+    console.log(this.showname);
   }
   gotologout() {
     this.router.navigate(["/"]);
@@ -22,8 +27,8 @@ export class SidebarComponent implements OnInit {
   gotohome() {
     this.router.navigate(["/dashboard"])
   }
-
-  showsidebar() {
-    this.sidebarshow = !this.sidebarshow;
+  toggleSideBar() {
+    this.global.showSideBar = !this.global.showSideBar
   }
+
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { GlobalVariablesService } from '../services/global-variables.service';
 
 @Component({
   selector: 'app-tourdetail',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class TourdetailComponent implements OnInit {
   show: string = "Price";
-  constructor(private router: Router) { }
+  constructor(private router: Router,public global:GlobalVariablesService) { }
   tourdetail = [
     {
       lable: "The Instanbul Turkey!",
@@ -36,6 +37,7 @@ export class TourdetailComponent implements OnInit {
 
 
   ngOnInit() {
+    this.global.currentRoute = this.router.routerState.snapshot.url
   }
 
   backtohome() {

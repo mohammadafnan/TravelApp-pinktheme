@@ -6,7 +6,8 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
 import { TourdetailComponent } from './tourdetail/tourdetail.component';
 
 const routes: Routes = [
-  { path: '', component: LoginpageComponent },
+  { path: '', redirectTo: "home", pathMatch: 'full' },
+  { path: 'home', component: LoginpageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'tourdetail', component: TourdetailComponent },

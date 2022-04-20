@@ -1,31 +1,16 @@
 <div class="scroll  mymoveright">
-  <div>
+  <!-- <div>
     <div class="topprofileimg">
       <img src="../../assets/images/user1.jpg" class="roundimg" />
     </div>
-    <div style="float: right; margin: 25px ;cursor: pointer;" (click)="showsidebar()">
+    <div style="float: right; margin: 25px ;cursor: pointer;">
       <div class="line1"></div>
       <div class="line2"></div>
     </div>
-  </div>
-
-  <!-- <div *ngIf="sidebarshow" (click)="showsidebar()" class="sidebarcontainer">
-    <div class="sidebar mymove-sidebarleft">
-      <div class="profile">
-        <div class="profileimg">
-          <img src="../../assets/images/user1.jpg" class="roundimg" />
-        </div>
-        <h2>Alex John</h2>
-      </div>
-      <div class="sidemenu">
-        <h3 class="sidemenupad" (click)="gotohome()">Home</h3>
-        <h3 class="sidemenupad">Setting</h3>
-        <h3 class="sidemenupad" (click)="gotologout()">Logout</h3>
-      </div>
-
-    </div>
   </div> -->
-  <app-sidebar *ngIf="sidebarshow" [show]="sidebarshow"></app-sidebar>
+
+
+  <app-sidebar></app-sidebar>
 
   <div>
     <h1 style="padding-top: 80px; padding-left: 40px">

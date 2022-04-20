@@ -1,16 +1,18 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { GlobalVariablesService } from "../services/global-variables.service";
 import { SidebarComponent } from "../sidebar/sidebar.component";
 
 @Component({
-  providers: [SidebarComponent],
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html",
   styleUrls: ["./dashboard.component.css"],
+
 })
 
 export class DashboardComponent implements OnInit {
-  constructor(private router: Router) { }
+  sidebarshow: boolean = false;
+  constructor(private router: Router, public global: GlobalVariablesService) { }
   search: any;
   show: String = "tourlist";
   tourData = [
@@ -96,15 +98,18 @@ export class DashboardComponent implements OnInit {
     },
   ];
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.global.currentRoute = this.router.routerState.snapshot.url
+  }
 
 
   gotodetail() {
     this.router.navigate(["/tourdetail"]);
   }
 
-
-
+  showsidebar() {
+    this.sidebarshow = !this.sidebarshow;
+  }
 
   gototourdata(text: any) {
     this.show = text;
