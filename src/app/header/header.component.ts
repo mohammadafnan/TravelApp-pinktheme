@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { GlobalVariablesService } from '../services/global-variables.service';
 
 @Component({
@@ -8,11 +9,15 @@ import { GlobalVariablesService } from '../services/global-variables.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public global: GlobalVariablesService) { }
+  constructor(private router: Router, public global: GlobalVariablesService) { }
 
   ngOnInit() {
   }
   toggleSideBar() {
     this.global.showSideBar = !this.global.showSideBar
+  }
+
+  backtohome() {
+    this.router.navigate(["/dashboard"])
   }
 }
