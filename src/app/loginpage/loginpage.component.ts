@@ -9,7 +9,7 @@ import { GlobalVariablesService } from '../services/global-variables.service';
 })
 export class LoginpageComponent implements OnInit {
 
-  constructor(private Router: Router,public global:GlobalVariablesService) { }
+  constructor(private Router: Router, public global: GlobalVariablesService) { }
 
   ngOnInit() {
     this.global.currentRoute = this.Router.routerState.snapshot.url
