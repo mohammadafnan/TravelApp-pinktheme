@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GlobalVariablesService } from '../services/global-variables.service';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +10,16 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router, public global: GlobalVariablesService) { }
+
+  public profileForm: FormGroup;
+  constructor(private fb: FormBuilder, private router: Router, public global: GlobalVariablesService) {
+    this.profileForm = this.fb.group({
+      name: ['', Validators.required],
+      password: ['', Validators.required]
+    })
+
+  }
+
 
   ngOnInit() {
     this.global.currentRoute = this.router.routerState.snapshot.url
