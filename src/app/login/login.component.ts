@@ -9,7 +9,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  logindata = [];
 
   public profileForm: FormGroup;
   constructor(private fb: FormBuilder, private router: Router, public global: GlobalVariablesService) {
@@ -25,9 +25,20 @@ export class LoginComponent implements OnInit {
     this.global.currentRoute = this.router.routerState.snapshot.url
   }
 
-  gotodashboard() {
+  gotodashboard(data) {
     this.router.navigate(['/dashboard'])
     this.global.showSideBar = false
+    if (data.name == "afnan" && data.password == 'afnan123') {
+      this.logindata.push(this.profileForm.value);
+      alert("login succecfully")
+      console.log(this.logindata)
+
+    }
+    else {
+      alert("login failed")
+      this.router.navigate(['/login'])
+
+    }
 
   }
 
