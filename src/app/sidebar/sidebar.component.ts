@@ -25,7 +25,8 @@ export class SidebarComponent implements OnInit {
   }
 
   gotohome() {
-    this.router.navigate(["/dashboard"])
+    this.router.navigate(["/dashboard"]);
+    this.global.showSideBar = false
   }
   toggleSideBar() {
     this.global.showSideBar = !this.global.showSideBar

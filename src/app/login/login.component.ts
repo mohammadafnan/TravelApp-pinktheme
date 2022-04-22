@@ -27,6 +27,8 @@ export class LoginComponent implements OnInit {
 
   gotodashboard() {
     this.router.navigate(['/dashboard'])
+    this.global.showSideBar = false
+
   }
 
 }
