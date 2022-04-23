@@ -198,8 +198,8 @@ a:hover {
 
 .scroll {
     position          : relative;
-    overflow-x        : hidden;
-    /* overflow-y     : hidden !important; */
+    /* overflow-x        : hidden; */
+    overflow-y     : hidden !important;
     width             : 100%;
     height            : 100vh;
     /* box-shadow     : -1px -162px 113px -9px rgba(2, 7, 28, 1) inset;
