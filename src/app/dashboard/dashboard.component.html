@@ -66,6 +66,11 @@ class = 'dis'
     </div>
   </div>
 
+
+  <div *ngIf="showloader" style="    display        : flex;
+  justify-content: center;">
+    <div class="loader"></div>
+  </div>
   <!-- *ngIf="(tourData | filter:search) as listdata" -->
   <div *ngIf="show == 'tourlist'">
     <div class="main mymoveright" *ngIf="tourData | filter: search as listdata">

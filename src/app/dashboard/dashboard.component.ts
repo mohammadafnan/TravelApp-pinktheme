@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
   sidebarshow: boolean = false;
   constructor(private router: Router, public global: GlobalVariablesService) { }
   search: any;
+  showloader: boolean = false;
   show: String = "tourlist";
   tourData = [
     {
@@ -104,7 +105,11 @@ export class DashboardComponent implements OnInit {
 
 
   gotodetail() {
-    this.router.navigate(["/tourdetail"]);
+    this.showloader = true;
+    setTimeout(() => {
+      this.router.navigate(["/tourdetail"]);
+    }, 2000);
+    // this.router.navigate(["/tourdetail"]);
   }
 
   showsidebar() {
