@@ -35,7 +35,5 @@ input {
     border-radius   : 20px;
     margin-top      : 12%;
     font-size       : 20px;
-
+    cursor          : pointer;
 }
-
-

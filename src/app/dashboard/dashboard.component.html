@@ -37,14 +37,7 @@
     <button [ngClass]="show == 'tourlist' ? 'btnn1' : 'btnn0'" (click)="gototourdata('tourlist')">
       <i [ngClass]="show == 'tourlist' ? 'fa fa-plane enab' : 'fa fa-plane dis'"></i>
     </button>
-    <!-- 
-  if(show == tourlist){
-class = 'enab'
-  }
-  else{
-class = 'dis'
-  }
- -->
+
     <button [ngClass]="show == 'hotellist' ? 'btnn1' : 'btnn0'" (click)="gototourdata('hotellist')">
       <i [ngClass]="
           show == 'hotellist' ? 'fa fa-building enab' : 'fa fa-building dis'

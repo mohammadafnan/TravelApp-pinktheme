@@ -108,7 +108,7 @@ export class DashboardComponent implements OnInit {
     this.showloader = true;
     setTimeout(() => {
       this.router.navigate(["/tourdetail"]);
-    }, 2000);
+    }, 1000);
     // this.router.navigate(["/tourdetail"]);
   }
 

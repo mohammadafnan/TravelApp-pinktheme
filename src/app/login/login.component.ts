@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
 
       setTimeout(() => {
         this.router.navigate(["/dashboard"]);
-      }, 3000);
+      }, 2000);
       this.global.showSideBar = false;
       console.log(this.logindata);
     } else {
