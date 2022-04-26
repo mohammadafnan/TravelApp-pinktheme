@@ -12,32 +12,38 @@ import { SidebarComponent } from "../sidebar/sidebar.component";
 
 export class DashboardComponent implements OnInit {
   sidebarshow: boolean = false;
+  tourdatacopy: any[] = [];
   constructor(private router: Router, public global: GlobalVariablesService) { }
   search: any;
   showloader: boolean = false;
   show: String = "tourlist";
   tourData = [
     {
+      id: 1,
       placename: "The Baku ",
       country: "Azerbaijan",
       image: "../../assets/images/baku.png",
     },
     {
+      id: 2,
       placename: "The Instanbul",
       country: "Turkey",
       image: "../../assets/images/turkey.png",
     },
     {
+      id: 2,
       placename: "The Maldive",
       country: "Maldive",
       image: "../../assets/images/maldive.png",
     },
     {
+      id: 3,
       placename: "The Germany",
       country: "Germany",
       image: "../../assets/images/Germany.png",
     },
     {
+      id: 3,
       placename: "The tree sunset",
       country: "Greece",
       image: "../../assets/images/pexels-travel1.jpg",
@@ -101,6 +107,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.global.currentRoute = this.router.routerState.snapshot.url
+    this.tourdatacopy = Object.assign([], this.tourData);
   }
 
 
@@ -119,5 +126,26 @@ export class DashboardComponent implements OnInit {
   gototourdata(text: any) {
     this.show = text;
   }
+
+  tab(newid: any) {
+
+    if (newid == -1) {
+      this.tourData = this.tourdatacopy;
+      return;
+    }
+
+    this.tourData = this.tourdatacopy;
+    this.showloader = true;
+
+    let data = this.tourData.filter(a => a.id == newid);
+    setTimeout(() => {
+      this.showloader = false;
+
+    }, 300);
+
+    this.tourData = data;
+
+  }
+
 
 }
