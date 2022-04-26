@@ -144,22 +144,47 @@ div.scrollmenu {
 }
 
 a {
-    display        : inline-block;
-    color          : black;
-    text-align     : center;
-    padding        : 14px;
+    display   : inline-block;
+    color     : black;
+    text-align: center;
+    ;
+    padding: 14px;
+    ;
     text-decoration: none;
+    ;
+    cursor: pointer;
+    ;
+
 }
 
-a:hover {
+.a1 {
+    background-color: white;
+    color           : #F36F7C !important;
+    font-weight     : bold;
+    border-bottom   : 5px solid #F36F7C !important;
+    cursor          : pointer;
+}
+
+.a2 {
+    display   : inline-block;
+    color     : black !important;
+    text-align: center;
+    ;
+    padding: 14px;
+    ;
+    text-decoration: none;
+    ;
+    cursor: pointer;
+    ;
+}
+
+/* a:hover {
     background-color: white;
     color           : #F36F7C !important;
     font-weight     : bold;
     border-bottom   : 5px solid #F36F7C;
-
-    /* border-radius: 20px; */
-    cursor: pointer;
-}
+    cursor          : pointer;
+} */
 
 /* card image */
 

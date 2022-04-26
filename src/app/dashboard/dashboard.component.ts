@@ -19,6 +19,7 @@ export class DashboardComponent implements OnInit {
   search: any;
   showloader: boolean = false;
   show: String = "tourlist";
+  id: number = 0;
   tourData = [
     {
       id: 1,
@@ -122,6 +123,8 @@ export class DashboardComponent implements OnInit {
     this.tourdatacopy = Object.assign([], this.tourData);
     this.hoteldatacopy = Object.assign([], this.hotelData);
     this.busdatacopy = Object.assign([], this.busData);
+    this.tourData = this.tourdatacopy;
+
   }
 
 
