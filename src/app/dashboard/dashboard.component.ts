@@ -152,18 +152,20 @@ export class DashboardComponent implements OnInit {
 
   filterData() {
     try {
+      debugger
       let SearchText = this.mygroup.get('search').value;
       if (SearchText !== ' ') {
         SearchText = SearchText.toLowerCase();
         this.tourData.filter(
-          x => x.country.toLocaleLowerCase().indexOf(SearchText) >= 0 ||
-            x.placename.toLocaleLowerCase().indexOf(SearchText) >= 0)
-        // console.log(SearchText)
+          x => x.country.toLowerCase().indexOf(SearchText) >= 0 ||
+            x.placename.toLowerCase().indexOf(SearchText) >= 0)
+        console.log(this.tourData)
       }
     }
     catch (x) {
 
     }
+    // Instanbul
   }
 
   // searchdata(value) {
