@@ -151,10 +151,15 @@ export class DashboardComponent implements OnInit {
     this.id = newid;
 
     if (newid == -1) {
+      this.showloader = true;
+
       this.tourData = this.tourdatacopy;
       this.hotelData = this.hoteldatacopy;
       this.busData = this.busdatacopy;
+      setTimeout(() => {
+        this.showloader = false;
 
+      }, 300);
       return;
     }
 
