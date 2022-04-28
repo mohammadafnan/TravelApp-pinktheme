@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { GlobalVariablesService } from "../services/global-variables.service";
 import { SidebarComponent } from "../sidebar/sidebar.component";
@@ -15,7 +16,12 @@ export class DashboardComponent implements OnInit {
   tourdatacopy: any[];
   hoteldatacopy: any[];
   busdatacopy: any[];
-  constructor(private router: Router, public global: GlobalVariablesService) { }
+  public mygroup: FormGroup;
+  constructor(private router: Router, public global: GlobalVariablesService, private fb: FormBuilder) {
+    this.mygroup = this.fb.group({
+      search: ["", Validators.required],
+    })
+  }
   search: any;
   showloader: boolean = false;
   show: String = "tourlist";
@@ -144,10 +150,29 @@ export class DashboardComponent implements OnInit {
     this.show = text;
   }
 
+  filterData() {
+    try {
+      let SearchText = this.mygroup.get('search').value;
+      if (SearchText !== ' ') {
+        SearchText = SearchText.toLowerCase();
+        this.tourData.filter(
+          x => x.country.toLocaleLowerCase().indexOf(SearchText) >= 0 ||
+            x.placename.toLocaleLowerCase().indexOf(SearchText) >= 0)
+        // console.log(SearchText)
+      }
+    }
+    catch (x) {
+
+    }
+  }
+
+  // searchdata(value) {
+  //   value = this.mygroup.get('search').value;
+  //   alert('working')
+  //   return value;
+  // }
+
   tab(newid: number) {
-
-
-
     this.id = newid;
 
     if (newid == -1) {
@@ -180,7 +205,6 @@ export class DashboardComponent implements OnInit {
     this.tourData = data;
     // this.hotelData = data1;
     // this.busData = data2;
-
 
   }
 

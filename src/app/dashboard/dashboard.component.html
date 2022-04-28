@@ -19,19 +19,33 @@
     </h1>
   </div>
 
-  <div class="container">
+  <form [formGroup]="mygroup">
+    <div class="container">
+      <div style="
+      display: flex;
+      position: relative;
+      width: 75%;
+    ">
+        <input type="text" placeholder="Search.." formControlName="search" (input)="filterData($event.target.value)" />
+        <button type="submit" class="searchbtn">
+          <i class="fa fa-search" (click)="searchdata(value)"></i>
+        </button>
+      </div>
+    </div>
+  </form>
+  <!-- <p> form value : {{mygroup.value | json}}</p> -->
+  <!-- <div class="container">
     <div style="
-        display: flex;
-        /* margin-left: 50px; */
-        position: relative;
-        width: 75%;
-      ">
+    display: flex;
+    position: relative;
+    width: 75%;
+  ">
       <input type="text" placeholder="Search.." [(ngModel)]="search" />
       <button type="submit" class="searchbtn">
         <i class="fa fa-search"></i>
       </button>
     </div>
-  </div>
+  </div> -->
 
   <div class="container">
     <button [ngClass]="show == 'tourlist' ? 'btnn1' : 'btnn0'" (click)="gototourdata('tourlist')">
@@ -57,7 +71,6 @@
       <a (click)="tab(3)" [ngClass]="id == 3 ? 'a1' : 'a2'">Hot tour</a>
       <a (click)="tab(-1)" [ngClass]="id == -1 ? 'a1' : 'a2'">All</a>
     </div>
-    <!-- [ngClass]="{'a1': 1 == '1'  ,'a2' : 1 != '1'  }" -->
   </div>
 
 
@@ -65,9 +78,9 @@
   justify-content: center;">
     <div class="loader"></div>
   </div>
-  <!-- *ngIf="(tourData | filter:search) as listdata" -->
   <div *ngIf="show == 'tourlist'">
-    <div class="main mymoveright" *ngIf="tourData | filter: search as listdata">
+    <!-- *ngIf="tourData | filter: search as listdata" -->
+    <div class="main mymoveright" *ngIf="tourData as listdata">
       <div *ngFor="let list of listdata; let i = index" style="margin-right: 5%; cursor: pointer"
         (click)="gotodetail()">
         <div class="container1"></div>
@@ -84,7 +97,8 @@
     </div>
   </div>
   <div *ngIf="show == 'hotellist'">
-    <div class="main mymoveright" *ngIf="hotelData | filter: search as listdata">
+    <!-- *ngIf="hotelData | filter: search as listdata" -->
+    <div class="main mymoveright" *ngIf="hotelData as listdata">
       <div *ngFor="let list of listdata; let i = index" style="margin-right: 5%; cursor: pointer"
         (click)="gotodetail()">
         <div class="container1"></div>
@@ -102,7 +116,8 @@
   </div>
 
   <div *ngIf="show == 'buslist'">
-    <div class="main mymoveright" *ngIf="busData | filter: search as listdata">
+    <!-- *ngIf="busData | filter: search as listdata" -->
+    <div class="main mymoveright" *ngIf="busData  as listdata">
       <div *ngFor="let list of listdata; let i = index" style="margin-right: 5%; cursor: pointer"
         (click)="gotodetail()">
         <div class="container1"></div>
