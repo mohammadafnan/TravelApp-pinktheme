@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
   search: any;
   showloader: boolean = false;
   show: String = "tourlist";
-  id: number = 0;
+  id: number;
   tourData = [
     {
       id: 1,
@@ -144,7 +144,11 @@ export class DashboardComponent implements OnInit {
     this.show = text;
   }
 
-  tab(newid: any) {
+  tab(newid: number) {
+
+
+
+    this.id = newid;
 
     if (newid == -1) {
       this.tourData = this.tourdatacopy;

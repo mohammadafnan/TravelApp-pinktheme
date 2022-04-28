@@ -52,11 +52,12 @@
 
   <div class="container">
     <div class="scrollmenu " *ngIf="show == 'tourlist'">
-      <a (click)="tab(1)" [ngClass]="{'a1': 1 == '1'  ,'a2' : 1 != '1'  }">New</a>
-      <a (click)="tab(2)">Most viewed</a>
-      <a (click)="tab(3)">Hot tour</a>
-      <a (click)="tab(-1)">All</a>
+      <a (click)="tab(1)" [ngClass]="id == 1 ? 'a1' : 'a2'">New</a>
+      <a (click)="tab(2)" [ngClass]="id == 2 ? 'a1' : 'a2'">Most viewed</a>
+      <a (click)="tab(3)" [ngClass]="id == 3 ? 'a1' : 'a2'">Hot tour</a>
+      <a (click)="tab(-1)" [ngClass]="id == -1 ? 'a1' : 'a2'">All</a>
     </div>
+    <!-- [ngClass]="{'a1': 1 == '1'  ,'a2' : 1 != '1'  }" -->
   </div>
 
 
