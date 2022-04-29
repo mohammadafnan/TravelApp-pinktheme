@@ -155,9 +155,19 @@ export class DashboardComponent implements OnInit {
       let SearchText = this.mygroup.get('search').value;
       if (SearchText !== ' ') {
         SearchText = SearchText.toLowerCase();
+        this.showloader = true;
+
         this.tourData = this.tourdatacopy.filter(
           x => x.country.toLowerCase().indexOf(SearchText) >= 0 || x.placename.toLowerCase().indexOf(SearchText) >= 0)
+
       }
+
+      this.mygroup.reset();
+      setTimeout(() => {
+        this.showloader = false;
+
+      }, 300);
+
     }
     catch (x) {
     }

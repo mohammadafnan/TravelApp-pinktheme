@@ -62,6 +62,7 @@ input {
     position        : absolute;
     right           : 8px;
     top             : 7px;
+    cursor          : pointer;
 }
 
 .btnn1 {
