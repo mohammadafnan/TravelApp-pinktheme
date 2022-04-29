@@ -26,9 +26,9 @@
       position: relative;
       width: 75%;
     ">
-        <input type="text" placeholder="Search.." formControlName="search" (input)="filterData($event.target.value)" />
+        <input type="text" placeholder="Search.." formControlName="search" />
         <button type="submit" class="searchbtn">
-          <i class="fa fa-search" (click)="searchdata(value)"></i>
+          <i class="fa fa-search" (click)=" filterData()"></i>
         </button>
       </div>
     </div>

@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
   public mygroup: FormGroup;
   constructor(private router: Router, public global: GlobalVariablesService, private fb: FormBuilder) {
     this.mygroup = this.fb.group({
-      search: ["", Validators.required],
+      search: ["", null],
     })
   }
   search: any;
@@ -152,20 +152,15 @@ export class DashboardComponent implements OnInit {
 
   filterData() {
     try {
-      debugger
       let SearchText = this.mygroup.get('search').value;
       if (SearchText !== ' ') {
         SearchText = SearchText.toLowerCase();
-        this.tourData.filter(
-          x => x.country.toLowerCase().indexOf(SearchText) >= 0 ||
-            x.placename.toLowerCase().indexOf(SearchText) >= 0)
-        console.log(this.tourData)
+        this.tourData = this.tourdatacopy.filter(
+          x => x.country.toLowerCase().indexOf(SearchText) >= 0 || x.placename.toLowerCase().indexOf(SearchText) >= 0)
       }
     }
     catch (x) {
-
     }
-    // Instanbul
   }
 
   // searchdata(value) {
