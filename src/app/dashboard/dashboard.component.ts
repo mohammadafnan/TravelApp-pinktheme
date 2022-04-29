@@ -163,11 +163,6 @@ export class DashboardComponent implements OnInit {
     }
   }
 
-  // searchdata(value) {
-  //   value = this.mygroup.get('search').value;
-  //   alert('working')
-  //   return value;
-  // }
 
   tab(newid: number) {
     this.id = newid;
