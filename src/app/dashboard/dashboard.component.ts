@@ -8,19 +8,21 @@ import { SidebarComponent } from "../sidebar/sidebar.component";
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html",
   styleUrls: ["./dashboard.component.css"],
-
 })
-
 export class DashboardComponent implements OnInit {
   sidebarshow: boolean = false;
   tourdatacopy: any[];
   hoteldatacopy: any[];
   busdatacopy: any[];
   public mygroup: FormGroup;
-  constructor(private router: Router, public global: GlobalVariablesService, private fb: FormBuilder) {
+  constructor(
+    private router: Router,
+    public global: GlobalVariablesService,
+    private fb: FormBuilder
+  ) {
     this.mygroup = this.fb.group({
       search: ["", null],
-    })
+    });
   }
   search: any;
   showloader: boolean = false;
@@ -125,14 +127,12 @@ export class DashboardComponent implements OnInit {
   ];
 
   ngOnInit() {
-    this.global.currentRoute = this.router.routerState.snapshot.url
+    this.global.currentRoute = this.router.routerState.snapshot.url;
     this.tourdatacopy = Object.assign([], this.tourData);
     this.hoteldatacopy = Object.assign([], this.hotelData);
     this.busdatacopy = Object.assign([], this.busData);
     this.tourData = this.tourdatacopy;
-
   }
-
 
   gotodetail() {
     this.showloader = true;
@@ -152,27 +152,32 @@ export class DashboardComponent implements OnInit {
 
   filterData() {
     try {
-      let SearchText = this.mygroup.get('search').value;
-      if (SearchText !== ' ') {
+      let SearchText = this.mygroup.get("search").value;
+      if (SearchText !== " ") {
         SearchText = SearchText.toLowerCase();
         this.showloader = true;
 
         this.tourData = this.tourdatacopy.filter(
-          x => x.country.toLowerCase().indexOf(SearchText) >= 0 || x.placename.toLowerCase().indexOf(SearchText) >= 0)
-
+          (x) =>
+            x.country.toLowerCase().indexOf(SearchText) >= 0 ||
+            x.placename.toLowerCase().indexOf(SearchText) >= 0
+        );
+      } else {
+        // this.tourData.length;
+        // this.tourData = this.tourdatacopy.filter(
+        //   (y) =>
+        //     y.country.toLowerCase().indexOf(SearchText) == 0 ||
+        //     y.placename.toLowerCase().indexOf(SearchText) == 0
+        // );
+        // return "no data";
       }
 
       this.mygroup.reset();
       setTimeout(() => {
         this.showloader = false;
-
       }, 300);
-
-    }
-    catch (x) {
-    }
+    } catch (x) {}
   }
-
 
   tab(newid: number) {
     this.id = newid;
@@ -185,7 +190,6 @@ export class DashboardComponent implements OnInit {
       this.busData = this.busdatacopy;
       setTimeout(() => {
         this.showloader = false;
-
       }, 300);
       return;
     }
@@ -195,20 +199,16 @@ export class DashboardComponent implements OnInit {
     this.busData = this.busdatacopy;
     this.showloader = true;
 
-    let data = this.tourData.filter(a => a.id == newid);
+    let data = this.tourData.filter((a) => a.id == newid);
     // let data1 = this.hotelData.filter(a => a.id == newid);
     // let data2 = this.busData.filter(a => a.id == newid);
 
     setTimeout(() => {
       this.showloader = false;
-
     }, 300);
 
     this.tourData = data;
     // this.hotelData = data1;
     // this.busData = data2;
-
   }
-
-
 }

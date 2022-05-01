@@ -369,3 +369,21 @@ a {
 .sidemenupad {
     padding-top: 15px;
 }
+
+
+.nodata{
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px; 
+    margin-top: 13%;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+    background-color: #FCE2E5;
+    padding: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 20px;
+    border: 2px solid #f36f7c;
+     /* border-bottom-left-radius: 30px; */
+
+}
