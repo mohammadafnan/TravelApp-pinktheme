@@ -66,8 +66,26 @@
     /* height          : 100vh; */
     height             : 100vh;
 
-    background-color          : #f36f7c;
+    background-color          : #F36F7C;
     border-top-right-radius   : 20px;
     border-bottom-right-radius: 20px;
 
+}
+
+.fa-home {
+    padding  : 10px;
+    font-size: 20px;
+    color    : #ffffff;
+}
+
+.fa-cog {
+    padding  : 10px;
+    font-size: 20px;
+    color    : #ffffff;
+}
+
+.fa-sign-out{
+    padding  : 10px;
+    font-size: 20px;
+    color    : #ffffff;  
 }
