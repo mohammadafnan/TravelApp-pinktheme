@@ -13,6 +13,7 @@ import { TourdetailComponent } from './tourdetail/tourdetail.component';
 import { LoginComponent } from './login/login.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HeaderComponent } from './header/header.component';
     LoginComponent,
     SidebarComponent,
     HeaderComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
