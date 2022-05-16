@@ -9,10 +9,13 @@
 }
 
 .roundimg {
-    width        : 50px;
-    height       : 50px;
+    width: 50px;
+    height: 50px;
     border-radius: 50px;
-    object-fit   : cover;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border: 5px solid #ff002d21;
+    box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
 }
 
 

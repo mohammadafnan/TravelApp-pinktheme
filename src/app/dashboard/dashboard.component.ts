@@ -131,7 +131,7 @@ export class DashboardComponent implements OnInit {
     this.tourdatacopy = Object.assign([], this.tourData);
     this.hoteldatacopy = Object.assign([], this.hotelData);
     this.busdatacopy = Object.assign([], this.busData);
-    this.tourData = this.tourdatacopy;
+    this.tourdatacopy = this.tourData;
   }
 
   gotodetail() {
