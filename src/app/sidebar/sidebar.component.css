@@ -1,18 +1,18 @@
 .roundimg {
-    width        : 50px;
-    height       : 50px;
+    width: 50px;
+    height: 50px;
     border-radius: 50px;
-    object-fit   : cover;
+    object-fit: cover;
 }
 
 
 .sidebarcontainer {
-    position        : fixed;
-    z-index         : 111;
+    position: fixed;
+    z-index: 111;
     background-color: #0000004a;
-    width           : 100%;
-    height          : 100vh;
-    top             : 0;
+    width: 100%;
+    height: 100vh;
+    top: 0;
 }
 
 @keyframes mymoveleft {
@@ -28,31 +28,33 @@
 
 .mymove-sidebarleft {
 
-    position : relative;
+    position: relative;
     animation: mymoveleft 0.2s;
 }
 
 .profile {
-    left    : 114px !important;
-    top     : 18px;
+    left: 114px !important;
+    top: 18px;
     position: absolute;
 }
 
 .profileimg {
-    position     : absolute;
-    right        : 135px;
-    width        : 50px;
-    height       : 50px;
+    position: absolute;
+    right: 150px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    border       : 7px solid white;
+    border: 1px solidp rgb(255, 130, 151);
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
 
 .sidemenu {
     position: absolute;
-    top     : 128px;
-    left    : 27px;
-    color   : white;
-    cursor  : pointer;
+    top: 128px;
+    left: 27px;
+    color: white;
+    cursor: pointer;
 }
 
 .sidemenupad {
@@ -62,30 +64,30 @@
 
 .sidebar {
     /* width           : 70vw; */
-    width              : 250px;
+    width: 250px;
     /* height          : 100vh; */
-    height             : 100vh;
+    height: 100vh;
 
-    background-color          : #F36F7C;
-    border-top-right-radius   : 20px;
+    background-color: #F36F7C;
+    border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 
 }
 
 .fa-home {
-    padding  : 10px;
+    padding: 10px;
     font-size: 20px;
-    color    : #ffffff;
+    color: #ffffff;
 }
 
 .fa-cog {
-    padding  : 10px;
+    padding: 10px;
     font-size: 20px;
-    color    : #ffffff;
+    color: #ffffff;
 }
 
-.fa-sign-out{
-    padding  : 10px;
+.fa-sign-out {
+    padding: 10px;
     font-size: 20px;
-    color    : #ffffff;  
+    color: #ffffff;
 }
