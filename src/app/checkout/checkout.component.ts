@@ -57,6 +57,9 @@ export class CheckoutComponent implements OnInit {
       name: ["", Validators.required],
       phoneno: ["", Validators.required],
       email: ["", Validators.required],
+      cnic: ["", Validators.required],
+      acountno: ["", Validators.required],
+
     });
   }
 

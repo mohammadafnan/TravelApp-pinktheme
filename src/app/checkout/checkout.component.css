@@ -33,12 +33,25 @@ input {
     background-color: #F36F7C;
     color           : white;
     border-radius   : 20px;
-    margin-top      : 230px;
+    margin-top      : 15px;
     margin-bottom   : 10%;
     font-size       : 20px;
     cursor          : pointer;
 }
 
+.logindis {
+    width           : 100%;
+    margin-right    : 30px !important;
+    padding         : 24px;
+    border          : 1px solid #f36f7c86;
+    background-color: #f36f7c86;
+    color           : white;
+    border-radius   : 20px;
+    margin-top      : 15px;
+    margin-bottom   : 10%;
+    font-size       : 20px;
+    cursor          : pointer;
+}
 
 /* card image */
 
