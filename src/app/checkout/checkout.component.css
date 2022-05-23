@@ -37,6 +37,7 @@ input {
     margin-bottom   : 10%;
     font-size       : 20px;
     cursor          : pointer;
+    transition      : 1s !important;
 }
 
 .logindis {
@@ -51,6 +52,7 @@ input {
     margin-bottom   : 10%;
     font-size       : 20px;
     cursor          : pointer;
+    transition      : 1s !important;
 }
 
 /* card image */
