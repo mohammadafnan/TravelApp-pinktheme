@@ -11,6 +11,15 @@
     <div class="container">
       <input type="email" formControlName="email" placeholder="Email" />
     </div>
+
+
+    <div class="container">
+      <select formControlName="title">
+        <option value="">Select Title</option>
+        <option *ngFor="let t of this.global.title" [ngValue]="t">{{t}}</option>
+      </select>
+    </div>
+
     <div style="    position: relative;
     top: 45px;
     left: 50px;
@@ -23,20 +32,22 @@
         (click)="gotodetail()">
         <div class="container1"></div>
         <div class="hero-text">
-          <h1 style="font-size: 26px; padding-left: 10%">
+          <!-- <h1 style="font-size: 26px; padding-left: 10%">
             {{ list.placename }}
-          </h1>
+          </h1> -->
 
         </div>
         <img src="{{ list.image }}" class="img" alt="" />
       </div>
     </div>
-    <div class="container" style="    margin-top: 270px;">
+    <div class="container" style="    margin-top: 210px;">
       <input type="number" maxlength="13" formControlName="cnic" placeholder="cnic" />
     </div>
     <div class="container">
       <input type="number" maxlength="15" formControlName="acountno" placeholder="acountno" />
     </div>
+
+
   </form>
   <!-- <p>Form Value: {{ profileForm.value | json }}</p> -->
   <div *ngIf="showloader" style="    display        : flex;
