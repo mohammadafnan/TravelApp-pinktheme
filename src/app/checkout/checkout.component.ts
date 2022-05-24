@@ -78,11 +78,12 @@ export class CheckoutComponent implements OnInit {
       this.router.navigate(["/dashboard"]);
     }, 2000);
   }
+  indexno: any
 
-  gotobank(list: any) {
+  gotobank(list: any, i: any) {
     // debugger
     this.myform.get('bank').setValue(list.Bankname);
-    list = this.CheckoutData;
+    this.indexno = i;
     console.log(this.global.fightdata);
     // debuger
   }
