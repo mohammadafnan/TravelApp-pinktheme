@@ -13,6 +13,7 @@ export class CheckoutComponent implements OnInit {
   public myform: FormGroup;
   showloader: boolean = false;
   show: string = "bank1";
+  indexno: number = -1;
 
   CheckoutData: any = [
     {
@@ -59,8 +60,7 @@ export class CheckoutComponent implements OnInit {
       cnic: ["", Validators.required],
       acountno: ["", Validators.required],
       title: ["", Validators.required],
-      bank: ["", Validators.required]
-
+      bank: ["", Validators.required],
     });
   }
 
@@ -78,12 +78,12 @@ export class CheckoutComponent implements OnInit {
       this.router.navigate(["/dashboard"]);
     }, 2000);
   }
-  indexno: any
 
   gotobank(list: any, i: any) {
-    // debugger
-    this.myform.get('bank').setValue(list.Bankname);
     this.indexno = i;
+    console.log(this.indexno);
+    // debugger
+    this.myform.get("bank").setValue(list.Bankname);
     console.log(this.global.fightdata);
     // debuger
   }
