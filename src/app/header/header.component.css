@@ -49,6 +49,7 @@
     width: 100% !important;
     z-index: 99 !important;
     top: 0px !important;
-    box-shadow: rgb(149 157 165 / 20%) 0px 1px 20px;
+    /* box-shadow: rgb(149 157 165 / 20%) 0px 1px 20px; */
+    box-shadow: #ffd7d9 0px 1px 20px;
     height: 75px;
 }
