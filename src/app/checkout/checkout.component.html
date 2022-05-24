@@ -28,8 +28,7 @@
       <label>Select Payment Type</label>
     </div>
     <div class="main mymoveright" *ngIf="CheckoutData as listdata">
-      <div *ngFor="let list of listdata; let i = index" style="margin-right: 5%; cursor: pointer"
-        (click)="gotodetail()"  >
+      <div *ngFor="let list of listdata; let i = index" style="margin-right: 5%; cursor: pointer">
         <div class="container1"></div>
         <div class="hero-text">
           <!-- <h1 style="font-size: 26px; padding-left: 10%">
@@ -37,7 +36,8 @@
           </h1> -->
 
         </div>
-        <img src="{{ list.image }}" class="img" alt="" />
+        <img (click)="gotobank(list)" [ngClass]="list == '1' ? 'listimg' : 'listimgdis'" src="{{ list.image }}"
+          class="img" alt="" />
       </div>
     </div>
     <div class="container" style="    margin-top: 210px;">
