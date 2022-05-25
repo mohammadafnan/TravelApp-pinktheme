@@ -88,3 +88,12 @@ export class CheckoutComponent implements OnInit {
     // debuger
   }
 }
+
+
+// if (this.indexno == i) {
+//   this.indexno = -1
+// }
+// else {
+//   this.indexno = i;
+//   console.log(this.indexno);
+
