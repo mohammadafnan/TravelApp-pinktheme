@@ -9,30 +9,68 @@ import { GlobalVariablesService } from "../services/global-variables.service";
 })
 export class TourdetailComponent implements OnInit {
   show: string = "Price";
-  constructor(private router: Router, public global: GlobalVariablesService) {}
-  tourdetail = [
+  constructor(private router: Router, public global: GlobalVariablesService) { }
+  city = [
     {
-      lable: "The Instanbul Turkey!",
+      id: 1,
+      countryId: 1,
+      name: "The Baku City1!",
       rating: "4.5",
       image: "../../assets/images/turkey.png",
     },
     {
-      lable: "The Instanbul Turkey!",
+      id: 2,
+      countryId: 1,
+      name: "The Baku City2!",
+      rating: "4.5",
+      image: "../../assets/images/turkey.png",
+    },
+    {
+      id: 3,
+      countryId: 1,
+      name: "The Baku City3!",
+      rating: "4.5",
+      image: "../../assets/images/turkey.png",
+    },
+    {
+      id: 4,
+      countryId: 2,
+      name: "The Instanbul Turkey1!",
       rating: "4.5",
       image: "../../assets/images/baku.png",
     },
     {
-      lable: "The Instanbul Turkey!",
+      id: 5,
+      countryId: 2,
+      name: "The Instanbul Turkey2!",
       rating: "4.5",
       image: "../../assets/images/Germany.png",
     },
     {
-      lable: "The Instanbul Turkey!",
+      id: 6,
+      countryId: 2,
+      name: "The Instanbul Turkey3!",
       rating: "4.5",
       image: "../../assets/images/maldive.png",
     },
     {
-      lable: "The Instanbul Turkey!",
+      id: 7,
+      countryId: 2,
+      name: "The Instanbul Turkey!",
+      rating: "4.5",
+      image: "../../assets/images/pexels-travel1.jpg",
+    },
+    {
+      id: 8,
+      countryId: 3,
+      name: "The Maldives city1!",
+      rating: "4.5",
+      image: "../../assets/images/pexels-travel1.jpg",
+    },
+    {
+      id: 9,
+      countryId: 3,
+      name: "The Maldives city2!",
       rating: "4.5",
       image: "../../assets/images/pexels-travel1.jpg",
     },

@@ -48,6 +48,7 @@ export class CheckoutComponent implements OnInit {
     },
   ];
   id: number;
+  agerange: any;
   constructor(
     public global: GlobalVariablesService,
     public router: Router,
@@ -55,6 +56,7 @@ export class CheckoutComponent implements OnInit {
   ) {
     this.myform = this.fb.group({
       name: ["", Validators.required],
+      age: ["", Validators.required],
       phoneno: ["", Validators.required],
       email: ["", Validators.required],
       cnic: ["", Validators.required],
@@ -86,6 +88,11 @@ export class CheckoutComponent implements OnInit {
     this.myform.get("bank").setValue(list.Bankname);
     console.log(this.global.fightdata);
     // debuger
+  }
+
+  age(age) {
+    this.agerange = age.target.value
+
   }
 }
 

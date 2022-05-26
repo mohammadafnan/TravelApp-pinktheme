@@ -36,8 +36,8 @@ export class DashboardComponent implements OnInit {
       image: "../../assets/images/baku.png",
     },
     {
-      id: 3,
-      placename: "The Instanbul",
+      id: 2,
+      placename: "The Turkey",
       country: "Turkey",
       image: "../../assets/images/turkey.png",
     },
@@ -48,13 +48,13 @@ export class DashboardComponent implements OnInit {
       image: "../../assets/images/maldive.png",
     },
     {
-      id: 2,
+      id: 4,
       placename: "The Germany",
       country: "Germany",
       image: "../../assets/images/Germany.png",
     },
     {
-      id: 2,
+      id: 5,
       placename: "The tree sunset",
       country: "Greece",
       image: "../../assets/images/pexels-travel1.jpg",
@@ -176,7 +176,7 @@ export class DashboardComponent implements OnInit {
       setTimeout(() => {
         this.showloader = false;
       }, 300);
-    } catch (x) {}
+    } catch (x) { }
   }
 
   tab(newid: number) {

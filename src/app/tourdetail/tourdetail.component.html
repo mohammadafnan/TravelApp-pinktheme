@@ -9,12 +9,12 @@
   </div>
 
   <div class="main mymoveright">
-    <div class="card " *ngFor="let list of tourdetail ; let i = index">
+    <div class="card " *ngFor="let list of city ; let i = index">
       <div style="float: left;   margin: 20px;">
         <img src={{list.image}} class="roundimg" />
       </div>
       <div style="    transform: translate(5px, -261px);">
-        <div class="b1">{{list.lable}}</div>
+        <div class="b1">{{list.name}}</div>
         <div class="b2">{{list.rating}}<i class="fa fa-star"></i>
         </div>
       </div>

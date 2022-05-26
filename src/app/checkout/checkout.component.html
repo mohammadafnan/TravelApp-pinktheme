@@ -20,6 +20,11 @@
       </select>
     </div>
 
+    <div>
+      {{agerange}}
+      <input type="range" min="1" max="100" value="0" (input)="age($event)" formControlName="age">
+    </div>
+
     <div style="    position: relative;
     top: 45px;
     left: 50px;
@@ -32,10 +37,6 @@
         (click)="gotobank(list,i)">
         <div class="container1"></div>
         <div class="hero-text">
-          <!-- <h1 style="font-size: 26px; padding-left: 10%">
-            {{ list.placename }}
-          </h1> -->
-
         </div>
         <img [ngClass]="indexno == i ? 'listimg' : 'listimgdis'" src="{{ list.image }}" class="img" alt="" />
       </div>

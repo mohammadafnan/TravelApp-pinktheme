@@ -7,11 +7,13 @@
   </div>
   <form [formGroup]="profileForm">
     <div class="container">
-      <input type="text" formControlName="name" placeholder="User name" />
+      <input type="text" formControlName="name" placeholder="User name"
+        (keydown.enter)='gotodashboard(profileForm.value)' />
     </div>
 
     <div class="container">
-      <input type="text" formControlName="password" placeholder="Password" />
+      <input type="text" formControlName="password" placeholder="Password"
+        (keydown.enter)='gotodashboard(profileForm.value)' />
     </div>
   </form>
   <!-- <p>Form Value: {{ profileForm.value | json }}</p> -->
