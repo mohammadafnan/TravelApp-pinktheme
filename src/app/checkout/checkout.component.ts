@@ -48,7 +48,7 @@ export class CheckoutComponent implements OnInit {
     },
   ];
   id: number;
-  agerange: any;
+  agerange: any = 0;
   constructor(
     public global: GlobalVariablesService,
     public router: Router,
