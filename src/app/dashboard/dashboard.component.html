@@ -80,9 +80,9 @@
   </div>
   <div *ngIf="show == 'tourlist'">
     <!-- *ngIf="tourData | filter: search as listdata" -->
-    <div class="main mymoveright" *ngIf="tourData as listdata">
-      <div *ngFor="let list of listdata; let i = index" style="margin-right: 5%; cursor: pointer"
-        (click)="gotodetail()">
+    <div class="main mymoveright">
+      <div *ngFor="let list of tourData; let i = index" style="margin-right: 5%; cursor: pointer"
+        (click)="gotodetail(list.countryId)">
         <div class="container1"></div>
         <div class="hero-text">
           <h1 style="font-size: 26px; padding-left: 10%">

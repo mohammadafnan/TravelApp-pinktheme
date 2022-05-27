@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: "home", component: LoginpageComponent },
   { path: "login", component: LoginComponent },
   { path: "dashboard", component: DashboardComponent },
-  { path: "tourdetail", component: TourdetailComponent },
+  { path: "tourdetail/:countryid", component: TourdetailComponent },
   { path: "checkout", component: CheckoutComponent },
 ];
 
@@ -19,4 +19,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

@@ -6,7 +6,74 @@ import { Injectable } from "@angular/core";
 export class GlobalVariablesService {
   fightdata: any = [];
   title: string[] = ["Mr", "Mrs", "Ms"];
+  city = [
+    {
+      id: 1,
+      countryId: 1,
+      name: "The Baku City1!",
+      rating: "4.5",
+      image: "../../assets/images/turkey.png",
+    },
+    {
+      id: 2,
+      countryId: 1,
+      name: "The Baku City2!",
+      rating: "4.5",
+      image: "../../assets/images/turkey.png",
+    },
+    {
+      id: 3,
+      countryId: 1,
+      name: "The Baku City3!",
+      rating: "4.5",
+      image: "../../assets/images/turkey.png",
+    },
+    {
+      id: 4,
+      countryId: 2,
+      name: "The Instanbul Turkey1!",
+      rating: "4.5",
+      image: "../../assets/images/baku.png",
+    },
+    {
+      id: 5,
+      countryId: 2,
+      name: "The Instanbul Turkey2!",
+      rating: "4.5",
+      image: "../../assets/images/Germany.png",
+    },
+    {
+      id: 6,
+      countryId: 2,
+      name: "The Instanbul Turkey3!",
+      rating: "4.5",
+      image: "../../assets/images/maldive.png",
+    },
+    {
+      id: 7,
+      countryId: 2,
+      name: "The Instanbul Turkey!",
+      rating: "4.5",
+      image: "../../assets/images/pexels-travel1.jpg",
+    },
+    {
+      id: 8,
+      countryId: 3,
+      name: "The Maldives city1!",
+      rating: "4.5",
+      image: "../../assets/images/pexels-travel1.jpg",
+    },
+    {
+      id: 9,
+      countryId: 3,
+      name: "The Maldives city2!",
+      rating: "4.5",
+      image: "../../assets/images/pexels-travel1.jpg",
+    },
+  ];
+  cityCopy:any = []
   currentRoute: string = "";
   showSideBar: boolean = false;
+  cityid
   constructor() {}
 }

@@ -8,8 +8,8 @@
 
   </div>
 
-  <div class="main mymoveright">
-    <div class="card " *ngFor="let list of city ; let i = index">
+  <div class="main mymoveright" *ngIf="global.cityCopy.length > 0">
+    <div class="card " *ngFor="let list of global.cityCopy ; let i = index">
       <div style="float: left;   margin: 20px;">
         <img src={{list.image}} class="roundimg" />
       </div>

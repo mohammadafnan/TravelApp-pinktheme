@@ -24,38 +24,41 @@ export class DashboardComponent implements OnInit {
       search: ["", null],
     });
   }
+
+  newcountryid: number
+
   search: any;
   showloader: boolean = false;
   show: String = "tourlist";
   id: number;
   tourData = [
     {
-      id: 1,
-      placename: "The Baku ",
+      countryId: 1,
+      placename: "The Azerbaijan ",
       country: "Azerbaijan",
       image: "../../assets/images/baku.png",
     },
     {
-      id: 2,
+      countryId: 2,
       placename: "The Turkey",
       country: "Turkey",
       image: "../../assets/images/turkey.png",
     },
     {
-      id: 3,
+      countryId: 3,
       placename: "The Maldive",
       country: "Maldive",
       image: "../../assets/images/maldive.png",
     },
     {
-      id: 4,
+      countryId: 4,
       placename: "The Germany",
       country: "Germany",
       image: "../../assets/images/Germany.png",
     },
     {
-      id: 5,
-      placename: "The tree sunset",
+      countryId: 5,
+      placename: "The Greece",
       country: "Greece",
       image: "../../assets/images/pexels-travel1.jpg",
     },
@@ -134,12 +137,23 @@ export class DashboardComponent implements OnInit {
     this.tourdatacopy = this.tourData;
   }
 
-  gotodetail() {
+  gotodetail(countryid) {
     this.showloader = true;
+    console.log(countryid)
+    this.findcity(countryid)
     setTimeout(() => {
-      this.router.navigate(["/tourdetail"]);
+      this.router.navigate(["/tourdetail", countryid]);
     }, 1000);
+
     // this.router.navigate(["/tourdetail"]);
+  }
+
+  findcity(countryid) {
+    // this.newcountryid = countryid
+    let citydata = this.global.city.filter((a) => a.countryId == countryid);
+    this.global.cityCopy = citydata;
+    // console.log(" city" + this.global.cityCopy)
+
   }
 
   showsidebar() {
@@ -199,7 +213,7 @@ export class DashboardComponent implements OnInit {
     this.busData = this.busdatacopy;
     this.showloader = true;
 
-    let data = this.tourData.filter((a) => a.id == newid);
+    let data = this.tourData.filter((a) => a.countryId == newid);
     // let data1 = this.hotelData.filter(a => a.id == newid);
     // let data2 = this.busData.filter(a => a.id == newid);
 
@@ -211,4 +225,8 @@ export class DashboardComponent implements OnInit {
     // this.hotelData = data1;
     // this.busData = data2;
   }
+
+
+
+
 }

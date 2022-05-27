@@ -17,7 +17,7 @@ export class SidebarComponent implements OnInit {
 
 
   ngOnInit() {
-    console.log(this.showname);
+    // console.log(this.showname);
   }
   gotologout() {
     this.router.navigate(["/"]);
