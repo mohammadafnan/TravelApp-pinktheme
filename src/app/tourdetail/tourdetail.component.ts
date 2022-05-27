@@ -10,16 +10,20 @@ import { GlobalVariablesService } from "../services/global-variables.service";
 export class TourdetailComponent implements OnInit {
   show: string = "Price";
   showloader: boolean = false;
+
   // activatedRoute: any;
-  constructor(private activatedRoute: ActivatedRoute, private router: Router, public global: GlobalVariablesService) { }
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+    public global: GlobalVariablesService
+  ) {}
 
   currentid: any;
   ngOnInit() {
     this.global.currentRoute = this.router.routerState.snapshot.url;
-    this.currentid = this.activatedRoute.snapshot.params['countryid'];
+    this.currentid = this.activatedRoute.snapshot.params["countryid"];
     console.log(this.global.currentRoute);
     console.log(this.currentid);
-
   }
 
   backtohome() {
@@ -33,7 +37,4 @@ export class TourdetailComponent implements OnInit {
   showtab(text: any) {
     this.show = text;
   }
-
-
-
 }

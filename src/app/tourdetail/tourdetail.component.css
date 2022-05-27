@@ -4,8 +4,21 @@
     object-fit   : cover;
     border-radius: 20px;
     transform    : translatey(-40%);
+    cursor: pointer;
+    transition: 0.5s !important;
+
 }
 
+.roundimg:hover {
+    width        : 260px;
+    height       : 200px !important;
+    object-fit   : cover;
+    border-radius: 20px;
+    transform    : translatey(-50%);
+    cursor: pointer;
+    transition: 0.5s !important;
+
+}
 
 .line1 {
     width           : 25px;

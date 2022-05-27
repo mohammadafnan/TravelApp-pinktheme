@@ -25,7 +25,7 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  newcountryid: number
+  newcountryid: number;
 
   search: any;
   showloader: boolean = false;
@@ -139,21 +139,17 @@ export class DashboardComponent implements OnInit {
 
   gotodetail(countryid) {
     this.showloader = true;
-    console.log(countryid)
-    this.findcity(countryid)
+    // console.log(countryid);
+    this.findcity(countryid);
     setTimeout(() => {
       this.router.navigate(["/tourdetail", countryid]);
     }, 1000);
 
-    // this.router.navigate(["/tourdetail"]);
   }
 
   findcity(countryid) {
-    // this.newcountryid = countryid
     let citydata = this.global.city.filter((a) => a.countryId == countryid);
     this.global.cityCopy = citydata;
-    // console.log(" city" + this.global.cityCopy)
-
   }
 
   showsidebar() {
@@ -190,7 +186,7 @@ export class DashboardComponent implements OnInit {
       setTimeout(() => {
         this.showloader = false;
       }, 300);
-    } catch (x) { }
+    } catch (x) {}
   }
 
   tab(newid: number) {
@@ -225,8 +221,4 @@ export class DashboardComponent implements OnInit {
     // this.hotelData = data1;
     // this.busData = data2;
   }
-
-
-
-
 }
