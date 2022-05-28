@@ -215,6 +215,15 @@ ul li::before {
 
 }
 
+label{
+    background-color: pink;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
 /* @keyframes mymoveright {
     from {
         left: 300px;

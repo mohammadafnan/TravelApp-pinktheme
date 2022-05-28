@@ -12,6 +12,7 @@ export class GlobalVariablesService {
       countryId: 1,
       name: "The Baku City1!",
       rating: "4.5",
+      price: "$ 400",
       image: "../../assets/images/baku.png",
     },
     {
@@ -19,6 +20,7 @@ export class GlobalVariablesService {
       countryId: 1,
       name: "The Baku City2!",
       rating: "4.5",
+      price: "$ 450",
       image: "../../assets/images/baku.png",
     },
     {
@@ -26,6 +28,7 @@ export class GlobalVariablesService {
       countryId: 1,
       name: "The Baku City3!",
       rating: "4.5",
+      price: "$ 550",
       image: "../../assets/images/baku.png",
     },
     {
@@ -33,6 +36,7 @@ export class GlobalVariablesService {
       countryId: 2,
       name: "The Instanbul Turkey1!",
       rating: "4.5",
+      price: "$ 300",
       image: "../../assets/images/turkey.png",
     },
     {
@@ -40,6 +44,7 @@ export class GlobalVariablesService {
       countryId: 2,
       name: "The Instanbul Turkey2!",
       rating: "4.5",
+      price: "$ 600",
       image: "../../assets/images/turkey.png",
     },
     {
@@ -47,6 +52,7 @@ export class GlobalVariablesService {
       countryId: 2,
       name: "The Instanbul Turkey3!",
       rating: "4.5",
+      price: "$ 700",
       image: "../../assets/images/turkey.png",
     },
     {
@@ -54,6 +60,7 @@ export class GlobalVariablesService {
       countryId: 2,
       name: "The Instanbul Turkey!",
       rating: "4.5",
+      price: "$ 4300",
       image: "../../assets/images/turkey.png",
     },
     {
@@ -61,6 +68,7 @@ export class GlobalVariablesService {
       countryId: 3,
       name: "The Maldives city1!",
       rating: "4.5",
+      price: "$ 5400",
       image: "../../assets/images/maldive.png",
     },
     {
@@ -68,6 +76,7 @@ export class GlobalVariablesService {
       countryId: 3,
       name: "The Maldives city2!",
       rating: "4.5",
+      price: "$ 350",
       image: "../../assets/images/maldive.png",
     },
   ];
