@@ -388,6 +388,9 @@ a {
     /* border-bottom-left-radius: 30px; */
 
 }
+.yesdata{
+    display: none;
+}
 
 .hide {
     display: none;

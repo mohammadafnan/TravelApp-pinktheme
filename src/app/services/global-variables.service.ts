@@ -34,31 +34,34 @@ export class GlobalVariablesService {
     {
       id: 4,
       countryId: 2,
-      name: "The Instanbul Turkey1!",
+      name: "Konya",
       rating: "4.5",
       price: "$ 300",
-      image: "../../assets/images/turkey.png",
+      image:
+        "https://images.pexels.com/photos/8120844/pexels-photo-8120844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
       id: 5,
       countryId: 2,
-      name: "The Instanbul Turkey2!",
+      name: "Antalya",
       rating: "4.5",
       price: "$ 600",
-      image: "../../assets/images/turkey.png",
+      image:
+        "https://images.pexels.com/photos/2767815/pexels-photo-2767815.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
       id: 6,
       countryId: 2,
-      name: "The Instanbul Turkey3!",
+      name: "Bursa",
       rating: "4.5",
       price: "$ 700",
-      image: "../../assets/images/turkey.png",
+      image:
+        "https://images.pexels.com/photos/5342345/pexels-photo-5342345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
       id: 7,
       countryId: 2,
-      name: "The Instanbul Turkey!",
+      name: "Instanbul ",
       rating: "4.5",
       price: "$ 4300",
       image: "../../assets/images/turkey.png",

@@ -1,21 +1,22 @@
 <div class="mymoveright" *ngIf=" global.currentRoute != '/login' && global.currentRoute != '/home' ">
   <div class="fix">
-    <!-- <div class="topprofileimg" *ngIf=" global.currentRoute != '/tourdetail/1' && global.currentRoute != '/checkout' ">
-      <img src="../../assets/images/user1.jpg" class="roundimg" />
-    </div> -->
-    <div class="topprofileimg" *ngIf="">
+    <div class="topprofileimg" *ngIf=" global.currentRoute != '/tourdetail/1' && global.currentRoute != '/checkout' ">
       <img src="../../assets/images/user1.jpg" class="roundimg" />
     </div>
+    <!-- <div class="topprofileimg" *ngIf="">
+      <img src="../../assets/images/user1.jpg" class="roundimg" />
+    </div> -->
     <div style="float: left;   margin: 20px;" *ngIf=" global.currentRoute != '/dashboard'  ">
       <i class="fa fa-angle-left" aria-hidden="true" (click)="backtohome()"></i>
-      <div style="    position: relative; 
-      bottom: 24px; 
-      left: 26px;" class="mymoveright" *ngIf="global.currentRoute != '/tourdetail'"> <label>Booking Details</label>
-      </div>
       <div style="    position: relative;
       bottom: 24px;
       left: 26px;" class="mymoveright" *ngIf="global.currentRoute == '/tourdetail'"> <label>Find Places</label>
       </div>
+      <div style="    position: relative; 
+      bottom: 24px; 
+      left: 26px;" class="mymoveright" *ngIf="global.currentRoute != '/tourdetail'"> <label>Booking Details</label>
+      </div>
+
     </div>
     <div style="float: right; margin: 25px ;cursor: pointer;" (click)="toggleSideBar() ">
       <div class="line1"></div>

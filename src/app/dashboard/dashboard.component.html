@@ -96,8 +96,12 @@
       </div>
     </div>
   </div>
-  <div [ngClass]="{ nodata: tourData.length == 0 }">
-    <label *ngIf="tourData.length === 0 ">No Match Found</label>
+  <div>
+    <!-- [ngClass]="{'my_class': step === 'step1', 'my_class2' : step === 'step2' }" -->
+    <!-- [ngClass]="{ nodata: tourData.length == 0 }" -->
+    <div [ngClass]="{'nodata': tourData.length == 0 }">
+      <label *ngIf="tourData.length === 0">No Match Found</label>
+    </div>
   </div>
   <div *ngIf="show == 'hotellist'">
     <!-- *ngIf="hotelData | filter: search as listdata" -->

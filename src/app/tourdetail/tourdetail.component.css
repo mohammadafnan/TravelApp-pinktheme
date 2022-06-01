@@ -1,83 +1,92 @@
 .roundimg {
-    width        : 260px;
-    height       : 200px !important;
-    object-fit   : cover;
+    width: 260px;
+    height: 200px !important;
+    object-fit: cover;
     border-radius: 20px;
-    transform    : translatey(-40%);
+    transform: translatey(-40%);
     cursor: pointer;
     transition: 0.5s !important;
 
 }
 
 .roundimg:hover {
-    width        : 260px;
-    height       : 200px !important;
-    object-fit   : cover;
+    width: 260px;
+    height: 200px !important;
+    object-fit: cover;
     border-radius: 20px;
-    transform    : translatey(-50%);
+    transform: translatey(-50%);
     cursor: pointer;
     transition: 0.5s !important;
 
 }
 
 .line1 {
-    width           : 25px;
-    height          : 5px;
+    width: 25px;
+    height: 5px;
     background-color: black;
-    margin          : 6px 0;
-    border-radius   : 20px
+    margin: 6px 0;
+    border-radius: 20px
 }
 
 .line2 {
-    width           : 15px;
-    height          : 5px;
+    width: 15px;
+    height: 5px;
     background-color: black;
-    margin-left     : 9px;
-    border-radius   : 20px
+    margin-left: 9px;
+    border-radius: 20px
 }
 
 .fa-angle-left {
     font-size: 30px;
-    cursor   : pointer;
+    cursor: pointer;
 }
 
 .card {
 
-    width        : 300px;
-    height       : 200px;
+    width: 300px;
+    height: 200px;
     border-radius: 20px !important;
     /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
-    box-shadow   : rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-    margin-left  : 3%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    margin-left: 3%;
     margin-bottom: 2%;
-    margin-top   : 105px;
-    cursor       : pointer;
+    margin-top: 105px;
+    cursor: pointer;
 }
 
 .b1 {
-    float       : left;
-    padding-top : 60%;
-    padding-left: 5%;
+    float: left;
+    padding-top: 60%;
+    padding-left: 20px;
 }
 
 .b2 {
-    float        : right;
-    padding-top  : 60%;
+    float: right;
+    padding-top: 60%;
     padding-right: 8%;
-    color        : #F36F7C;
+    color: #F36F7C;
+}
+
+.b3 {
+
+  
+    float: left;
+    padding-top: 60%;
+    padding-left: 34px;
+
 }
 
 .fa-star {
     padding-left: 5px;
-    color       : #F36F7C;
+    color: #F36F7C;
 }
 
 .scroll {
-    position          : relative;
-    overflow-x        : hidden;
+    position: relative;
+    overflow-x: hidden;
     /* overflow-y        : hidden !important; */
-    width             : 100%;
-    height            : 100vh;
+    width: 100%;
+    height: 100vh;
     /* box-shadow     : -1px -162px 113px -9px rgba(2, 7, 28, 1) inset;
     -webkit-box-shadow: -1px -162px 113px -9px rgba(2, 7, 28, 1) inset;
     -moz-box-shadow   : -1px -162px 113px -9px rgba(2, 7, 28, 1) inset; */
@@ -85,22 +94,22 @@
 
 
 .img {
-    width        : 200px;
-    height       : 180px;
+    width: 200px;
+    height: 180px;
     border-radius: 20px !important;
-    margin-left  : 3%;
+    margin-left: 3%;
     margin-bottom: 10%;
 
     /* object-fit: cover; */
 }
 
 .main {
-    display      : flex;
+    display: flex;
     /* position  : absolute; */
-    overflow-x   : scroll;
-    width        : 100%;
-    overflow-y   : hidden !important;
-    top          : -40px;
+    overflow-x: scroll;
+    width: 100%;
+    overflow-y: hidden !important;
+    top: -40px;
     /* margin-top: 5% !important; */
     /* box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 15px -7px !important; */
 
@@ -108,8 +117,8 @@
 
 div.scrollmenu {
     background-color: white;
-    overflow        : auto;
-    white-space     : nowrap;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 /* a {
@@ -120,24 +129,24 @@ div.scrollmenu {
     text-decoration: none;
 } */
 .botline1 {
-    display         : inline-block !important;
-    text-align      : center;
-    padding         : 14px !important;
-    text-decoration : none;
+    display: inline-block !important;
+    text-align: center;
+    padding: 14px !important;
+    text-decoration: none;
     background-color: white;
-    color           : #F36F7C !important;
-    font-weight     : bold;
-    border-bottom   : 3px solid #F36F7C !important;
-    cursor          : pointer !important;
+    color: #F36F7C !important;
+    font-weight: bold;
+    border-bottom: 3px solid #F36F7C !important;
+    cursor: pointer !important;
 }
 
 .botline2 {
-    display        : inline-block !important;
-    color          : black;
-    text-align     : center;
-    padding        : 14px !important;
+    display: inline-block !important;
+    color: black;
+    text-align: center;
+    padding: 14px !important;
     text-decoration: none;
-    cursor         : pointer !important;
+    cursor: pointer !important;
 
 }
 
@@ -150,52 +159,52 @@ div.scrollmenu {
 } */
 
 .container {
-    display        : flex;
+    display: flex;
     justify-content: center;
-    align-items    : center;
+    align-items: center;
     /* margin-top  : 80px; */
-    margin-left    : 40px;
-    margin-bottom  : -20px;
-    transform      : translateY(-25px);
+    margin-left: 40px;
+    margin-bottom: -20px;
+    transform: translateY(-25px);
 }
 
 .para {
-    display      : flex;
-    padding-left : 1%;
-    box-shadow   : rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    display: flex;
+    padding-left: 1%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     border-radius: 20px !important;
-    margin-top   : 2%;
+    margin-top: 2%;
     margin-bottom: 5%;
-    margin-left  : 5%;
-    margin-right : 5%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .price {
-    padding-top     : 20% !important;
-    padding-bottom  : 20% !important;
-    border          : 1px solid #F36F7C;
+    padding-top: 20% !important;
+    padding-bottom: 20% !important;
+    border: 1px solid #F36F7C;
     background-color: white;
-    border-radius   : 20px;
-    margin-bottom   : 5%;
-    width           : 100px;
-    color           : #F36F7C;
-    font-weight     : 600;
-    font-size       : 16px;
+    border-radius: 20px;
+    margin-bottom: 5%;
+    width: 100px;
+    color: #F36F7C;
+    font-weight: 600;
+    font-size: 16px;
 
 }
 
 .buy {
-    padding-top     : 22px;
-    padding-bottom  : 22px;
-    border          : 2px solid #F36F7C;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    border: 2px solid #F36F7C;
     background-color: #F36F7C;
-    border-radius   : 20px;
-    margin-bottom   : 20px;
-    color           : white;
-    width           : 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    color: white;
+    width: 100%;
     /* transform    : translatey(-5px); */
-    font-weight     : 600;
-    font-size       : 16px;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 ul {
@@ -204,24 +213,25 @@ ul {
 }
 
 ul li::before {
-    content       : "\2022";
-    color         : #F36F7C;
-    font-weight   : bold;
-    display       : inline-block;
-    width         : 1em;
+    content: "\2022";
+    color: #F36F7C;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
     /* margin-left: -1em; */
-    font-size     : x-large;
+    font-size: x-large;
     /* padding-top: 15px; */
 
 }
 
-label{
+label {
     background-color: pink;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 20px;
     margin-left: 10px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
 
 /* @keyframes mymoveright {
