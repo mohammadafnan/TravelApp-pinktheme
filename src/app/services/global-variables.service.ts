@@ -18,18 +18,20 @@ export class GlobalVariablesService {
     {
       id: 2,
       countryId: 1,
-      name: "The Baku City2!",
+      name: "Yevlakh",
       rating: "4.5",
       price: "$ 450",
-      image: "../../assets/images/baku.png",
+      image:
+        "https://images.pexels.com/photos/2850287/pexels-photo-2850287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
       id: 3,
       countryId: 1,
-      name: "The Baku City3!",
+      name: "Ganja",
       rating: "4.5",
       price: "$ 550",
-      image: "../../assets/images/baku.png",
+      image:
+        "https://images.pexels.com/photos/2693529/pexels-photo-2693529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
       id: 4,
@@ -69,7 +71,7 @@ export class GlobalVariablesService {
     {
       id: 8,
       countryId: 3,
-      name: "The Maldives city1!",
+      name: "Maldives isl 1",
       rating: "4.5",
       price: "$ 5400",
       image: "../../assets/images/maldive.png",
@@ -77,10 +79,11 @@ export class GlobalVariablesService {
     {
       id: 9,
       countryId: 3,
-      name: "The Maldives city2!",
+      name: "Maldives isl 2",
       rating: "4.5",
       price: "$ 350",
-      image: "../../assets/images/maldive.png",
+      image:
+        "https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
   ];
   cityCopy: any = [];
