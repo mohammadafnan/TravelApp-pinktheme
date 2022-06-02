@@ -15,7 +15,8 @@
       </div>
       <div style="    transform: translate(5px, -261px);">
         <div class="b1">{{list.name}} </div>
-        <div class="b3"> <label>{{list.price}}</label></div>
+        <div class="b3" (click)="showPrice(i)"> <label [ngClass]="pritbn == i ? 'act' : 'dis'">{{list.price}}</label>
+        </div>
         <div class="b2">{{list.rating}}<i class="fa fa-star"></i>
         </div>
       </div>

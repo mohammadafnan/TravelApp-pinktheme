@@ -224,7 +224,34 @@ ul li::before {
 
 }
 
-label {
+.dis {
+    background-color: rgb(255, 223, 227);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.5s !important;
+}
+
+.act {
+    background-color: #F36F7C;
+    color: white;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.5s !important;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+
+}
+
+
+
+/* label:hover {
     background-color: pink;
     padding: 5px;
     padding-left: 10px;
@@ -232,7 +259,10 @@ label {
     border-radius: 20px;
     margin-left: 10px;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
-}
+    cursor: pointer;
+    transition: 0.5s !important;
+} */
+
 
 /* @keyframes mymoveright {
     from {

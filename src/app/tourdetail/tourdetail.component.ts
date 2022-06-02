@@ -10,6 +10,7 @@ import { GlobalVariablesService } from "../services/global-variables.service";
 export class TourdetailComponent implements OnInit {
   show: string = "Price";
   showloader: boolean = false;
+  pritbn: any;
 
   // activatedRoute: any;
   constructor(
@@ -36,5 +37,10 @@ export class TourdetailComponent implements OnInit {
 
   showtab(text: any) {
     this.show = text;
+  }
+
+  showPrice(i) {
+    this.pritbn = i;
+    // alert(i);
   }
 }

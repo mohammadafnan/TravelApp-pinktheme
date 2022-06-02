@@ -10,7 +10,7 @@ export class GlobalVariablesService {
     {
       id: 1,
       countryId: 1,
-      name: "The Baku City1!",
+      name: "Baku ",
       rating: "4.5",
       price: "$ 400",
       image: "../../assets/images/baku.png",
