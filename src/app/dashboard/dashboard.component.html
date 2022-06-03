@@ -82,14 +82,14 @@
     <!-- *ngIf="tourData | filter: search as listdata" -->
     <div class="main mymoveright">
       <div *ngFor="let list of tourData; let i = index" style="margin-right: 5%; cursor: pointer"
-        (click)="gotodetail(list.countryId)">
+        (click)="gotodetail(list.countryId,i)">
         <div class="container1"></div>
         <div class="hero-text">
           <h1 style="font-size: 26px; padding-left: 10%">
-            {{ list.placename }}
+            {{ list.countryDisc }}
           </h1>
           <h1 style=" font-size: 20px">
-            <i class="fa fa-map-marker"></i>{{ list.country }}
+            <i class="fa fa-map-marker"></i>{{ list.countryname }}
           </h1>
         </div>
         <img src="{{ list.image }}" class="img" alt="" />

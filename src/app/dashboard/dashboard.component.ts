@@ -34,32 +34,32 @@ export class DashboardComponent implements OnInit {
   tourData = [
     {
       countryId: 1,
-      placename: "The Azerbaijan ",
-      country: "Azerbaijan",
+      countryDisc: "The Azerbaijan ",
+      countryname: "Azerbaijan",
       image: "../../assets/images/baku.png",
     },
     {
       countryId: 2,
-      placename: "The Turkey",
-      country: "Turkey",
+      countryDisc: "The Turkey",
+      countryname: "Turkey",
       image: "../../assets/images/turkey.png",
     },
     {
       countryId: 3,
-      placename: "The Maldive",
-      country: "Maldive",
+      countryDisc: "The Maldive",
+      countryname: "Maldive",
       image: "../../assets/images/maldive.png",
     },
     {
       countryId: 4,
-      placename: "The Germany",
-      country: "Germany",
+      countryDisc: "The Germany",
+      countryname: "Germany",
       image: "../../assets/images/Germany.png",
     },
     {
       countryId: 5,
-      placename: "The Greece",
-      country: "Greece",
+      countryDisc: "The Greece",
+      countryname: "Greece",
       image: "../../assets/images/pexels-travel1.jpg",
     },
   ];
@@ -67,31 +67,31 @@ export class DashboardComponent implements OnInit {
   hotelData = [
     {
       id: 1,
-      placename: "The Hotel ",
+      countryDisc: "The Hotel ",
       country: "Azerbaijan",
       image: "../../assets/images/hotel1.jpg",
     },
     {
       id: 2,
-      placename: "The Hotel",
+      countryDisc: "The Hotel",
       country: "Turkey",
       image: "../../assets/images/hotel2.jpg",
     },
     {
       id: 2,
-      placename: "The Hotel",
+      countryDisc: "The Hotel",
       country: "Maldive",
       image: "../../assets/images/hotel3.jpg",
     },
     {
       id: 3,
-      placename: "The Hotel",
+      countryDisc: "The Hotel",
       country: "Germany",
       image: "../../assets/images/hotel4.jpg",
     },
     {
       id: 3,
-      placename: "The Hotel",
+      countryDisc: "The Hotel",
       country: "Greece",
       image: "../../assets/images/hotel5.jpg",
     },
@@ -99,68 +99,68 @@ export class DashboardComponent implements OnInit {
   busData = [
     {
       id: 1,
-      placename: "The Bus ",
+      countryDisc: "The Bus ",
       country: "Daewoo 1",
       image: "../../assets/images/bus1.jpeg",
     },
     {
       id: 2,
-      placename: "The Bus",
+      countryDisc: "The Bus",
       country: "Daewoo 2",
       image: "../../assets/images/bus2.jpeg",
     },
     {
       id: 2,
-      placename: "The Bus",
+      countryDisc: "The Bus",
       country: "Daewoo 3",
       image: "../../assets/images/bus3.jpeg",
     },
     {
       id: 3,
-      placename: "The Bus",
+      countryDisc: "The Bus",
       country: "Daewoo 4",
       image: "../../assets/images/bus4.jpeg",
     },
     {
       id: 3,
-      placename: "The Bus",
+      countryDisc: "The Bus",
       country: "Daewoo 5",
       image: "../../assets/images/bus5.jpeg",
     },
   ];
 
   ngOnInit() {
-    this.global.isShowprofile = true
-    this.global.isShowbackbtn = false
+    this.global.isShowprofile = true;
+    this.global.isShowbackbtn = false;
     this.global.currentRoute = this.router.routerState.snapshot.url;
     this.tourdatacopy = Object.assign([], this.tourData);
     this.hoteldatacopy = Object.assign([], this.hotelData);
     this.busdatacopy = Object.assign([], this.busData);
     this.tourdatacopy = this.tourData;
     // this.global.cityCopy = this.global.city;
-
+    // console.log(this.global.cityCopy, "citycopy")
   }
 
   gotodetail(countryid) {
-    this.global.newcountryid = countryid
-    console.log(this.global.newcountryid + "new country id");
+    this.global.newcountryid = countryid;
 
     this.showloader = true;
     this.findcity(countryid);
+    localStorage.setItem("tourData", JSON.stringify(this.tourData));
     setTimeout(() => {
-      this.global.isHidden = true
-      this.global.isHidden1 = false
-      this.global.isShowprofile = false
-      this.global.isShowbackbtn = true
+      this.global.isHidden = true;
+      this.global.isHidden1 = false;
+      this.global.isShowprofile = false;
+      this.global.isShowbackbtn = true;
       // this.global.isShowprofile = false
       this.router.navigate(["/tourdetail/" + countryid]);
     }, 1000);
-
   }
 
   findcity(countryid) {
     let citydata = this.global.city.filter((a) => a.countryId == countryid);
     this.global.cityCopy = citydata;
+    console.log(this.global.cityCopy, "city data  in  dashboard");
   }
 
   showsidebar() {
@@ -181,14 +181,14 @@ export class DashboardComponent implements OnInit {
         this.tourData = this.tourdatacopy.filter(
           (x) =>
             x.country.toLowerCase().indexOf(SearchText) >= 0 ||
-            x.placename.toLowerCase().indexOf(SearchText) >= 0
+            x.countryDisc.toLowerCase().indexOf(SearchText) >= 0
         );
       } else {
         // this.tourData.length;
         // this.tourData = this.tourdatacopy.filter(
         //   (y) =>
         //     y.country.toLowerCase().indexOf(SearchText) == 0 ||
-        //     y.placename.toLowerCase().indexOf(SearchText) == 0
+        //     y.countryDisc.toLowerCase().indexOf(SearchText) == 0
         // );
         // return "no data";
       }
@@ -197,7 +197,7 @@ export class DashboardComponent implements OnInit {
       setTimeout(() => {
         this.showloader = false;
       }, 300);
-    } catch (x) { }
+    } catch (x) {}
   }
 
   tab(newid: number) {

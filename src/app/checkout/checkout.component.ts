@@ -75,6 +75,7 @@ export class CheckoutComponent implements OnInit {
 
   onSubmit() {
     this.global.fightdata.push(this.myform.value);
+    sessionStorage.setItem('fightdata',JSON.stringify(this.global.fightdata))
     this.myform.reset();
     alert("Succecfully Booked");
     console.log(this.global.fightdata);
@@ -86,10 +87,10 @@ export class CheckoutComponent implements OnInit {
 
   gotobank(list: any, i: any) {
     this.indexno = i;
-    console.log(this.indexno);
+    // console.log(this.indexno);
     // debugger
     this.myform.get("bank").setValue(list.Bankname);
-    console.log(this.global.fightdata);
+    // console.log(this.global.fightdata);
     // debuger
   }
 

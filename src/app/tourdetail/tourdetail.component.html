@@ -3,21 +3,22 @@
 
   <app-sidebar></app-sidebar>
 
-  <div>
-    <h2 style="padding-top: 70px;padding-left: 50px;">The Instanbul<br> Turkey!</h2>
+  <div *ngIf="global.cityCopy == undefined" >
+    <h2 style="padding-top: 70px;padding-left: 50px;"> Select Your Journeys!</h2>
 
   </div>
 
   <div class="main mymoveright " *ngIf="global.cityCopy.length > 0">
     <div class="card " *ngFor="let list of global.cityCopy ; let i = index">
       <div style="float: left;   margin: 20px;">
-        <img src={{list.image}} class="roundimg" />
+        <img src={{list.cityimage}} class="roundimg" />
       </div>
       <div style="    transform: translate(5px, -261px);">
-        <div class="b1">{{list.name}} </div>
-        <div class="b3" (click)="showPrice(i)"> <label [ngClass]="pritbn == i ? 'act' : 'dis'">{{list.price}}</label>
+        <div class="b1">{{list.cityname}}  </div>
+        <div class="b3" (click)="showPrice(i)"> <label
+            [ngClass]="pritbn == i ? 'act' : 'dis'">{{list.cityprice}}</label>
         </div>
-        <div class="b2">{{list.rating}}<i class="fa fa-star"></i>
+        <div class="b2">{{list.cityrating}}<i class="fa fa-star"></i>
         </div>
       </div>
     </div>

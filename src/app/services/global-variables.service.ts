@@ -4,15 +4,14 @@ import { Injectable } from "@angular/core";
   providedIn: "root",
 })
 export class GlobalVariablesService {
-  isHidden: boolean = false
-  isHidden1: boolean = false
+  isHidden: boolean = false;
+  isHidden1: boolean = false;
   isShowprofile: boolean = true;
-  isShowbackbtn:boolean = true
+  isShowbackbtn: boolean = true;
   fightdata: any = [];
   cityCopy: any = [];
   currentRoute: string;
   showSideBar: boolean = false;
-  cityid;
   public newcountryid: number;
 
   title: string[] = ["Mr", "Mrs", "Ms"];
@@ -20,84 +19,87 @@ export class GlobalVariablesService {
     {
       id: 1,
       countryId: 1,
-      name: "Baku ",
-      rating: "4.5",
-      price: "$ 400",
-      image: "../../assets/images/baku.png",
+      countryname: "Azerbaijan",
+      cityname: "Baku ",
+      cityrating: "4.5",
+      cityprice: "$ 400",
+      cityimage: "../../assets/images/baku.png",
     },
     {
       id: 2,
       countryId: 1,
-      name: "Yevlakh",
-      rating: "4.5",
-      price: "$ 450",
-      image:
+      countryname: "Azerbaijan",
+      cityname: "Yevlakh",
+      cityrating: "4.5",
+      cityprice: "$ 450",
+      cityimage:
         "https://images.pexels.com/photos/2850287/pexels-photo-2850287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
       id: 3,
       countryId: 1,
-      name: "Ganja",
-      rating: "4.5",
-      price: "$ 550",
-      image:
+      countryname: "Azerbaijan",
+      cityname: "Ganja",
+      cityrating: "4.5",
+      cityprice: "$ 550",
+      cityimage:
         "https://images.pexels.com/photos/2693529/pexels-photo-2693529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
       id: 4,
       countryId: 2,
-      name: "Konya",
-      rating: "4.5",
-      price: "$ 300",
-      image:
+      cityname: "Konya",
+      cityrating: "4.5",
+      cityprice: "$ 300",
+      cityimage:
         "https://images.pexels.com/photos/8120844/pexels-photo-8120844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
       id: 5,
       countryId: 2,
-      name: "Antalya",
-      rating: "4.5",
-      price: "$ 600",
-      image:
+      cityname: "Antalya",
+      cityrating: "4.5",
+      cityprice: "$ 600",
+      cityimage:
         "https://images.pexels.com/photos/2767815/pexels-photo-2767815.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
       id: 6,
       countryId: 2,
-      name: "Bursa",
-      rating: "4.5",
-      price: "$ 700",
-      image:
+      cityname: "Bursa",
+      cityrating: "4.5",
+      cityprice: "$ 700",
+      cityimage:
         "https://images.pexels.com/photos/5342345/pexels-photo-5342345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
       id: 7,
       countryId: 2,
-      name: "Instanbul ",
-      rating: "4.5",
-      price: "$ 4300",
-      image: "../../assets/images/turkey.png",
+      cityname: "Instanbul ",
+      cityrating: "4.5",
+      cityprice: "$ 4300",
+      cityimage: "../../assets/images/turkey.png",
     },
     {
       id: 8,
       countryId: 3,
-      name: "Maldives isl 1",
-      rating: "4.5",
-      price: "$ 5400",
-      image: "../../assets/images/maldive.png",
+      cityname: "Maldives isl 1",
+      cityrating: "4.5",
+      cityprice: "$ 5400",
+      cityimage: "../../assets/images/maldive.png",
     },
     {
       id: 9,
       countryId: 3,
-      name: "Maldives isl 2",
-      rating: "4.5",
-      price: "$ 350",
-      image:
+      cityname: "Maldives isl 2",
+      cityrating: "4.5",
+      cityprice: "$ 350",
+      cityimage:
         "https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
   ];
 
-  constructor() { }
+  constructor() {}
 
   GetAll() {
     return;
