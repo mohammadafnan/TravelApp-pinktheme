@@ -14,17 +14,24 @@ export class TourdetailComponent implements OnInit {
 
   // activatedRoute: any;
   constructor(
+    private route: ActivatedRoute,
     private activatedRoute: ActivatedRoute,
     private router: Router,
     public global: GlobalVariablesService
-  ) {}
+  ) { }
 
   currentid: any;
   ngOnInit() {
+    this.global.isHidden = true
+    this.global.isShowprofile = false
     this.global.currentRoute = this.router.routerState.snapshot.url;
     this.currentid = this.activatedRoute.snapshot.params["countryid"];
-    console.log(this.global.currentRoute);
-    console.log(this.currentid);
+    this.global.cityCopy = this.global.city;
+
+
+
+
+
   }
 
   backtohome() {
@@ -32,6 +39,9 @@ export class TourdetailComponent implements OnInit {
   }
 
   gotocheckout() {
+    this.global.isHidden = false
+    this.global.isHidden1 = true
+
     this.router.navigate(["/checkout"]);
   }
 

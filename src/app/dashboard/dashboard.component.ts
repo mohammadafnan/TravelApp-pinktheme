@@ -130,20 +130,30 @@ export class DashboardComponent implements OnInit {
   ];
 
   ngOnInit() {
+    this.global.isShowprofile = true
+    this.global.isShowbackbtn = false
     this.global.currentRoute = this.router.routerState.snapshot.url;
     this.tourdatacopy = Object.assign([], this.tourData);
     this.hoteldatacopy = Object.assign([], this.hotelData);
     this.busdatacopy = Object.assign([], this.busData);
     this.tourdatacopy = this.tourData;
-    this.global.cityCopy ;
+    // this.global.cityCopy = this.global.city;
+
   }
 
   gotodetail(countryid) {
+    this.global.newcountryid = countryid
+    console.log(this.global.newcountryid + "new country id");
+
     this.showloader = true;
-    // console.log(countryid);
     this.findcity(countryid);
     setTimeout(() => {
-      this.router.navigate(["/tourdetail", countryid]);
+      this.global.isHidden = true
+      this.global.isHidden1 = false
+      this.global.isShowprofile = false
+      this.global.isShowbackbtn = true
+      // this.global.isShowprofile = false
+      this.router.navigate(["/tourdetail/" + countryid]);
     }, 1000);
 
   }
@@ -187,7 +197,7 @@ export class DashboardComponent implements OnInit {
       setTimeout(() => {
         this.showloader = false;
       }, 300);
-    } catch (x) {}
+    } catch (x) { }
   }
 
   tab(newid: number) {

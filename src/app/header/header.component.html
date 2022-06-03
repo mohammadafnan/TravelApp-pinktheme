@@ -1,20 +1,24 @@
 <div class="mymoveright" *ngIf=" global.currentRoute != '/login' && global.currentRoute != '/home' ">
   <div class="fix">
-    <div class="topprofileimg" *ngIf=" global.currentRoute != '/tourdetail/1' && global.currentRoute != '/checkout' ">
+    <div class="topprofileimg" *ngIf="global.isShowprofile   ">
       <img src="../../assets/images/user1.jpg" class="roundimg" />
     </div>
     <!-- <div class="topprofileimg" *ngIf="">
       <img src="../../assets/images/user1.jpg" class="roundimg" />
     </div> -->
-    <div style="float: left;   margin: 20px;" *ngIf=" global.currentRoute != '/dashboard'  ">
+    <div style="float: left;   margin: 20px;" *ngIf="global.isShowbackbtn">
       <i class="fa fa-angle-left" aria-hidden="true" (click)="backtohome()"></i>
       <div style="    position: relative;
       bottom: 24px;
-      left: 26px;" class="mymoveright" *ngIf="global.currentRoute == '/tourdetail'"> <label>Find Places</label>
+      left: 26px;" class="mymoveright" *ngIf="global.isHidden">
+        <label>Find
+          Places</label>
       </div>
       <div style="    position: relative; 
       bottom: 24px; 
-      left: 26px;" class="mymoveright" *ngIf="global.currentRoute != '/tourdetail'"> <label>Booking Details</label>
+      left: 26px;" class="mymoveright" *ngIf="global.isHidden1">
+        <label>Booking
+          Details</label>
       </div>
 
     </div>

@@ -4,7 +4,17 @@ import { Injectable } from "@angular/core";
   providedIn: "root",
 })
 export class GlobalVariablesService {
+  isHidden: boolean = false
+  isHidden1: boolean = false
+  isShowprofile: boolean = true;
+  isShowbackbtn:boolean = true
   fightdata: any = [];
+  cityCopy: any = [];
+  currentRoute: string;
+  showSideBar: boolean = false;
+  cityid;
+  public newcountryid: number;
+
   title: string[] = ["Mr", "Mrs", "Ms"];
   city = [
     {
@@ -86,9 +96,10 @@ export class GlobalVariablesService {
         "https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
   ];
-  cityCopy: any = [];
-  currentRoute: string = "";
-  showSideBar: boolean = false;
-  cityid;
-  constructor() {}
+
+  constructor() { }
+
+  GetAll() {
+    return;
+  }
 }

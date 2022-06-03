@@ -67,6 +67,9 @@ export class CheckoutComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    this.global.isHidden1 = true
+    this.global.isShowprofile = false
     this.global.currentRoute = this.router.routerState.snapshot.url;
   }
 
