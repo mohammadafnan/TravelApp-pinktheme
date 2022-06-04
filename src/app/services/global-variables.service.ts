@@ -48,6 +48,7 @@ export class GlobalVariablesService {
     {
       id: 4,
       countryId: 2,
+      countryname: "Turkey",
       cityname: "Konya",
       cityrating: "4.5",
       cityprice: "$ 300",
@@ -57,6 +58,7 @@ export class GlobalVariablesService {
     {
       id: 5,
       countryId: 2,
+      countryname: "Turkey",
       cityname: "Antalya",
       cityrating: "4.5",
       cityprice: "$ 600",
@@ -66,6 +68,7 @@ export class GlobalVariablesService {
     {
       id: 6,
       countryId: 2,
+      countryname: "Turkey",
       cityname: "Bursa",
       cityrating: "4.5",
       cityprice: "$ 700",
@@ -75,6 +78,7 @@ export class GlobalVariablesService {
     {
       id: 7,
       countryId: 2,
+      countryname: "Turkey",
       cityname: "Instanbul ",
       cityrating: "4.5",
       cityprice: "$ 4300",
@@ -83,6 +87,7 @@ export class GlobalVariablesService {
     {
       id: 8,
       countryId: 3,
+      countryname: "Maldive",
       cityname: "Maldives isl 1",
       cityrating: "4.5",
       cityprice: "$ 5400",
@@ -91,6 +96,7 @@ export class GlobalVariablesService {
     {
       id: 9,
       countryId: 3,
+      countryname: "Maldive",
       cityname: "Maldives isl 2",
       cityrating: "4.5",
       cityprice: "$ 350",

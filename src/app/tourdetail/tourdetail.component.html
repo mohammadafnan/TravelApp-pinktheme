@@ -3,7 +3,7 @@
 
   <app-sidebar></app-sidebar>
 
-  <div  >
+  <div>
     <h2 style="padding-top: 70px;padding-left: 50px;"> Select Your Journeys!</h2>
 
   </div>
@@ -14,8 +14,9 @@
         <img src={{list.cityimage}} class="roundimg" />
       </div>
       <div style="    transform: translate(5px, -261px);">
-        <div class="b1">{{list.cityname}}  </div>
-        <div class="b3" (click)="showPrice(i)"> <label
+        <div class="b1">{{list.cityname}} </div>
+        <div class="b1" id="name" style="display: none">{{list.countryname}} </div>
+        <div class="b3" (click)="showPrice(i,list.cityname,list.cityprice,list.countryname)"> <label
             [ngClass]="pritbn == i ? 'act' : 'dis'">{{list.cityprice}}</label>
         </div>
         <div class="b2">{{list.cityrating}}<i class="fa fa-star"></i>

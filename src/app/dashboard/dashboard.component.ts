@@ -146,7 +146,7 @@ export class DashboardComponent implements OnInit {
 
     this.showloader = true;
     this.findcity(countryid);
-    localStorage.setItem("tourData", JSON.stringify(this.tourData));
+    // localStorage.setItem("cityCopyData", JSON.stringify(this.global.cityCopy));
     setTimeout(() => {
       this.global.isHidden = true;
       this.global.isHidden1 = false;
@@ -160,7 +160,7 @@ export class DashboardComponent implements OnInit {
   findcity(countryid) {
     let citydata = this.global.city.filter((a) => a.countryId == countryid);
     this.global.cityCopy = citydata;
-    console.log(this.global.cityCopy, "city data  in  dashboard");
+    // console.log(this.global.cityCopy, "city data  in  dashboard");
   }
 
   showsidebar() {

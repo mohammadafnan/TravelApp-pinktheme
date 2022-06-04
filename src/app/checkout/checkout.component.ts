@@ -63,19 +63,34 @@ export class CheckoutComponent implements OnInit {
       acountno: ["", Validators.required],
       title: ["", Validators.required],
       bank: ["", Validators.required],
+      countryname: ["", Validators.required],
+      cityname: ["", Validators.required],
+      cityprice: ["", Validators.required],
     });
   }
 
   ngOnInit() {
-
-    this.global.isHidden1 = true
-    this.global.isShowprofile = false
+    this.global.isHidden1 = true;
+    this.global.isShowprofile = false;
     this.global.currentRoute = this.router.routerState.snapshot.url;
+    this. setvalue()
+    JSON.parse(localStorage.getItem("Selected country name")); //retrieve the key
+    // console.log(
+    //   "Selected country name" + JSON.parse(localStorage.getItem("Selected country name"))
+    // );
+    JSON.parse(localStorage.getItem("Selected city name")); //retrieve the key
+    // console.log(
+    //   "Selected city name" + JSON.parse(localStorage.getItem("Selected city name"))
+    // );
+    JSON.parse(localStorage.getItem("Selected city price")); //retrieve the key
+    // console.log(
+    //   "Selected city price" + JSON.parse(localStorage.getItem("Selected city price"))
+    // );
   }
 
   onSubmit() {
     this.global.fightdata.push(this.myform.value);
-    sessionStorage.setItem('fightdata',JSON.stringify(this.global.fightdata))
+    sessionStorage.setItem("fightdata", JSON.stringify(this.global.fightdata));
     this.myform.reset();
     alert("Succecfully Booked");
     console.log(this.global.fightdata);
@@ -94,12 +109,17 @@ export class CheckoutComponent implements OnInit {
     // debuger
   }
 
-  age(age) {
-    this.agerange = age.target.value
+  setvalue() {
+    this.myform.get("countryname").setValue(JSON.parse(localStorage.getItem("Selected country name")));
+    this.myform.get("cityname").setValue(JSON.parse(localStorage.getItem("Selected city name")));
+    this.myform.get("cityprice").setValue(JSON.parse(localStorage.getItem("Selected city price")));
 
   }
-}
 
+  age(age) {
+    this.agerange = age.target.value;
+  }
+}
 
 // if (this.indexno == i) {
 //   this.indexno = -1
@@ -107,4 +127,3 @@ export class CheckoutComponent implements OnInit {
 // else {
 //   this.indexno = i;
 //   console.log(this.indexno);
-
