@@ -17,11 +17,11 @@
 
 @keyframes mymoveleft {
     from {
-        right: 300px;
+        left: 300px;
     }
 
     to {
-        right: 0px;
+        left: 0px;
     }
 }
 
@@ -69,9 +69,9 @@
     height: 100vh;
 
     background-color: #F36F7C;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    float: right;
 }
 
 .fa-home {
@@ -80,7 +80,7 @@
     color: #ffffff;
 }
 
-.fa-cog {
+.fa-plane {
     padding: 10px;
     font-size: 20px;
     color: #ffffff;

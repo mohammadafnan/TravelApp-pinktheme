@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { HistoryComponent } from './history/history.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     SidebarComponent,
     HeaderComponent,
     CheckoutComponent,
+    HistoryComponent,
   ],
   imports: [
     BrowserModule,

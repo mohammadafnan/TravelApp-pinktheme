@@ -8,7 +8,7 @@ export class GlobalVariablesService {
   isHidden1: boolean = false;
   isShowprofile: boolean = true;
   isShowbackbtn: boolean = true;
-  fightdata: any = [];
+  flightdata: any = [];
   cityCopy: any = [];
   currentRoute: string;
   showSideBar: boolean = false;

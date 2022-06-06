@@ -28,6 +28,13 @@ export class SidebarComponent implements OnInit {
     this.router.navigate(["/dashboard"]);
     this.global.showSideBar = false
   }
+
+  gototour(){
+    this.router.navigate(["/history"]);
+    this.global.showSideBar = false
+  }
+
+
   toggleSideBar() {
     this.global.showSideBar = !this.global.showSideBar
   }

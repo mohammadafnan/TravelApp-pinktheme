@@ -1,0 +1,17 @@
+<div>
+  <app-sidebar></app-sidebar>
+</div>
+<!-- <div *ngFor="let list of listdata; let i = index" style="margin-right: 5%; cursor: pointer" -->
+<div style="margin-top :100px;"></div>
+<div *ngFor="let flighthistory of this.flightdataCopy; let i = index" class="card wrap">
+  <span class="left">{{flighthistory.countryname}}</span>
+  <span class="center">{{flighthistory.cityname}}</span>
+  <span class="right">{{flighthistory.cityprice}}</span>
+</div>
+
+
+<!-- <div id="container" *ngFor="let flighthistory of this.flightdataCopy; let i = index ">
+  <div>{{flighthistory.countryname}}</div>
+  <div>{{flighthistory.cityname}}</div>
+  <div>{{flighthistory.cityprice}}</div>
+</div> -->

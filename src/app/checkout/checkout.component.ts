@@ -73,7 +73,7 @@ export class CheckoutComponent implements OnInit {
     this.global.isHidden1 = true;
     this.global.isShowprofile = false;
     this.global.currentRoute = this.router.routerState.snapshot.url;
-    this. setvalue()
+    this.setvalue();
     JSON.parse(localStorage.getItem("Selected country name")); //retrieve the key
     // console.log(
     //   "Selected country name" + JSON.parse(localStorage.getItem("Selected country name"))
@@ -89,11 +89,11 @@ export class CheckoutComponent implements OnInit {
   }
 
   onSubmit() {
-    this.global.fightdata.push(this.myform.value);
-    sessionStorage.setItem("fightdata", JSON.stringify(this.global.fightdata));
+    this.global.flightdata.push(this.myform.value);
+    localStorage.setItem("flightdata", JSON.stringify(this.global.flightdata));
     this.myform.reset();
     alert("Succecfully Booked");
-    console.log(this.global.fightdata);
+    console.log(this.global.flightdata);
     this.showloader = true;
     setTimeout(() => {
       this.router.navigate(["/dashboard"]);
@@ -110,10 +110,15 @@ export class CheckoutComponent implements OnInit {
   }
 
   setvalue() {
-    this.myform.get("countryname").setValue(JSON.parse(localStorage.getItem("Selected country name")));
-    this.myform.get("cityname").setValue(JSON.parse(localStorage.getItem("Selected city name")));
-    this.myform.get("cityprice").setValue(JSON.parse(localStorage.getItem("Selected city price")));
-
+    this.myform
+      .get("countryname")
+      .setValue(JSON.parse(localStorage.getItem("Selected country name")));
+    this.myform
+      .get("cityname")
+      .setValue(JSON.parse(localStorage.getItem("Selected city name")));
+    this.myform
+      .get("cityprice")
+      .setValue(JSON.parse(localStorage.getItem("Selected city price")));
   }
 
   age(age) {
