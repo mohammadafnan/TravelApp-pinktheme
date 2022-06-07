@@ -6,6 +6,7 @@ import { Injectable } from "@angular/core";
 export class GlobalVariablesService {
   isHidden: boolean = false;
   isHidden1: boolean = false;
+  ishistory:boolean = false;
   isShowprofile: boolean = true;
   isShowbackbtn: boolean = true;
   flightdata: any = [];

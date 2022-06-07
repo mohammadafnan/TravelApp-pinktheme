@@ -28,8 +28,10 @@ export class TourdetailComponent implements OnInit {
 
   currentid: any;
   ngOnInit() {
+    this.global.ishistory = false;
     this.global.isHidden = true;
     this.global.isShowprofile = false;
+    this.global.isHidden1=false;
     this.global.currentRoute = this.router.routerState.snapshot.url;
     // this.currentid = this.activatedRoute.snapshot.params["countryid"];
     // this.global.cityCopy = this.global.city;
@@ -43,6 +45,7 @@ export class TourdetailComponent implements OnInit {
   gotocheckout() {
     this.global.isHidden = false;
     this.global.isHidden1 = true;
+    this.global.ishistory = false;
     // this.showPrice();
     // this.pricountryname = this.countryname;
     // this.pricityname = this.cityName;
