@@ -1,6 +1,14 @@
 <div style="    margin-top: 90px;    overflow: hidden !important;" class="mymoveright">
   <app-sidebar></app-sidebar>
-
+  <div class="col-xs-12 col-12 col-md-4 form-group">
+    <input type="text"
+          class="form-control"
+          [minDate]="minDate"
+          [maxDate]="maxDate"
+          #dp="bsDatepicker"
+          bsDatepicker [(bsValue)]="myDateValue">
+          <button (click)="Save(myDateValue)">Save</button>
+  </div>
   <form [formGroup]="myform">
     <div class="container">
       <input type="text" formControlName="name" placeholder="User name" />
