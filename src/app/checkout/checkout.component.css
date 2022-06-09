@@ -190,3 +190,11 @@ select:focus {
     padding-bottom: 10px;
     border-radius: 10px;
 }
+
+input:disabled{
+    background-color: #f36f7c7d;
+    border: 1px solid #f36f7c7d;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+
+}

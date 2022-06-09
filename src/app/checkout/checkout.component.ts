@@ -14,6 +14,9 @@ export class CheckoutComponent implements OnInit {
   showloader: boolean = false;
   show: string = "bank1";
   indexno: number = -1;
+  myDateValue: Date;
+  minDate: Date;
+  maxDate: Date;
 
   CheckoutData: any = [
     {
@@ -49,6 +52,7 @@ export class CheckoutComponent implements OnInit {
   ];
   id: number;
   agerange: any = 0;
+
   constructor(
     public global: GlobalVariablesService,
     public router: Router,
@@ -66,10 +70,13 @@ export class CheckoutComponent implements OnInit {
       countryname: ["", Validators.required],
       cityname: ["", Validators.required],
       cityprice: ["", Validators.required],
+      date: ["", Validators.required],
     });
   }
 
   ngOnInit() {
+    this.myDateValue = new Date();
+console.log(this.myDateValue)
     this.global.isHidden1 = true;
     this.global.isShowprofile = false;
     this.global.currentRoute = this.router.routerState.snapshot.url;
@@ -86,6 +93,8 @@ export class CheckoutComponent implements OnInit {
     // console.log(
     //   "Selected city price" + JSON.parse(localStorage.getItem("Selected city price"))
     // );
+    // this.minDate=new Date(2017,1,1);
+    // this.maxDate=new Date(2022,11,1)
   }
 
   onSubmit() {

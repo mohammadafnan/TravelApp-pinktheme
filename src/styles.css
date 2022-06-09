@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-
+/* Add application styles & imports to this file! */
+/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
+@import '~ngx-bootstrap/datepicker/bs-datepicker.css';
 @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
 
 body {
@@ -76,4 +78,48 @@ body {
     100% {
         transform: rotate(360deg);
     }
+}
+
+/* datepicker color */
+.theme-green .bs-datepicker-head {
+    background-color: #f36f7c !important;
+}
+
+.bs-datepicker-container {
+    padding: 0px !important;
+}
+
+.theme-green .bs-datepicker-body table td span.selected,
+.theme-green .bs-datepicker-body table td.selected span,
+.theme-green .bs-datepicker-body table td span[class*="select-"]:after,
+.theme-green .bs-datepicker-body table td[class*="select-"] span:after {
+    background-color: #ff2c41 !important;
+}
+
+
+
+bs-datepicker-navigation-view {
+    position: relative !important;
+    left: 35px !important;
+    top: 11px !important;
+}
+
+
+.bs-datepicker-head {
+      /* border-radius: 20px; */
+      border-top-left-radius: 20px !important;
+      border-top-right-radius: 20px !important;
+}
+
+
+.bs-datepicker {
+    display: flex;
+    align-items: stretch;
+    flex-flow: row wrap;
+    background: #fff;
+    box-shadow: 0 0 10px 0 #aaa;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px !important;
+
 }
