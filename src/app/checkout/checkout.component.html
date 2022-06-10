@@ -1,104 +1,131 @@
 <div style="    margin-top: 90px;    overflow: hidden !important;" class="mymoveright">
   <app-sidebar></app-sidebar>
   <!-- <button (click)="Save(myDateValue)">Save</button> -->
+  <!-- <i [ngClass]="show == 'tourlist' ? 'fa fa-plane enab' : 'fa fa-plane dis'"></i> -->
 
 
 
-  <form [formGroup]="myform">
-
-    <div style="    position: relative;
-    top: 5px;
-    left: 50px;
-    font-weight: bold;
-    font-size: 20px;">
-      <label>Going to</label>
-    </div>
-    <div class="container">
-      <input type="text" formControlName="cityname" disabled />
-    </div>
+  <div>
 
 
-    <div style="    position: relative;
-    top: 15px;
-    left: 50px;
-    font-weight: bold;
-    font-size: 15px;">
-      <label>Select Date</label>
-    </div>
-    <div class="container">
-      <input placeholder="Select Date" type="text" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY' }"
-        formControlName="date">
-    </div>
-    <!-- [(bsValue)]="myDateValue" #dp="bsDatepicker" -->
 
+    <form [formGroup]="myform">
 
-    <div class="container">
-      <input type="text" formControlName="name" placeholder="User name" />
-    </div>
-    <div class="container">
-      <input type="tel" maxlength="11" formControlName="phoneno" placeholder="Phone" />
-    </div>
-    <div class="container">
-      <input type="email" formControlName="email" placeholder="Email" />
-    </div>
+      <div class="stpfix">
+        <div class="stepper">
+          <button [ngClass]="showstep == '1' ? 'step1' : 'step2'" (click)="step('1')">
+            1
+            <div class="lbl2" [ngClass]="showstep == '1' ? 'step2lbl' : 'step1lbl'">Flight Info</div>
 
+          </button>
+          <div class="line"></div>
+          <button [ngClass]="showstep == '2' ? 'step1' : 'step2'" (click)="step('2')">
+            2
+            <div class="lbl2" [ngClass]="showstep == '2' ? 'step2lbl' : 'step1lbl'"> Customer Info</div>
 
-    <div class="container">
-      <select formControlName="title">
-        <option value="">Select Title</option>
-        <option *ngFor="let t of this.global.title" [ngValue]="t">{{t}}</option>
-      </select>
-    </div>
-    <div style="    padding-top: 40px;"></div>
-    <div>
-      <div class="left">
-        <label>Select Age</label>
+          </button>
+
+        </div>
       </div>
-      <div class="right">
-        <label class="age"> {{agerange}}
-        </label>
-      </div>
-    </div>
-    <div class="container">
-      <input class="input" type="range" min="1" max="100" value="0" (input)="age($event)" formControlName="age">
-    </div>
 
-    <div style="    position: relative;
+
+
+
+
+      <div class="moveleft" *ngIf="showstep == '1'">
+        <div class="lbl">
+          <label>Going to</label>
+        </div>
+        <div class="container">
+          <input type="text" formControlName="cityname" disabled />
+        </div>
+
+
+        <div class="lbl">
+          <label>Select Date</label>
+        </div>
+        <div class="container">
+          <input placeholder="Select Date" type="text" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY' }"
+            formControlName="date">
+        </div>
+        <!-- [(bsValue)]="myDateValue" #dp="bsDatepicker" -->
+      </div>
+
+
+      <div class="moveright" *ngIf="showstep == '2'">
+
+
+        <div class="container">
+          <input type="text" formControlName="name" placeholder="User name" />
+        </div>
+        <div class="container">
+          <input type="tel" maxlength="11" formControlName="phoneno" placeholder="Phone" />
+        </div>
+        <div class="container">
+          <input type="email" formControlName="email" placeholder="Email" />
+        </div>
+
+
+        <div class="container">
+          <select formControlName="title">
+            <option value="">Select Title</option>
+            <option *ngFor="let t of this.global.title" [ngValue]="t">{{t}}</option>
+          </select>
+        </div>
+        <div style="    padding-top: 40px;"></div>
+        <div>
+          <div class="left">
+            <label>Select Age</label>
+          </div>
+          <div class="right">
+            <label class="age"> {{agerange}}
+            </label>
+          </div>
+        </div>
+        <div class="container">
+          <input class="input" type="range" min="1" max="100" value="0" (input)="age($event)" formControlName="age">
+        </div>
+
+        <div style="    position: relative;
     top: 45px;
     left: 50px;
     font-weight: bold;
     font-size: 20px;">
-      <label>Select Payment Type</label>
-    </div>
-    <div class="main mymoveright">
-      <div *ngFor="let list of CheckoutData; let i = index" style="margin-right: 5%; cursor: pointer"
-        (click)="gotobank(list,i)">
-        <div class="container1"></div>
-        <div class="hero-text">
+          <label>Select Payment Type</label>
         </div>
-        <img [ngClass]="indexno == i ? 'listimg' : 'listimgdis'" src="{{ list.image }}" class="img" alt="" />
+        <div class="main mymoveright">
+          <div *ngFor="let list of CheckoutData; let i = index" style="margin-right: 5%; cursor: pointer"
+            (click)="gotobank(list,i)">
+            <div class="container1"></div>
+            <div class="hero-text">
+            </div>
+            <img [ngClass]="indexno == i ? 'listimg' : 'listimgdis'" src="{{ list.image }}" class="img" alt="" />
+          </div>
+        </div>
+        <div class="container" style="    margin-top: 230px;">
+          <input type="number" maxlength="13" formControlName="cnic" placeholder="cnic" />
+        </div>
+        <div class="container">
+          <input type="number" maxlength="15" formControlName="acountno" placeholder="acountno" />
+        </div>
+        <div *ngIf="showloader" style="    display        : flex;
+        justify-content: center;">
+          <div class="loader"></div>
+        </div>
+
+
+        <div class="container">
+          <button [ngClass]="{
+             logindis: myform.valid == false,
+             login: myform.valid == true
+           }" [disabled]="!myform.valid" (click)="onSubmit(myform.value)">Booking Done</button>
+        </div>
       </div>
-    </div>
-    <div class="container" style="    margin-top: 230px;">
-      <input type="number" maxlength="13" formControlName="cnic" placeholder="cnic" />
-    </div>
-    <div class="container">
-      <input type="number" maxlength="15" formControlName="acountno" placeholder="acountno" />
-    </div>
 
 
-  </form>
-  <!-- <p>Form Value: {{ profileForm.value | json }}</p> -->
-  <div *ngIf="showloader" style="    display        : flex;
- justify-content: center;">
-    <div class="loader"></div>
+    </form>
+    <!-- <p>Form Value: {{ profileForm.value | json }}</p> -->
+
   </div>
 
-
-  <div class="container">
-    <button [ngClass]="{
-      logindis: myform.valid == false,
-      login: myform.valid == true
-    }" [disabled]="!myform.valid" (click)="onSubmit(myform.value)">Booking Done</button>
-  </div>
 </div>

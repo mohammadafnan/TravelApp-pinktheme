@@ -17,7 +17,7 @@ export class CheckoutComponent implements OnInit {
   myDateValue: Date;
   minDate: Date;
   maxDate: Date;
-
+showstep :string = '1'
   CheckoutData: any = [
     {
       id: 1,
@@ -132,6 +132,10 @@ console.log(this.myDateValue)
 
   age(age) {
     this.agerange = age.target.value;
+  }
+
+  step(stp){
+  this.showstep = stp
   }
 }
 

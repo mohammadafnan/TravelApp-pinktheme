@@ -7,6 +7,15 @@
 
 }
 
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 26px;
+    /* margin-left : 40px;*/
+
+}
+
 input:focus {
     outline: none;
     border: 4px solid #EEEEEE;
@@ -168,14 +177,14 @@ select:focus {
     accent-color: #ff2c41
 }
 
-.left{
+.left {
     float: left;
     position: relative;
     left: 45px;
     top: 24px;
 }
 
-.right{
+.right {
     float: right;
     position: relative;
     right: 34px;
@@ -191,10 +200,131 @@ select:focus {
     border-radius: 10px;
 }
 
-input:disabled{
+input:disabled {
     background-color: #f36f7c7d;
     border: 1px solid #f36f7c7d;
     color: rgb(0, 0, 0);
     font-size: 20px;
 
+}
+
+.stepper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 80px;
+    /* position: fixed;
+    z-index: 99; */
+}
+
+
+.step1 {
+    margin-right: 80px;
+    background-color: #f36f7c;
+    border: 0;
+    width: 50px;
+    height: 50px;
+    color: white;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.step2 {
+    margin-right: 80px;
+    background-color: #ffced3;
+    border: 0;
+    width: 50px;
+    height: 50px;
+    color: white;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+
+
+
+.line {
+    border-bottom: 2px solid black;
+    width: 50px;
+    position: relative;
+    bottom: 20px;
+    right: 35px;
+}
+
+@keyframes moveleft {
+    from {
+        right: 300px;
+    }
+
+    to {
+        right: 0px;
+    }
+}
+
+.moveright {
+    position: relative;
+    animation: moveright 0.5s;
+    padding-top: 120px !important;
+
+}
+
+@keyframes moveright {
+    from {
+        left: 300px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
+
+.moveleft {
+    position: relative;
+    animation: moveleft 0.5s;
+    padding-top: 120px !important;
+}
+
+
+.lbl {
+    position: relative;
+    top: 15px;
+    left: 50px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #a5a5a5;
+    letter-spacing: 1px;
+}
+
+.lbl1 {
+    padding-top: 32px;
+    color: black;
+    position: absolute;
+    font-weight: 700;
+    transform: translateX(-18px);
+}
+
+.lbl2 {
+    padding-top: 32px;
+    color: black;
+    position: absolute;
+    font-weight: 700;
+    transform: translateX(-42px);
+    white-space: nowrap;
+}
+
+.step1lbl {
+    color: #a5a5a5;
+}
+
+.step2lbl {
+    color: #000000;
+}
+
+.stpfix{
+    position: fixed;
+    z-index: 99;
+    background-color: #ffffff;
+    top: 75px;
+    padding-bottom: 40px !important;
 }
