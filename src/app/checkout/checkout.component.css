@@ -211,8 +211,8 @@ input:disabled {
 .stepper {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 0px;
     margin-left: 80px;
     /* position: fixed;
     z-index: 99; */
@@ -223,23 +223,24 @@ input:disabled {
     margin-right: 80px;
     background-color: #f36f7c;
     border: 0;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     color: white;
     border-radius: 50px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .step2 {
     margin-right: 80px;
     background-color: #ffced3;
     border: 0;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     color: white;
     border-radius: 50px;
-    font-size: 20px;
+    font-size: 16px;
 }
+
 
 
 
@@ -248,8 +249,8 @@ input:disabled {
     border-bottom: 2px solid black;
     width: 50px;
     position: relative;
-    bottom: 20px;
-    right: 35px;
+    bottom: 16px;
+    right: 38px;
 }
 
 @keyframes moveleft {
@@ -309,8 +310,9 @@ input:disabled {
     color: black;
     position: absolute;
     font-weight: 700;
-    transform: translateX(-42px);
+    transform: translateX(-32px);
     white-space: nowrap;
+    font-size: 16px;
 }
 
 .step1lbl {
@@ -321,10 +323,23 @@ input:disabled {
     color: #000000;
 }
 
-.stpfix{
-    position: fixed;
-    z-index: 99;
+.stpfix {
+    /* position: fixed;
+    z-index: 99; */
     background-color: #ffffff;
     top: 75px;
-    padding-bottom: 40px !important;
+    padding-bottom: 50px !important;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .stpfixmobi {
+        position: fixed;
+        z-index: 99;
+        background-color: #ffffff;
+        top: 75px;
+        padding-bottom: 50px !important;
+        width: 100%;
+
+    }
 }
