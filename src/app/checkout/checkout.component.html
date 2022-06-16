@@ -33,13 +33,25 @@
 
 
       <div class="moveleft" *ngIf="showstep == '1'">
-        <div class="lbl">
-          <label>Going to</label>
-        </div>
-        <div class="container">
-          <input type="text" formControlName="cityname" disabled />
-        </div>
+        <div>
 
+          <div class="lbl">
+            <label>Going to <i Class="fa fa-plane "></i>
+            </label>
+          </div>
+          <div class="container">
+            <input type="text" formControlName="cityname" disabled />
+          </div>
+
+
+          <!-- <div class="lbl">
+            <label>Going from</label>
+          </div>
+          <div class="container">
+            <input type="text" formControlName="cityname" disabled />
+          </div> -->
+
+        </div>
 
         <div class="lbl">
           <label>Select Date</label>
@@ -49,6 +61,9 @@
             formControlName="date">
         </div>
         <!-- [(bsValue)]="myDateValue" #dp="bsDatepicker" -->
+        <div class="container next">
+          <label (click)="step('2')"> Next ></label>
+        </div>
       </div>
 
 
@@ -113,12 +128,19 @@
           <div class="loader"></div>
         </div>
 
+        <div>
 
-        <div class="container">
-          <button [ngClass]="{
+          <div class="container back">
+            <label (click)="step('1')">
+              < Back</label>
+          </div>
+
+          <div class="container" style="    float: right;">
+            <button [ngClass]="{
              logindis: myform.valid == false,
              login: myform.valid == true
            }" [disabled]="!myform.valid" (click)="onSubmit(myform.value)">Booking Done</button>
+          </div>
         </div>
       </div>
 
