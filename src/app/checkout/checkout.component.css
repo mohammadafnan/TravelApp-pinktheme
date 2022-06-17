@@ -344,6 +344,14 @@ input:disabled {
     }
 }
 
+/* @media only screen and (max-width: 367) {
+    .fix {
+         position: relative;
+          bottom: 60px;
+
+    }
+} */
+
 .fa-plane {
     color: #f36f7c;
     font-size: 20px;
