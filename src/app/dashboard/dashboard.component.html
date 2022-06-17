@@ -19,20 +19,20 @@
     </h1>
   </div>
 
-  <form [formGroup]="mygroup">
+  <!-- <form> -->
     <div class="container">
       <div style="
       display: flex;
       position: relative;
       width: 75%;
     ">
-        <input type="text" placeholder="Search.." formControlName="search" />
-        <button type="submit" class="searchbtn">
-          <i class="fa fa-search" (click)=" filterData()"></i>
-        </button>
+        <input type="text" placeholder="Search.." [(ngModel)]="term" />
+        <!-- <button type="submit" class="searchbtn">
+          <i class="fa fa-search" ></i>
+        </button> -->
       </div>
     </div>
-  </form>
+  <!-- </form> -->
   <!-- <p> form value : {{mygroup.value | json}}</p> -->
   <!-- <div class="container">
     <div style="
@@ -81,7 +81,7 @@
   <div *ngIf="show == 'tourlist'">
     <!-- *ngIf="tourData | filter: search as listdata" -->
     <div class="main mymoveright">
-      <div *ngFor="let list of tourData; let i = index" style="margin-right: 5%; cursor: pointer"
+      <div *ngFor="let list of tourData | filter:term; let i = index" style="margin-right: 5%; cursor: pointer"
         (click)="gotodetail(list.countryId,i)">
         <div class="container1"></div>
         <div class="hero-text">
@@ -99,9 +99,9 @@
   <div>
     <!-- [ngClass]="{'my_class': step === 'step1', 'my_class2' : step === 'step2' }" -->
     <!-- [ngClass]="{ nodata: tourData.length == 0 }" -->
-    <div [ngClass]="{'nodata': tourData.length == 0 }">
+    <!-- <div [ngClass]="{'nodata': tourData.length == 0 }">
       <label *ngIf="tourData.length === 0 ">No Match Found</label>
-    </div>
+    </div> -->
   </div>
   <div *ngIf="show == 'hotellist'">
     <!-- *ngIf="hotelData | filter: search as listdata" -->

@@ -19,7 +19,8 @@ export class DashboardComponent implements OnInit {
     private router: Router,
     public global: GlobalVariablesService,
     private fb: FormBuilder
-  ) {
+  )
+   {
     this.mygroup = this.fb.group({
       search: ["", null],
     });
@@ -171,34 +172,28 @@ export class DashboardComponent implements OnInit {
     this.show = text;
   }
 
-  filterData() {
-    try {
-      let SearchText = this.mygroup.get("search").value;
-      if (SearchText !== " ") {
-        SearchText = SearchText.toLowerCase();
-        this.showloader = true;
+  // filterData() {
+  //   try {
+  //     let SearchText = this.mygroup.get("search").value;
+  //     if (SearchText !== " ") {
+  //       SearchText = SearchText.toLowerCase();
+  //       this.showloader = true;
 
-        this.tourData = this.tourdatacopy.filter(
-          (x) =>
-            x.country.toLowerCase().indexOf(SearchText) >= 0 ||
-            x.countryDisc.toLowerCase().indexOf(SearchText) >= 0
-        );
-      } else {
-        // this.tourData.length;
-        // this.tourData = this.tourdatacopy.filter(
-        //   (y) =>
-        //     y.country.toLowerCase().indexOf(SearchText) == 0 ||
-        //     y.countryDisc.toLowerCase().indexOf(SearchText) == 0
-        // );
-        // return "no data";
-      }
+  //       this.tourData = this.tourdatacopy.filter(
+  //         (x) =>
+  //           x.country.toLowerCase().indexOf(SearchText) >= 0 ||
+  //           x.countryDisc.toLowerCase().indexOf(SearchText) >= 0
+  //       );
+  //     } else {
+ 
+  //     }
 
-      this.mygroup.reset();
-      setTimeout(() => {
-        this.showloader = false;
-      }, 300);
-    } catch (x) {}
-  }
+  //     this.mygroup.reset();
+  //     setTimeout(() => {
+  //       this.showloader = false;
+  //     }, 300);
+  //   } catch (x) {}
+  // }
 
   tab(newid: number) {
     this.id = newid;
