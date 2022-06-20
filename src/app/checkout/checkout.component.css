@@ -344,13 +344,13 @@ input:disabled {
     }
 }
 
-/* @media only screen and (max-width: 367) {
+@media only screen and (max-width: 367) {
     .fix {
-         position: relative;
-          bottom: 60px;
+         position: relative !important;
+          bottom: 60px !important;
 
     }
-} */
+}
 
 .fa-plane {
     color: #f36f7c;

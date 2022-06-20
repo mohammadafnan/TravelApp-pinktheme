@@ -57,7 +57,7 @@
           <label>Select Date</label>
         </div>
         <div class="container">
-          <input placeholder="Select Date" type="text" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY' }"
+          <input [(ngModel)]="myDateValue" placeholder="Select Date" type="text" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY' }"
             formControlName="date">
         </div>
         <!-- [(bsValue)]="myDateValue" #dp="bsDatepicker" -->
@@ -117,7 +117,7 @@
             <img [ngClass]="indexno == i ? 'listimg' : 'listimgdis'" src="{{ list.image }}" class="img" alt="" />
           </div>
         </div>
-        <div class="container" style="    margin-top: 230px;">
+        <div class="container" style="    margin-top: 260px;">
           <input type="number" maxlength="13" formControlName="cnic" placeholder="cnic" />
         </div>
         <div class="container">
@@ -135,8 +135,7 @@
               < Back</label>
           </div>
 
-          <div class="container fix" style="    float: right;position: relative;
-        bottom: 60px;">
+          <div class="container fix" style="    float: right;">
             <button [ngClass]="{
              logindis: myform.valid == false,
              login: myform.valid == true

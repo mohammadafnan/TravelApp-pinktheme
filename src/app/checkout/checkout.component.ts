@@ -17,7 +17,7 @@ export class CheckoutComponent implements OnInit {
   myDateValue: Date;
   minDate: Date;
   maxDate: Date;
-showstep :string = '1'
+  showstep: string = "1";
   CheckoutData: any = [
     {
       id: 1,
@@ -76,11 +76,14 @@ showstep :string = '1'
 
   ngOnInit() {
     this.myDateValue = new Date();
-console.log(this.myDateValue)
+    console.log(this.myDateValue);
     this.global.isHidden1 = true;
     this.global.isShowprofile = false;
     this.global.currentRoute = this.router.routerState.snapshot.url;
     this.setvalue();
+    //     this.myform.patchValue({
+    //       targetDate:new Date('project.targetDate')
+    // });
     JSON.parse(localStorage.getItem("Selected country name")); //retrieve the key
     // console.log(
     //   "Selected country name" + JSON.parse(localStorage.getItem("Selected country name"))
@@ -134,8 +137,8 @@ console.log(this.myDateValue)
     this.agerange = age.target.value;
   }
 
-  step(stp){
-  this.showstep = stp
+  step(stp) {
+    this.showstep = stp;
   }
 }
 
