@@ -130,6 +130,8 @@ export class DashboardComponent implements OnInit {
     },
   ];
 
+
+  
   ngOnInit() {
     this.global.isShowprofile = true;
     this.global.isShowbackbtn = false;

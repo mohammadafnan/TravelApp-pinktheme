@@ -6,6 +6,15 @@
     margin-left: 40px;
 
 }
+.containerfromlocation{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; */
+    margin-top: 30px; 
+    margin-left: 40px;  
+    margin-right: 40px; 
+}
 
 .container1 {
     display: flex;
@@ -33,6 +42,8 @@ input {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 15px -7px;
     margin-right: 30px !important;
 }
+
+
 
 select {
     outline: none;
@@ -357,6 +368,11 @@ input:disabled {
     font-size: 20px;
     transform: rotate(90deg);
 }
+.fa-jhaaz {
+    color: #f36f7c;
+    font-size: 20px;
+    transform: rotate(12deg);
+}
 
 .next {
     float: right;
@@ -376,3 +392,38 @@ input:disabled {
     position: relative;
     top: 30px;
 }
+
+/* .autocomplete-container .input-container input {
+    outline: none;
+    border: 3px solid #EEEEEE;
+    color: #000000;
+    background-color: #EEEEEE;
+    padding: 24px;
+    border-radius: 20px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 15px -7px;
+    margin-right: 30px ;
+} */
+
+/* .ng-autocomplete {
+    width:100%;
+    max-width: 600px;
+    display: table;
+    margin: 0 auto;
+    
+  } */
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    line-height: 45px;
+    height: 45px;
+    padding: 0 16px;
+    text-align: left;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  span {
+    margin-left: 5px;
+  }

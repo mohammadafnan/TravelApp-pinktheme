@@ -6,7 +6,7 @@ import { Injectable } from "@angular/core";
 export class GlobalVariablesService {
   isHidden: boolean = false;
   isHidden1: boolean = false;
-  ishistory:boolean = false;
+  ishistory: boolean = false;
   isShowprofile: boolean = true;
   isShowbackbtn: boolean = true;
   flightdata: any = [];
@@ -14,7 +14,40 @@ export class GlobalVariablesService {
   currentRoute: string;
   showSideBar: boolean = false;
   public newcountryid: number;
-
+  states = [
+    {
+      name: "Karachi,Pakistan (KHI)",
+      flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
+    },
+    {
+      name: "Islamabad,Pakistan (ISB)",
+      flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
+    },
+    {
+      name: "Lahore,Pakistan (LHE)",
+      flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
+    },
+    {
+      name: "Peshawar,Pakistan (PEW)",
+      flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
+    },
+    {
+      name: "Dubai,United Arab Emirates (DXB)",
+      flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
+    },
+    {
+      name: "Instabul,Turkey(IST)",
+      flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
+    },
+    {
+      name: "London,United Kingdom (LHR)",
+      flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
+    },
+    {
+      name: "New York,United State (JFK)",
+      flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
+    },
+  ];
   title: string[] = ["Mr", "Mrs", "Ms"];
   city = [
     {

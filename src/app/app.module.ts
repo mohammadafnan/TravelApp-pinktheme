@@ -16,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { HistoryComponent } from './history/history.component';
 import { BsDatepickerModule, DatepickerModule } from 'ngx-bootstrap/datepicker';
+import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { BsDatepickerModule, DatepickerModule } from 'ngx-bootstrap/datepicker';
     ReactiveFormsModule,
     FormsModule,
     Ng2SearchPipeModule,
+    AutocompleteLibModule,
     BsDatepickerModule.forRoot(),
     DatepickerModule.forRoot() ,
     

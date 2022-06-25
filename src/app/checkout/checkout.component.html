@@ -36,29 +36,47 @@
         <div>
 
           <div class="lbl">
-            <label>Going to <i Class="fa fa-plane "></i>
+            <label>Flying to <i Class="fa fa-plane "></i>
             </label>
           </div>
           <div class="container">
             <input type="text" formControlName="cityname" disabled />
           </div>
 
-
-          <!-- <div class="lbl">
-            <label>Going from</label>
+          <!-- <i Class="fa fa-plane"></i> -->
+          <div class="lbl">
+              <label>Flying from
+              </label>
+          
           </div>
-          <div class="container">
-            <input type="text" formControlName="cityname" disabled />
-          </div> -->
+          <div class="containerfromlocation">
+            <ng-autocomplete formControlName="fromlocation" [data]="global.states" [searchKeyword]="keyword"
+              placeholder="Search City" historyIdentifier="states" [historyHeading]="no" [itemTemplate]="itemTemplate"
+              [notFoundTemplate]="notFoundTemplate">
+            </ng-autocomplete>
+
+            <ng-template #itemTemplate let-item>
+              <div class="item">
+                <img src="{{ item.flag }}" height="25" />
+                <span [innerHTML]="item.name"></span>
+                <!-- &nbsp; | &nbsp; -->
+                <!-- <small>Population: {{ item.population }}</small> -->
+              </div>
+            </ng-template>
+
+            <ng-template #notFoundTemplate let-notFound>
+              <div [innerHTML]="notFound"></div>
+            </ng-template>
+          </div>
 
         </div>
 
         <div class="lbl">
-          <label>Select Date</label>
+          <label>Flying Date</label>
         </div>
         <div class="container">
-          <input [(ngModel)]="myDateValue" placeholder="Select Date" type="text" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY' }"
-            formControlName="date">
+          <input [(ngModel)]="myDateValue" placeholder="Select Date" type="text" bsDatepicker
+            [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY' }" formControlName="date">
         </div>
         <!-- [(bsValue)]="myDateValue" #dp="bsDatepicker" -->
         <div class="container next">
@@ -118,10 +136,10 @@
           </div>
         </div>
         <div class="container" style="    margin-top: 260px;">
-          <input type="number" maxlength="13" formControlName="cnic" placeholder="cnic" />
+          <input type="number" formControlName="cnic" placeholder="cnic" />
         </div>
         <div class="container">
-          <input type="number" maxlength="15" formControlName="acountno" placeholder="acountno" />
+          <input type="number" formControlName="acountno" placeholder="acountno" />
         </div>
         <div *ngIf="showloader" style="    display        : flex;
         justify-content: center;">

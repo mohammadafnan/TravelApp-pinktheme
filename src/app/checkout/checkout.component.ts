@@ -52,7 +52,9 @@ export class CheckoutComponent implements OnInit {
   ];
   id: number;
   agerange: any = 0;
+  keyword = "name";
 
+ 
   constructor(
     public global: GlobalVariablesService,
     public router: Router,
@@ -71,19 +73,21 @@ export class CheckoutComponent implements OnInit {
       cityname: ["", Validators.required],
       cityprice: ["", Validators.required],
       date: ["", Validators.required],
+      fromlocation:["", Validators.required],
     });
   }
 
   ngOnInit() {
     this.myDateValue = new Date();
+    this.myform.patchValue({
+      date: new Date("project.date"),
+    });
     console.log(this.myDateValue);
     this.global.isHidden1 = true;
     this.global.isShowprofile = false;
     this.global.currentRoute = this.router.routerState.snapshot.url;
     this.setvalue();
-    //     this.myform.patchValue({
-    //       targetDate:new Date('project.targetDate')
-    // });
+
     JSON.parse(localStorage.getItem("Selected country name")); //retrieve the key
     // console.log(
     //   "Selected country name" + JSON.parse(localStorage.getItem("Selected country name"))
