@@ -1,107 +1,108 @@
 .container {
-    display: flex;
+    display        : flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    margin-left: 40px;
+    align-items    : center;
+    margin-top     : 30px;
+    margin-left    : 40px;
 
 }
-.containerfromlocation{
+
+.containerfromlocation {
     /* display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px; */
-    margin-top: 30px; 
-    margin-left: 40px;  
-    margin-right: 40px; 
+    margin-top  : 30px;
+    margin-left : 40px;
+    margin-right: 40px;
 }
 
 .container1 {
-    display: flex;
+    display        : flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 26px;
+    align-items    : center;
+    margin-top     : 26px;
     /* margin-left : 40px;*/
 
 }
 
 input:focus {
     outline: none;
-    border: 4px solid #EEEEEE;
-    color: #000000;
+    border : 4px solid #EEEEEE;
+    color  : #000000;
 }
 
 input {
-    outline: none;
-    border: 3px solid #EEEEEE;
-    color: #000000;
+    outline         : none;
+    border          : 3px solid #EEEEEE;
+    color           : #000000;
     background-color: #EEEEEE;
-    padding: 24px;
-    border-radius: 20px;
-    width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 15px -7px;
-    margin-right: 30px !important;
+    padding         : 24px;
+    border-radius   : 20px;
+    width           : 100%;
+    box-shadow      : rgba(0, 0, 0, 0.2) 0px 10px 15px -7px;
+    margin-right    : 30px !important;
 }
 
 
 
 select {
-    outline: none;
-    border: 3px solid #EEEEEE;
-    color: #000000;
+    outline         : none;
+    border          : 3px solid #EEEEEE;
+    color           : #000000;
     background-color: #EEEEEE;
-    padding: 24px;
-    border-radius: 20px;
-    width: 100%;
-    box-shadow: rgb(0 0 0 / 20%) 0px 10px 15px -7px;
-    margin-right: 30px !important;
+    padding         : 24px;
+    border-radius   : 20px;
+    width           : 100%;
+    box-shadow      : rgb(0 0 0 / 20%) 0px 10px 15px -7px;
+    margin-right    : 30px !important;
 }
 
 select:focus {
     outline: none;
-    border: 4px solid #EEEEEE;
-    color: #000000;
+    border : 4px solid #EEEEEE;
+    color  : #000000;
 }
 
 .login {
-    width: 100%;
-    margin-right: 30px !important;
-    padding: 24px;
-    border: 1px solid #F36F7C;
+    width           : 100%;
+    margin-right    : 30px !important;
+    padding         : 24px;
+    border          : 1px solid #F36F7C;
     background-color: #F36F7C;
-    color: white;
-    border-radius: 20px;
-    margin-top: 15px;
-    margin-bottom: 10%;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 1s !important;
+    color           : white;
+    border-radius   : 20px;
+    margin-top      : 15px;
+    margin-bottom   : 10%;
+    font-size       : 20px;
+    cursor          : pointer;
+    transition      : 1s !important;
 }
 
 .logindis {
-    width: 100%;
-    margin-right: 30px !important;
-    padding: 24px;
-    border: 1px solid #f36f7c86;
+    width           : 100%;
+    margin-right    : 30px !important;
+    padding         : 24px;
+    border          : 1px solid #f36f7c86;
     background-color: #f36f7c86;
-    color: white;
-    border-radius: 20px;
-    margin-top: 15px;
-    margin-bottom: 10%;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 1s !important;
+    color           : white;
+    border-radius   : 20px;
+    margin-top      : 15px;
+    margin-bottom   : 10%;
+    font-size       : 20px;
+    cursor          : pointer;
+    transition      : 1s !important;
 }
 
 .listimg {
-    border: 3px solid rgb(255, 0, 43);
+    border    : 3px solid rgb(255, 0, 43);
     box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
     transition: 1s !important;
 
 }
 
 .listimgdis {
-    border: 3px solid rgb(255, 255, 255);
+    border    : 3px solid rgb(255, 255, 255);
     transition: 1s !important;
 
 }
@@ -109,12 +110,12 @@ select:focus {
 /* card image */
 
 .hero-text {
-    text-align: left;
-    position: absolute;
-    padding-top: 120px;
-    padding-left: 2%;
-    color: rgb(255, 255, 255);
-    bottom: 25px;
+    text-align           : left;
+    position             : absolute;
+    padding-top          : 120px;
+    padding-left         : 2%;
+    color                : rgb(255, 255, 255);
+    bottom               : 25px;
     /* -webkit-box-shadow: -1px -112px 113px -9px rgb(2 7 28) inset;
     transform            : translate(42px, 2px);
     border-radius        : 20px;
@@ -123,12 +124,12 @@ select:focus {
 
 
 .scroll {
-    position: relative;
+    position                : relative;
     /* overflow-x           : hidden !important; */
     /* overflow-y           : hidden !important; */
-    width: 100%;
-    height: 100vh;
-    overflow-x: hidden !important;
+    width                   : 100%;
+    height                  : 100vh;
+    overflow-x              : hidden !important;
     /* box-shadow           : -1px -162px 113px -9px rgba(2, 7, 28, 1) inset;
     -webkit-box-shadow      : -1px -162px 113px -9px rgba(2, 7, 28, 1) inset;
     -moz-box-shadow         : -1px -162px 113px -9px rgba(2, 7, 28, 1) inset; */
@@ -146,110 +147,110 @@ select:focus {
 
 
 .img {
-    width: 100px;
-    height: 100px;
+    width        : 100px;
+    height       : 100px;
     border-radius: 20px !important;
-    margin-left: 3%;
+    margin-left  : 3%;
     margin-bottom: 10%;
 
     /* object-fit: cover; */
 }
 
 .fa-map-marker {
-    padding: 15px;
+    padding  : 15px;
     font-size: 20px;
-    color: #F36F7C;
-    display: inline;
+    color    : #F36F7C;
+    display  : inline;
 }
 
 .main {
-    display: flex;
-    position: absolute;
-    overflow-x: scroll;
-    width: 100%;
-    overflow-y: hidden !important;
-    margin-top: 70px !important;
+    display       : flex;
+    position      : absolute;
+    overflow-x    : scroll;
+    width         : 100%;
+    overflow-y    : hidden !important;
+    margin-top    : 70px !important;
     /* margin-left: 30px; */
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 15px -7px !important;
+    box-shadow    : rgba(0, 0, 0, 0.2) 0px 10px 15px -7px !important;
 
 }
 
 
 .input {
-    outline: none;
-    border: 3px solid #EEEEEE;
-    color: #000000;
+    outline         : none;
+    border          : 3px solid #EEEEEE;
+    color           : #000000;
     background-color: #EEEEEE;
-    padding: 24px;
-    border-radius: 20px;
-    width: 100%;
-    box-shadow: rgb(0 0 0 / 20%) 0px 0px 0px -0px !important;
-    margin-right: 30px !important;
-    accent-color: #ff2c41
+    padding         : 24px;
+    border-radius   : 20px;
+    width           : 100%;
+    box-shadow      : rgb(0 0 0 / 20%) 0px 0px 0px -0px !important;
+    margin-right    : 30px !important;
+    accent-color    : #ff2c41
 }
 
 .left {
-    float: left;
+    float   : left;
     position: relative;
-    left: 45px;
-    top: 24px;
+    left    : 45px;
+    top     : 24px;
 }
 
 .right {
-    float: right;
+    float   : right;
     position: relative;
-    right: 34px;
-    top: 24px;
+    right   : 34px;
+    top     : 24px;
 }
 
 .age {
     background-color: pink;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 10px;
+    padding-left    : 10px;
+    padding-right   : 10px;
+    padding-top     : 10px;
+    padding-bottom  : 10px;
+    border-radius   : 10px;
 }
 
 input:disabled {
     background-color: #f36f7c4d !important;
-    border: 1px solid #f36f7c4d !important;
-    color: rgb(0, 0, 0);
-    font-size: 20px;
+    border          : 1px solid #f36f7c4d !important;
+    color           : rgb(0, 0, 0);
+    font-size       : 20px;
 
 }
 
 .stepper {
-    display: flex;
+    display        : flex;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    margin-left: 80px;
-    /* position: fixed;
-    z-index: 99; */
+    margin-top     : 20px;
+    margin-bottom  : 0px;
+    margin-left    : 80px;
+    /* position    : fixed;
+    z-index        : 99; */
 }
 
 
 .step1 {
-    margin-right: 80px;
+    margin-right    : 80px;
     background-color: #f36f7c;
-    border: 0;
-    width: 30px;
-    height: 30px;
-    color: white;
-    border-radius: 50px;
-    font-size: 16px;
+    border          : 0;
+    width           : 30px;
+    height          : 30px;
+    color           : white;
+    border-radius   : 50px;
+    font-size       : 16px;
 }
 
 .step2 {
-    margin-right: 80px;
+    margin-right    : 80px;
     background-color: #ffced3;
-    border: 0;
-    width: 30px;
-    height: 30px;
-    color: white;
-    border-radius: 50px;
-    font-size: 16px;
+    border          : 0;
+    width           : 30px;
+    height          : 30px;
+    color           : white;
+    border-radius   : 50px;
+    font-size       : 16px;
 }
 
 
@@ -258,10 +259,10 @@ input:disabled {
 
 .line {
     border-bottom: 2px solid black;
-    width: 50px;
-    position: relative;
-    bottom: 16px;
-    right: 38px;
+    width        : 50px;
+    position     : relative;
+    bottom       : 16px;
+    right        : 38px;
 }
 
 @keyframes moveleft {
@@ -275,9 +276,9 @@ input:disabled {
 }
 
 .moveright {
-    position: relative;
-    animation: moveright 0.5s;
-    padding-top: 120px !important;
+    position   : relative;
+    animation  : moveright 0.5s;
+    padding-top: 50px !important;
 
 }
 
@@ -292,38 +293,38 @@ input:disabled {
 }
 
 .moveleft {
-    position: relative;
-    animation: moveleft 0.5s;
-    padding-top: 120px !important;
+    position   : relative;
+    animation  : moveleft 0.5s;
+    padding-top: 70px !important;
 }
 
 
 .lbl {
-    position: relative;
-    top: 15px;
-    left: 50px;
-    font-weight: bold;
-    font-size: 15px;
-    color: #a5a5a5;
+    position      : relative;
+    top           : 15px;
+    left          : 50px;
+    font-weight   : bold;
+    font-size     : 15px;
+    color         : #a5a5a5;
     letter-spacing: 1px;
 }
 
 .lbl1 {
     padding-top: 32px;
-    color: black;
-    position: absolute;
+    color      : black;
+    position   : absolute;
     font-weight: 700;
-    transform: translateX(-18px);
+    transform  : translateX(-18px);
 }
 
 .lbl2 {
     padding-top: 32px;
-    color: black;
-    position: absolute;
+    color      : black;
+    position   : absolute;
     font-weight: 700;
-    transform: translateX(-32px);
+    transform  : translateX(-32px);
     white-space: nowrap;
-    font-size: 16px;
+    font-size  : 16px;
 }
 
 .step1lbl {
@@ -338,59 +339,60 @@ input:disabled {
     /* position: fixed;
     z-index: 99; */
     background-color: #ffffff;
-    top: 75px;
-    padding-bottom: 50px !important;
+    top             : 75px;
+    padding-bottom  : 50px !important;
 }
 
 
 @media only screen and (max-width: 500px) {
     .stpfixmobi {
-        position: fixed;
-        z-index: 99;
+        position        : fixed;
+        z-index         : 99;
         background-color: #ffffff;
-        top: 75px;
-        padding-bottom: 50px !important;
-        width: 100%;
+        top             : 47px;
+        padding-bottom  : 50px !important;
+        width           : 100%;
 
     }
 }
 
 @media only screen and (max-width: 367) {
     .fix {
-         position: relative !important;
-          bottom: 60px !important;
+        position: relative !important;
+        bottom  : 60px !important;
 
     }
 }
 
 .fa-plane {
-    color: #f36f7c;
+    color    : #f36f7c;
     font-size: 20px;
     transform: rotate(90deg);
 }
+
 .fa-jhaaz {
-    color: #f36f7c;
+    color    : #f36f7c;
     font-size: 20px;
     transform: rotate(12deg);
 }
 
 .next {
-    float: right;
+    float       : right;
     margin-right: 35px;
-    font-size: 16px;
-    color: #ff002d;
-    font-weight: bold;
-    margin-top: 50px;
+    font-size   : 16px;
+    color       : #ff002d;
+    font-weight : bold;
+    margin-top  : 50px;
 }
 
-.back{
-    float: left;
+.back {
+    float       : left;
     margin-right: 35px;
-    font-size: 16px;
-    color: #ff002d;
-    font-weight: bold;
-    position: relative;
-    top: 30px;
+    font-size   : 16px;
+    color       : #ff002d;
+    font-weight : bold;
+    position    : relative;
+    top         : 30px;
 }
 
 /* .autocomplete-container .input-container input {
@@ -412,18 +414,19 @@ input:disabled {
     margin: 0 auto;
     
   } */
-  .item {
-    display: flex;
+.item {
+    display       : flex;
     flex-direction: row;
-    align-items: center;
-    white-space: nowrap;
-    line-height: 45px;
-    height: 45px;
-    padding: 0 16px;
-    text-align: left;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-  span {
+    align-items   : center;
+    white-space   : nowrap;
+    line-height   : 45px;
+    height        : 45px;
+    padding       : 0 16px;
+    text-align    : left;
+    max-width     : 100%;
+    box-sizing    : border-box;
+}
+
+span {
     margin-left: 5px;
-  }
+}
