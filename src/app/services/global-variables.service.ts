@@ -16,35 +16,43 @@ export class GlobalVariablesService {
   public newcountryid: number;
   states = [
     {
-      name: "Karachi,Pakistan (KHI)",
+      fromcity: "Karachi,(KHI)",
+      fromcountry: "Pakistan ",
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
     {
-      name: "Islamabad,Pakistan (ISB)",
+      fromcity: "Islamabad,(ISB)",
+      fromcountry: "Pakistan ",
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
     {
-      name: "Lahore,Pakistan (LHE)",
+      fromcity: "Lahore,(LHE)",
+      fromcountry: "Pakistan ",
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
     {
-      name: "Peshawar,Pakistan (PEW)",
+      fromcity: "Peshawar,(PEW)",
+      fromcountry: "Pakistan ",
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
     {
-      name: "Dubai,United Arab Emirates (DXB)",
+      fromcity: "Dubai,(DXB)",
+      fromcountry: "United Arab Emirates",
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
     {
-      name: "Instabul,Turkey(IST)",
+      fromcity: "Instabul,(IST)",
+      fromcountry: "Turkey",
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
     {
-      name: "London,United Kingdom (LHR)",
+      fromcity: "London,(LHR)",
+      fromcountry: "United Kingdom",
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
     {
-      name: "New York,United State (JFK)",
+      fromcity: "New York,(JFK)",
+      fromcountry: "United State",
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
   ];
@@ -139,7 +147,7 @@ export class GlobalVariablesService {
     },
   ];
 
-  constructor() {}
+  constructor() { }
 
   GetAll() {
     return;

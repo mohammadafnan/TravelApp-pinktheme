@@ -52,9 +52,9 @@ export class CheckoutComponent implements OnInit {
   ];
   id: number;
   agerange: any = 0;
-  keyword = "name";
+  keyword = "fromcity";
 
- 
+
   constructor(
     public global: GlobalVariablesService,
     public router: Router,
@@ -73,7 +73,7 @@ export class CheckoutComponent implements OnInit {
       cityname: ["", Validators.required],
       cityprice: ["", Validators.required],
       date: ["", Validators.required],
-      fromlocation:["", Validators.required],
+      fromlocation: ["", Validators.required],
     });
   }
 
