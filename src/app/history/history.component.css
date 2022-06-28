@@ -18,8 +18,9 @@
 }
 
 .left {
-    float        : left;
-    /* background:grey */
+    float            : left;
+    display          : grid
+        /* background:grey */
 }
 
 .right {
@@ -28,14 +29,18 @@
     padding-right: 12px;
     font-weight  : 900;
     font-size    : 18px;
+    position     : relative;
+    bottom       : 25px;
+
     /* background:red */
 }
 
 .center {
-    text-align   : left;
+    /* text-align   : left; */
     /* background:green; */
-    margin       : 0 auto !important;
-    display      : inline-block
+    margin              : 0 auto !important;
+    display             : grid
+        /* display      : inline-block */
 }
 
 
@@ -62,6 +67,8 @@
     color    : #ff002d !important;
     transform: rotate(45deg);
     font-size: 18px;
+    position : absolute;
+    left     : 170px;
 }
 
 .fromcity {
