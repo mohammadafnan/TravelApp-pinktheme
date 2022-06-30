@@ -20,18 +20,50 @@
   </div>
 
   <!-- <form> -->
-    <div class="container">
+
+
+
+  <div class="containerfromlocation ">
+    <ng-autocomplete [data]="global.MainSearch" [searchKeyword]="keyword" placeholder="Search City"
+      historyIdentifier="states" [historyHeading]="no" [itemTemplate]="itemTemplate" #hh
+      [notFoundTemplate]="notFoundTemplate">
+    </ng-autocomplete>
+    <input type="text" placeholder="Search.." [(ngModel)]="term" style="display: none;" id="hh" />
+
+    <ng-template #itemTemplate let-item>
+      <div class="item">
+        <img src="{{ item.flag }}" height="25" />
+        <span [innerHTML]="item.fromcity"></span>
+        <!-- &nbsp; | &nbsp; -->
+        <!-- <small>Population: {{ item.population }}</small> -->
+      </div>
+    </ng-template>
+
+    <ng-template #notFoundTemplate let-notFound>
+      <div [innerHTML]="notFound"></div>
+    </ng-template>
+  </div>
+
+
+
+
+  <!-- <div class="container">
       <div style="
       display: flex;
       position: relative;
       width: 75%;
     ">
         <input type="text" placeholder="Search.." [(ngModel)]="term" />
-        <!-- <button type="submit" class="searchbtn">
+     
+      </div>
+    </div> -->
+
+
+
+
+  <!-- <button type="submit" class="searchbtn">
           <i class="fa fa-search" ></i>
         </button> -->
-      </div>
-    </div>
   <!-- </form> -->
   <!-- <p> form value : {{mygroup.value | json}}</p> -->
   <!-- <div class="container">

@@ -399,7 +399,7 @@ input:disabled {
 
 
 
-.item {
+/* .item {
     display       : flex;
     flex-direction: row;
     align-items   : center;
@@ -414,7 +414,7 @@ input:disabled {
 
 span {
     margin-left: 5px;
-}
+} */
 
 
 .fa-plane {

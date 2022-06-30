@@ -56,6 +56,56 @@ export class GlobalVariablesService {
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
   ];
+
+
+  MainSearch = [
+    {
+      fromcity: "Azerbaijab,(GYD)",
+      fromcountry: "Pakistan ",
+      flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
+    },
+    {
+      fromcity: "Turkey,(TYR)",
+      fromcountry: "Pakistan ",
+      flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
+    },
+    {
+      fromcity: "Maldive,(MAL)",
+      fromcountry: "Pakistan ",
+      flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
+    },
+    {
+      fromcity: "Germay,(GER)",
+      fromcountry: "Pakistan ",
+      flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
+    },
+    {
+      fromcity: "Greece,(GRE)",
+      fromcountry: "Pakistan ",
+      flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
+    },
+    // {
+    //   fromcity: "Dubai,(DXB)",
+    //   fromcountry: "United Arab Emirates",
+    //   flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
+    // },
+    // {
+    //   fromcity: "Instabul,(IST)",
+    //   fromcountry: "Turkey",
+    //   flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
+    // },
+    // {
+    //   fromcity: "London,(LHR)",
+    //   fromcountry: "United Kingdom",
+    //   flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
+    // },
+    // {
+    //   fromcity: "New York,(JFK)",
+    //   fromcountry: "United State",
+    //   flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
+    // },
+  ];
+
   title: string[] = ["Mr", "Mrs", "Ms"];
   city = [
     {

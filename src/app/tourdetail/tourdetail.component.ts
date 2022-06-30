@@ -28,6 +28,7 @@ export class TourdetailComponent implements OnInit {
 
   currentid: any;
   ngOnInit() {
+    
     this.global.ishistory = false;
     this.global.isHidden = true;
     this.global.isShowprofile = false;

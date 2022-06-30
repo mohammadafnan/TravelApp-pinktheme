@@ -15,12 +15,12 @@ export class DashboardComponent implements OnInit {
   hoteldatacopy: any[];
   busdatacopy: any[];
   public mygroup: FormGroup;
+  keyword = "fromcity";
   constructor(
     private router: Router,
     public global: GlobalVariablesService,
     private fb: FormBuilder
-  )
-   {
+  ) {
     this.mygroup = this.fb.group({
       search: ["", null],
     });
@@ -131,7 +131,7 @@ export class DashboardComponent implements OnInit {
   ];
 
 
-  
+
   ngOnInit() {
     this.global.isShowprofile = true;
     this.global.isShowbackbtn = false;
@@ -187,7 +187,7 @@ export class DashboardComponent implements OnInit {
   //           x.countryDisc.toLowerCase().indexOf(SearchText) >= 0
   //       );
   //     } else {
- 
+
   //     }
 
   //     this.mygroup.reset();
