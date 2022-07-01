@@ -29,7 +29,7 @@ export class DashboardComponent implements OnInit {
   newcountryid: number;
   // term: any
   search: any;
-  searchInput:any=""
+  searchInput: any = ""
   showloader: boolean = false;
   show: String = "tourlist";
   id: number;
@@ -177,9 +177,13 @@ export class DashboardComponent implements OnInit {
 
   onChangeSearch(val: string) {
     console.log(val)
-    this.searchInput = val ;
+    this.searchInput = val;
   }
 
+  selectEvent(item) {
+    console.log(item.fromcity)
+    this.searchInput = item.fromcity;
+  }
   // filterData() {
   //   try {
   //     let SearchText = this.mygroup.get("search").value;

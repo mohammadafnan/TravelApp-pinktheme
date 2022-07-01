@@ -60,27 +60,27 @@ export class GlobalVariablesService {
 
   MainSearch = [
     {
-      fromcity: "Azerbaijab,(GYD)",
+      fromcity: "Azerbaijan",
       fromcountry: "Pakistan ",
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
     {
-      fromcity: "Turkey,(TYR)",
+      fromcity: "Turkey",
       fromcountry: "Pakistan ",
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
     {
-      fromcity: "Maldive,(MAL)",
+      fromcity: "Maldive",
       fromcountry: "Pakistan ",
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
     {
-      fromcity: "Germay,(GER)",
+      fromcity: "Germany",
       fromcountry: "Pakistan ",
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
     {
-      fromcity: "Greece,(GRE)",
+      fromcity: "Greece",
       fromcountry: "Pakistan ",
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
