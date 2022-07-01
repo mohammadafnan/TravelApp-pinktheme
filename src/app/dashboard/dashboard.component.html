@@ -24,18 +24,15 @@
 
 
   <div class="containerfromlocation ">
-    <ng-autocomplete [data]="global.MainSearch" [searchKeyword]="keyword" placeholder="Search City"
-      historyIdentifier="states" [historyHeading]="no" [itemTemplate]="itemTemplate" #hh
-      [notFoundTemplate]="notFoundTemplate">
+    <ng-autocomplete [data]="global.MainSearch" [searchKeyword]="keyword" placeholder="Search Country"
+      [historyHeading]="no" [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate"
+      (inputChanged)='onChangeSearch($event)'>
     </ng-autocomplete>
-    <input type="text" placeholder="Search.." [(ngModel)]="term" style="display: none;" id="hh" />
 
     <ng-template #itemTemplate let-item>
       <div class="item">
         <img src="{{ item.flag }}" height="25" />
         <span [innerHTML]="item.fromcity"></span>
-        <!-- &nbsp; | &nbsp; -->
-        <!-- <small>Population: {{ item.population }}</small> -->
       </div>
     </ng-template>
 
@@ -48,15 +45,15 @@
 
 
   <!-- <div class="container">
-      <div style="
+    <div style="
       display: flex;
       position: relative;
       width: 75%;
     ">
-        <input type="text" placeholder="Search.." [(ngModel)]="term" />
-     
-      </div>
-    </div> -->
+      <input type="text" placeholder="Search.." [(ngModel)]="sea" />
+
+    </div>
+  </div> -->
 
 
 
@@ -113,7 +110,7 @@
   <div *ngIf="show == 'tourlist'">
     <!-- *ngIf="tourData | filter: search as listdata" -->
     <div class="main mymoveright">
-      <div *ngFor="let list of tourData | filter:term; let i = index" style="margin-right: 5%; cursor: pointer"
+      <div *ngFor="let list of tourData | filter:searchInput; let i = index" style="margin-right: 5%; cursor: pointer"
         (click)="gotodetail(list.countryId,i)">
         <div class="container1"></div>
         <div class="hero-text">
@@ -138,7 +135,7 @@
   <div *ngIf="show == 'hotellist'">
     <!-- *ngIf="hotelData | filter: search as listdata" -->
     <div class="main mymoveright" *ngIf="hotelData as listdata">
-      <div *ngFor="let list of listdata | filter:term; let i = index" style="margin-right: 5%; cursor: pointer"
+      <div *ngFor="let list of listdata | filter:sea; let i = index" style="margin-right: 5%; cursor: pointer"
         (click)="gotodetail()">
         <div class="container1"></div>
         <div class="hero-text">
@@ -157,7 +154,7 @@
   <div *ngIf="show == 'buslist'">
     <!-- *ngIf="busData | filter: search as listdata" -->
     <div class="main mymoveright" *ngIf="busData  as listdata">
-      <div *ngFor="let list of listdata | filter:term; let i = index" style="margin-right: 5%; cursor: pointer"
+      <div *ngFor="let list of listdata | filter:sea; let i = index" style="margin-right: 5%; cursor: pointer"
         (click)="gotodetail()">
         <div class="container1"></div>
         <div class="hero-text">

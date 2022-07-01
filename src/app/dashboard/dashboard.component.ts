@@ -27,8 +27,9 @@ export class DashboardComponent implements OnInit {
   }
 
   newcountryid: number;
-
+  // term: any
   search: any;
+  searchInput:any=""
   showloader: boolean = false;
   show: String = "tourlist";
   id: number;
@@ -172,6 +173,11 @@ export class DashboardComponent implements OnInit {
 
   gototourdata(text: any) {
     this.show = text;
+  }
+
+  onChangeSearch(val: string) {
+    console.log(val)
+    this.searchInput = val ;
   }
 
   // filterData() {
