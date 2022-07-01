@@ -26,7 +26,8 @@
   <div class="containerfromlocation ">
     <ng-autocomplete [data]="global.MainSearch" [searchKeyword]="keyword" placeholder="Search Country"
       [historyHeading]="no" [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate"
-      (inputChanged)='onChangeSearch($event)' (selected)='selectEvent($event)'>
+      (selected)='selectEvent($event)' (inputCleared)='onClear($event)'>
+      <!-- (inputChanged)='onChangeSearch($event)' -->
     </ng-autocomplete>
 
     <ng-template #itemTemplate let-item>
@@ -135,7 +136,7 @@
   <div *ngIf="show == 'hotellist'">
     <!-- *ngIf="hotelData | filter: search as listdata" -->
     <div class="main mymoveright" *ngIf="hotelData as listdata">
-      <div *ngFor="let list of listdata | filter:sea; let i = index" style="margin-right: 5%; cursor: pointer"
+      <div *ngFor="let list of listdata | filter:searchInput; let i = index" style="margin-right: 5%; cursor: pointer"
         (click)="gotodetail()">
         <div class="container1"></div>
         <div class="hero-text">
@@ -154,7 +155,7 @@
   <div *ngIf="show == 'buslist'">
     <!-- *ngIf="busData | filter: search as listdata" -->
     <div class="main mymoveright" *ngIf="busData  as listdata">
-      <div *ngFor="let list of listdata | filter:sea; let i = index" style="margin-right: 5%; cursor: pointer"
+      <div *ngFor="let list of listdata | filter:searchInput; let i = index" style="margin-right: 5%; cursor: pointer"
         (click)="gotodetail()">
         <div class="container1"></div>
         <div class="hero-text">

@@ -141,6 +141,7 @@ export class DashboardComponent implements OnInit {
     this.hoteldatacopy = Object.assign([], this.hotelData);
     this.busdatacopy = Object.assign([], this.busData);
     this.tourdatacopy = this.tourData;
+
     // this.global.cityCopy = this.global.city;
     // console.log(this.global.cityCopy, "citycopy")
   }
@@ -175,15 +176,22 @@ export class DashboardComponent implements OnInit {
     this.show = text;
   }
 
-  onChangeSearch(val: string) {
-    console.log(val)
-    this.searchInput = val;
+  // onChangeSearch(val: string) {
+  //   // console.log(val)
+  //   this.searchInput = val;
+  // }
+
+  selectEvent(val) {
+    // console.log(val.fromcity)
+    this.searchInput = val.fromcity;
   }
 
-  selectEvent(item) {
-    console.log(item.fromcity)
-    this.searchInput = item.fromcity;
+  onClear(val) {
+    // console.log(val.fromcity)
+    this.searchInput = null;
   }
+
+
   // filterData() {
   //   try {
   //     let SearchText = this.mygroup.get("search").value;
