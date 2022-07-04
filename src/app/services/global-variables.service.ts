@@ -107,6 +107,22 @@ export class GlobalVariablesService {
   ];
 
   title: string[] = ["Mr", "Mrs", "Ms"];
+  ticketclass: any[] = [
+    {
+      id: 1,
+      class: "Economy"
+    },
+    {
+      id: 2,
+      class: "Premium"
+    }, {
+      id: 3,
+      class: "Business"
+    }, {
+      id: 4,
+      class: "First Class"
+    },
+  ]
   city = [
     {
       id: 1,

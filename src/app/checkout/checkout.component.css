@@ -2,7 +2,7 @@
     display        : flex;
     justify-content: center;
     align-items    : center;
-    margin-top     : 30px;
+    margin-top     : 25px;
     margin-left    : 40px;
 
 }
@@ -213,10 +213,10 @@ select:focus {
 }
 
 input:disabled {
-    background-color: #f36f7c4d !important;
-    border          : 1px solid #f36f7c4d !important;
-    color           : rgb(0, 0, 0);
-    font-size       : 20px;
+    background-color: #f36f7c00 !important;
+    border: 1px solid #f36f7c00 !important;
+    color: #ff002d;
+    font-size: 20px;
 
 }
 

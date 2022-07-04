@@ -37,14 +37,26 @@
   <div class="para mymoveleft" *ngIf="show == 'About'">
     <p>Without a doubt, Turkey is one of the world’s hottest tourist destinations. Ranking as the 6th most visited
       country in the world in 2011, the total number of international tourists nearly doubled between 2004 and 2011.
-      During my travels, I constantly heard rave reviews for the country, and was super impressed myself by the beauty
-      and diversity of the country.</p>
+    </p>
   </div>
   <div class="para mymoveright" *ngIf="show == 'Price'">
     <ul>
-      <li style="padding-bottom: 5px;">10kg Bag Include</li>
-      <li style="padding-bottom: 5px;">Meal include</li>
-      <li style="padding-bottom: 5px;">2 person Include</li>
+      <div style=" padding-bottom: 10px;
+      padding-left: 0px;
+      position: relative;
+      right: 35px;">Select Class</div>
+      <div class="ticketclass">
+
+        <div *ngFor="let list of global.ticketclass ; let i = index">
+
+          <button (click)="ticketClass(i)" [ngClass]="ticket == i ? 'actclas' : 'disclas'">{{list.class}}</button>
+        </div>
+
+      </div>
+      <li style="      padding-top: 20px;
+      " class="li">10kg Bag Include</li>
+      <li class="li">Meal include</li>
+      <li class="li">2 Adults Include</li>
 
     </ul>
   </div>

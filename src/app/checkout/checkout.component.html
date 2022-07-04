@@ -44,7 +44,7 @@
           </div>
 
           <!-- <i Class="fa fa-plane"></i> -->
-          <div style="    margin-top: 20px;">
+          <div style="    margin-top: 10px;">
 
             <div class="lbl">
               <label>Flying from
@@ -53,8 +53,8 @@
             </div>
             <div class="containerfromlocation ">
               <ng-autocomplete formControlName="fromlocation" [data]="global.states" [searchKeyword]="keyword"
-                placeholder="Search City" historyIdentifier="states" [historyHeading]="no" [itemTemplate]="itemTemplate"
-                [notFoundTemplate]="notFoundTemplate">
+                style="    margin-bottom: 20px;" placeholder="Search City" historyIdentifier="states"
+                [historyHeading]="no" [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate">
               </ng-autocomplete>
 
               <ng-template #itemTemplate let-item>
@@ -74,7 +74,7 @@
           </div>
         </div>
 
-        <div style="    margin-top: 20px;">
+        <div style="    margin-top: 30px;">
           <div class="lbl">
             <label>Flying Date</label>
           </div>

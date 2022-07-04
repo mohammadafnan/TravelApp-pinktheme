@@ -17,6 +17,7 @@ export class TourdetailComponent implements OnInit {
   countryname: any;
   cityName: any;
   cityPrice: any;
+  ticket: any;
 
   // activatedRoute: any;
   constructor(
@@ -24,15 +25,15 @@ export class TourdetailComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private router: Router,
     public global: GlobalVariablesService
-  ) {}
+  ) { }
 
   currentid: any;
   ngOnInit() {
-    
+
     this.global.ishistory = false;
     this.global.isHidden = true;
     this.global.isShowprofile = false;
-    this.global.isHidden1=false;
+    this.global.isHidden1 = false;
     this.global.currentRoute = this.router.routerState.snapshot.url;
     // this.currentid = this.activatedRoute.snapshot.params["countryid"];
     // this.global.cityCopy = this.global.city;
@@ -66,16 +67,19 @@ export class TourdetailComponent implements OnInit {
     this.pricountryname = countryname;
     this.pricityname = cityName;
     this.pricityprice = cityPrice;
-    localStorage.setItem('Selected country name',JSON.stringify(this.pricountryname))
-    localStorage.setItem('Selected city name',JSON.stringify(this.pricityname))
-    localStorage.setItem('Selected city price',JSON.stringify(this.pricityprice))
+    localStorage.setItem('Selected country name', JSON.stringify(this.pricountryname))
+    localStorage.setItem('Selected city name', JSON.stringify(this.pricityname))
+    localStorage.setItem('Selected city price', JSON.stringify(this.pricityprice))
 
 
     // console.log(this.pritbn + "city all data");
-    console.log(this.pricityname + " Selected city name");
-    console.log(this.pricityprice + " Selected city price");
-    console.log(this.pricountryname + " Selected country name");
+    // console.log(this.pricityname + " Selected city name");
+    // console.log(this.pricityprice + " Selected city price");
+    // console.log(this.pricountryname + " Selected country name");
 
     // alert(i);
+  }
+  ticketClass(i) {
+    this.ticket = i
   }
 }
