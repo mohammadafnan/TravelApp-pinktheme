@@ -61,27 +61,27 @@ export class GlobalVariablesService {
   MainSearch = [
     {
       fromcity: "Azerbaijan",
-      fromcountry: "Pakistan ",
+      fromcountry: "Azerbaijan ",
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
     {
       fromcity: "Turkey",
-      fromcountry: "Pakistan ",
+      fromcountry: "Turkey ",
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
     {
       fromcity: "Maldive",
-      fromcountry: "Pakistan ",
+      fromcountry: "Maldive ",
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
     {
       fromcity: "Germany",
-      fromcountry: "Pakistan ",
+      fromcountry: "Germany ",
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
     {
       fromcity: "Greece",
-      fromcountry: "Pakistan ",
+      fromcountry: "Greece ",
       flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
     },
     // {
@@ -194,6 +194,46 @@ export class GlobalVariablesService {
       cityprice: "$ 350",
       cityimage:
         "https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      id: 10,
+      countryId: 4,
+      countryname: "Germany",
+      cityname: "Berlin",
+      cityrating: "4.5",
+      cityprice: "$ 350",
+      cityimage:
+        "https://images.pexels.com/photos/3466324/pexels-photo-3466324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      id: 11,
+      countryId: 4,
+      countryname: "Germany",
+      cityname: "Humburg",
+      cityrating: "4.5",
+      cityprice: "$ 350",
+      cityimage:
+        "https://images.pexels.com/photos/2506904/pexels-photo-2506904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      id: 12,
+      countryId: 4,
+      countryname: "Germany",
+      cityname: "Munich",
+      cityrating: "4.5",
+      cityprice: "$ 350",
+      cityimage:
+        "https://images.pexels.com/photos/1885810/pexels-photo-1885810.jpeg",
+    },
+    {
+      id: 13,
+      countryId: 5,
+      countryname: "Greece",
+      cityname: "Athens",
+      cityrating: "4.5",
+      cityprice: "$ 350",
+      cityimage:
+        "https://images.pexels.com/photos/951539/pexels-photo-951539.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
   ];
 
