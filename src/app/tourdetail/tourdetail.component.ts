@@ -18,6 +18,7 @@ export class TourdetailComponent implements OnInit {
   cityName: any;
   cityPrice: any;
   ticket: any;
+  tickerclassname: any;
 
   // activatedRoute: any;
   constructor(
@@ -79,7 +80,51 @@ export class TourdetailComponent implements OnInit {
 
     // alert(i);
   }
-  ticketClass(i) {
-    this.ticket = i
+  ticketClass(i, classname) {
+    this.ticket = i;
+    this.tickerclassname = classname;
+    localStorage.setItem('Selected ticket Class name', JSON.stringify(this.tickerclassname))
+    console.log(this.pricityname + " Selected ticket Class name");
   }
+  Adultcount = 2;
+
+  incrementAdult() {
+    if (this.Adultcount < 6) {
+      this.Adultcount++;
+    }
+  }
+
+  decrementAdult() {
+    if (this.Adultcount > 2) {
+      this.Adultcount--;
+    }
+  }
+
+  Childcount = 0;
+
+  incrementChild() {
+    if (this.Childcount < 6) {
+      this.Childcount++;
+    }
+  }
+
+  decrementChild() {
+    if (this.Childcount > 0) {
+      this.Childcount--;
+    }
+  }
+  infantscount = 0;
+
+  incrementinfants() {
+    if (this.infantscount < 6) {
+      this.infantscount++;
+    }
+  }
+
+  decrementinfants() {
+    if (this.infantscount > 0) {
+      this.infantscount--;
+    }
+  }
+
 }

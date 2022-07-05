@@ -281,11 +281,43 @@ ul li::before {
     display : -webkit-box;
     /* width: max-content; */
 }
-.li{
+
+.li {
     padding-bottom: 5px;
-      position: relative;
-      right: 35px;
+    position      : relative;
+    right         : 35px;
 }
+
+.qty {
+    float: right;
+}
+
+.num {
+    padding-right: 10px;
+    padding-left : 7px;
+}
+
+
+.plus {
+    background   : white;
+    border       : 1px solid rgb(255, 255, 255);
+    color        : #ff002d;
+    border-radius: 20px;
+    font-size    : 20px;
+    box-shadow   : rgb(0 0 0 / 35%) 0px 5px 15px;
+
+}
+
+.minus {
+    background   : white;
+    border       : 1px solid white;
+    color        : #ff002d;
+    border-radius: 20px;
+    font-size    : 20px;
+    width        : 26px;
+    box-shadow   : rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+
 /* label:hover {
     background-color: pink;
     padding: 5px;
