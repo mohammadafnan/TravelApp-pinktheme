@@ -19,6 +19,7 @@ export class TourdetailComponent implements OnInit {
   cityPrice: any;
   ticket: any;
   tickerclassname: any;
+  adultqty: any;
 
   // activatedRoute: any;
   constructor(
@@ -88,13 +89,20 @@ export class TourdetailComponent implements OnInit {
   }
   Adultcount = 2;
 
-  incrementAdult() {
+  incrementAdult(Adultcount) {
+    this.adultqty = Adultcount
+    localStorage.setItem('Selected Adult Qty', JSON.stringify(this.adultqty))
+    // console.log(this.pricityname + " Selected Adult Qty");
     if (this.Adultcount < 6) {
       this.Adultcount++;
     }
+
   }
 
-  decrementAdult() {
+  decrementAdult(Adultcount) {
+    this.adultqty = Adultcount
+    localStorage.setItem('Selected Adult Qty', JSON.stringify(this.adultqty))
+    // console.log(this.pricityname + " Selected Adult Qty");
     if (this.Adultcount > 2) {
       this.Adultcount--;
     }

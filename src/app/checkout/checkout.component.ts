@@ -74,6 +74,9 @@ export class CheckoutComponent implements OnInit {
       cityprice: ["", Validators.required],
       date: ["", Validators.required],
       fromlocation: ["", Validators.required],
+      ticketclass: ["", Validators.required],
+      adultqty: ["", Validators.required],
+
     });
   }
 
@@ -88,15 +91,18 @@ export class CheckoutComponent implements OnInit {
     this.global.currentRoute = this.router.routerState.snapshot.url;
     this.setvalue();
 
-    JSON.parse(localStorage.getItem("Selected country name")); //retrieve the key
+    // JSON.parse(localStorage.getItem("Selected country name"));
+     //retrieve the key
     // console.log(
     //   "Selected country name" + JSON.parse(localStorage.getItem("Selected country name"))
     // );
-    JSON.parse(localStorage.getItem("Selected city name")); //retrieve the key
+    // JSON.parse(localStorage.getItem("Selected city name"));
+     //retrieve the key
     // console.log(
     //   "Selected city name" + JSON.parse(localStorage.getItem("Selected city name"))
     // );
-    JSON.parse(localStorage.getItem("Selected city price")); //retrieve the key
+    // JSON.parse(localStorage.getItem("Selected city price")); 
+    //retrieve the key
     // console.log(
     //   "Selected city price" + JSON.parse(localStorage.getItem("Selected city price"))
     // );
@@ -135,6 +141,12 @@ export class CheckoutComponent implements OnInit {
     this.myform
       .get("cityprice")
       .setValue(JSON.parse(localStorage.getItem("Selected city price")));
+    this.myform
+      .get("ticketclass")
+      .setValue(JSON.parse(localStorage.getItem("Selected ticket Class name")));
+    this.myform
+      .get("adultqty")
+      .setValue(JSON.parse(localStorage.getItem("Selected Adult Qty")));
   }
 
   age(age) {
