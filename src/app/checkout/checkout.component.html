@@ -83,7 +83,22 @@
               [bsConfig]="{ dateInputFormat: 'DD-MMM-YYYY' }" formControlName="date">
           </div>
         </div>
-
+        <div style="    position: relative;
+        top: 45px;
+        left: 50px;
+        font-weight: bold;
+        font-size: 20px;">
+          <label>Select Airline</label>
+        </div>
+        <div class="main-airline mymoveright">
+          <div *ngFor="let list of CheckoutData; let i = index" style="margin-right: 5%; cursor: pointer"
+            (click)="gotobank(list,i)">
+            <div class="container1"></div>
+            <div class="hero-text">
+            </div>
+            <img [ngClass]="indexno == i ? 'listimg' : 'listimgdis'" src="{{ list.image }}" class="img" alt="" />
+          </div>
+        </div>
         <!-- [(bsValue)]="myDateValue" #dp="bsDatepicker" -->
         <div class="container next">
           <label (click)="step('2')"> Next ></label>
@@ -133,7 +148,7 @@
           <label>Select Payment Type</label>
         </div>
         <div class="main mymoveright">
-          <div *ngFor="let list of CheckoutData; let i = index" style="margin-right: 5%; cursor: pointer"
+          <div *ngFor="let list of bankData; let i = index" style="margin-right: 5%; cursor: pointer"
             (click)="gotobank(list,i)">
             <div class="container1"></div>
             <div class="hero-text">

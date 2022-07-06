@@ -21,7 +21,7 @@
     display        : flex;
     justify-content: center;
     align-items    : center;
-    margin-top     : 26px;
+    /* margin-top     : 26px; */
     /* margin-left : 40px;*/
 
 }
@@ -170,11 +170,19 @@ select:focus {
     width         : 100%;
     overflow-y    : hidden !important;
     margin-top    : 70px !important;
-    /* margin-left: 30px; */
     box-shadow    : rgba(0, 0, 0, 0.2) 0px 10px 15px -7px !important;
 
 }
+.main-airline {
+    display       : flex;
+    /* position      : absolute; */
+    overflow-x    : scroll;
+    width         : 100%;
+    overflow-y    : hidden !important;
+    margin-top    : 70px !important;
+    box-shadow    : rgba(0, 0, 0, 0.2) 0px 10px 15px -7px !important;
 
+}
 
 .input {
     outline         : none;
@@ -382,7 +390,7 @@ input:disabled {
     font-size   : 16px;
     color       : #ff002d;
     font-weight : bold;
-    margin-top  : 50px;
+    margin-bottom  : 20px;
 }
 
 .back {

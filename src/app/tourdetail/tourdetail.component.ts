@@ -20,6 +20,8 @@ export class TourdetailComponent implements OnInit {
   ticket: any;
   tickerclassname: any;
   adultqty: any;
+  Bagname: any;
+  bag: any;
 
   // activatedRoute: any;
   constructor(
@@ -27,11 +29,10 @@ export class TourdetailComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private router: Router,
     public global: GlobalVariablesService
-  ) { }
+  ) {}
 
   currentid: any;
   ngOnInit() {
-
     this.global.ishistory = false;
     this.global.isHidden = true;
     this.global.isShowprofile = false;
@@ -69,10 +70,18 @@ export class TourdetailComponent implements OnInit {
     this.pricountryname = countryname;
     this.pricityname = cityName;
     this.pricityprice = cityPrice;
-    localStorage.setItem('Selected country name', JSON.stringify(this.pricountryname))
-    localStorage.setItem('Selected city name', JSON.stringify(this.pricityname))
-    localStorage.setItem('Selected city price', JSON.stringify(this.pricityprice))
-
+    localStorage.setItem(
+      "Selected country name",
+      JSON.stringify(this.pricountryname)
+    );
+    localStorage.setItem(
+      "Selected city name",
+      JSON.stringify(this.pricityname)
+    );
+    localStorage.setItem(
+      "Selected city price",
+      JSON.stringify(this.pricityprice)
+    );
 
     // console.log(this.pritbn + "city all data");
     // console.log(this.pricityname + " Selected city name");
@@ -84,24 +93,33 @@ export class TourdetailComponent implements OnInit {
   ticketClass(i, classname) {
     this.ticket = i;
     this.tickerclassname = classname;
-    localStorage.setItem('Selected ticket Class name', JSON.stringify(this.tickerclassname))
-    console.log(this.pricityname + " Selected ticket Class name");
+    localStorage.setItem(
+      "Selected ticket Class name",
+      JSON.stringify(this.tickerclassname)
+    );
+  }
+  bagClass(i, bagname) {
+    this.bag = i;
+    this.Bagname = bagname;
+    localStorage.setItem(
+      "Selected bag",
+      JSON.stringify(this.Bagname)
+    );
   }
   Adultcount = 2;
 
   incrementAdult(Adultcount) {
-    this.adultqty = Adultcount
-    localStorage.setItem('Selected Adult Qty', JSON.stringify(this.adultqty))
+    this.adultqty = Adultcount;
+    localStorage.setItem("Selected Adult Qty", JSON.stringify(this.adultqty));
     // console.log(this.pricityname + " Selected Adult Qty");
     if (this.Adultcount < 6) {
       this.Adultcount++;
     }
-
   }
 
   decrementAdult(Adultcount) {
-    this.adultqty = Adultcount
-    localStorage.setItem('Selected Adult Qty', JSON.stringify(this.adultqty))
+    this.adultqty = Adultcount;
+    localStorage.setItem("Selected Adult Qty", JSON.stringify(this.adultqty));
     // console.log(this.pricityname + " Selected Adult Qty");
     if (this.Adultcount > 2) {
       this.Adultcount--;
@@ -134,5 +152,4 @@ export class TourdetailComponent implements OnInit {
       this.infantscount--;
     }
   }
-
 }

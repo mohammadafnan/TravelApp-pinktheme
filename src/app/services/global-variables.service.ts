@@ -122,7 +122,31 @@ export class GlobalVariablesService {
       id: 4,
       class: "First Class"
     },
+    {
+      id: 5,
+      class: "Special Class"
+    },
+    
   ]
+
+  Baggage: any[] = [
+    {
+      id: 1,
+      bag: "No baggage",
+      bagprice:"PKR 0"
+    },
+    {
+      id: 2,
+      bag: "1 Pc - 10 KG",
+      bagprice:"PKR 1500"
+    }, {
+      id: 3,
+      bag: "1 Pc - 20 KG",
+      bagprice:"PKR 2000"
+    }, 
+    
+  ]
+
   city = [
     {
       id: 1,

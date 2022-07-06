@@ -41,22 +41,39 @@
   </div>
   <div class="para mymoveright" *ngIf="show == 'Price'">
     <ul>
-      <div style=" padding-bottom: 10px;
-      padding-left: 0px;
-      position: relative;
-      right: 35px;">Select Class / Travelers</div>
-      <div class="ticketclass">
+      <div>
+        <div style=" padding-bottom: 10px;
+        padding-left: 0px;
+        position: relative;
+        right: 35px;">Select Class / Travelers</div>
+        <div class="ticketclass">
 
-        <div *ngFor="let list of global.ticketclass ; let i = index">
+          <div *ngFor="let list of global.ticketclass ; let i = index">
 
-          <button (click)="ticketClass(i,list.class)"
-            [ngClass]="ticket == i ? 'actclas' : 'disclas'">{{list.class}}</button>
+            <button (click)="ticketClass(i,list.class)"
+              [ngClass]="ticket == i ? 'actclas' : 'disclas'">{{list.class}}</button>
+          </div>
+
         </div>
+      </div>
+      <div style=" padding-top: 10px;">
+        <div style=" padding-bottom: 10px;
+        padding-left: 0px;
+        position: relative;
+        right: 35px;">Select Bag</div>
+        <div class="ticketclass">
 
+          <div *ngFor="let list of global.Baggage ; let i = index">
+
+            <button (click)="bagClass(i,list.bag)" [ngClass]="bag == i ? 'actclas' : 'disclas'">{{list.bag}} +
+              {{list.bagprice}}</button>
+          </div>
+
+        </div>
       </div>
       <li style="      padding-top: 20px;
-      " class="li">Meal include</li>
-      <li class="li">10kg Bag Include</li>
+      " class="li">Meal included</li>
+      <!-- <li class="li">Select Baggage Included</li> -->
       <li class="li"> Adults
         <span class="qty">
           <button class="minus" (click)="decrementAdult(Adultcount)">-</button>
