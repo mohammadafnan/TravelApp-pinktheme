@@ -9,7 +9,7 @@ import { GlobalVariablesService } from "../services/global-variables.service";
 export class HistoryComponent implements OnInit {
   flightdataCopy: any = [];
   constructor(public global: GlobalVariablesService) { }
-
+  Show: boolean = false;
   ngOnInit() {
     this.global.ishistory = true;
     this.global.isShowprofile = false
@@ -21,5 +21,8 @@ export class HistoryComponent implements OnInit {
     this.flightdataCopy = JSON.parse(localStorage.getItem("flightdata"));
     console.log("flightdataCopy Data", this.flightdataCopy);
 
+  }
+  show() {
+    this.Show = !this.Show
   }
 }

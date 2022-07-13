@@ -9,7 +9,10 @@
   </span>
   <span class="center">{{flighthistory.cityname }} <span class="fromcountry">
       {{ flighthistory.countryname}}</span></span>
-  <span class="right">{{flighthistory.cityprice}}</span>
+  <span class="right" (click)="show()">{{flighthistory.cityprice}}</span>
+  <img *ngIf="this.Show" src="{{ flighthistory.airlineimg }}" class="img" alt="" />
+
+  <!-- <div>{{flighthistory.airlineimg}}</div> -->
 </div>
 
 

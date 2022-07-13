@@ -92,11 +92,11 @@
         </div>
         <div class="main-airline mymoveright">
           <div *ngFor="let list of airlineData; let i = index" style="margin-right: 5%; cursor: pointer"
-            (click)="gotobank(list,i)">
+            (click)="gotoairline(list,i)">
             <div class="container1"></div>
             <div class="hero-text">
             </div>
-            <img [ngClass]="indexno == i ? 'listimg' : 'listimgdis'" src="{{ list.image }}" class="img" alt="" />
+            <img [ngClass]="indexno == i ? 'listimg' : 'listimgdis'" src="{{ list.airlineimage }}" class="img" alt="" />
           </div>
         </div>
         <!-- [(bsValue)]="myDateValue" #dp="bsDatepicker" -->
