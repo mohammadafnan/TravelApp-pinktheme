@@ -91,7 +91,7 @@
           <label>Select Airline</label>
         </div>
         <div class="main-airline mymoveright">
-          <div *ngFor="let list of CheckoutData; let i = index" style="margin-right: 5%; cursor: pointer"
+          <div *ngFor="let list of airlineData; let i = index" style="margin-right: 5%; cursor: pointer"
             (click)="gotobank(list,i)">
             <div class="container1"></div>
             <div class="hero-text">
@@ -148,7 +148,7 @@
           <label>Select Payment Type</label>
         </div>
         <div class="main mymoveright">
-          <div *ngFor="let list of bankData; let i = index" style="margin-right: 5%; cursor: pointer"
+          <div *ngFor="let list of bankName; let i = index" style="margin-right: 5%; cursor: pointer"
             (click)="gotobank(list,i)">
             <div class="container1"></div>
             <div class="hero-text">
