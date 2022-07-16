@@ -8,6 +8,7 @@ import { GlobalVariablesService } from "../services/global-variables.service";
 })
 export class HistoryComponent implements OnInit {
   flightdataCopy: any = [];
+  selectindex: number;
   constructor(public global: GlobalVariablesService) { }
   Show: boolean = false;
   ngOnInit() {
@@ -22,7 +23,9 @@ export class HistoryComponent implements OnInit {
     console.log("flightdataCopy Data", this.flightdataCopy);
 
   }
-  show() {
+  showhistory(i) {
+    this.selectindex = i
+    console.log(this.selectindex)
     this.Show = !this.Show
   }
 }

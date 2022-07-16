@@ -18,7 +18,7 @@ export class CheckoutComponent implements OnInit {
   minDate: Date;
   maxDate: Date;
   showstep: string = "1";
-  bankName: any = [
+  bankData: any = [
     {
       id: 1,
       Bankname: "UBL",
@@ -86,7 +86,6 @@ export class CheckoutComponent implements OnInit {
   agerange: any = 0;
   keyword = "fromcity";
 
-
   constructor(
     public global: GlobalVariablesService,
     public router: Router,
@@ -110,8 +109,7 @@ export class CheckoutComponent implements OnInit {
       adultqty: ["", Validators.required],
       bagqty: ["", Validators.required],
       airlineimg: ["", Validators.required],
-
-
+      airlinename: ["", Validators.required],
     });
   }
 
@@ -125,7 +123,6 @@ export class CheckoutComponent implements OnInit {
     this.global.isShowprofile = false;
     this.global.currentRoute = this.router.routerState.snapshot.url;
     this.setvalue();
-
 
     // this.minDate=new Date(2017,1,1);
     // this.maxDate=new Date(2022,11,1)
@@ -147,9 +144,10 @@ export class CheckoutComponent implements OnInit {
     this.indexno = i;
     this.myform.get("bank").setValue(list.Bankname);
   }
-  gotoairline(list: any, i: any) {
+  gotoairline(airline: any, i: any) {
     this.indexno = i;
-    this.myform.get("airlineimg").setValue(list.airlineimage);
+    this.myform.get("airlineimg").setValue(airline.airlineimage);
+    this.myform.get("airlinename").setValue(airline.airlinename);
   }
 
   setvalue() {
@@ -171,9 +169,15 @@ export class CheckoutComponent implements OnInit {
     this.myform
       .get("bagqty")
       .setValue(JSON.parse(localStorage.getItem("Selected bag")));
-    this.myform
-      .get("airlineimg")
-      .setValue(JSON.parse(localStorage.getItem("Selected airline image")));
+    // this.myform
+    //   .get("airlineimg")
+    //   .setValue(JSON.parse(localStorage.getItem("Selected airline image")));
+    // this.myform
+    //   .get("airlinename")
+    //   .setValue(JSON.parse(localStorage.getItem("Selected airline name")));
+      // this.myform
+      // .get("bank")
+      // .setValue(JSON.parse(localStorage.getItem("Selected airline name")));
   }
 
   age(age) {

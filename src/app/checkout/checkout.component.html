@@ -53,7 +53,7 @@
             </div>
             <div class="containerfromlocation ">
               <ng-autocomplete formControlName="fromlocation" [data]="global.states" [searchKeyword]="keyword"
-                style="    margin-bottom: 20px;" placeholder="Search City" historyIdentifier="states"
+                style="    margin-bottom: 20px;" placeholder="Search City"
                 [historyHeading]="no" [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate">
               </ng-autocomplete>
 
@@ -91,12 +91,13 @@
           <label>Select Airline</label>
         </div>
         <div class="main-airline mymoveright">
-          <div *ngFor="let list of airlineData; let i = index" style="margin-right: 5%; cursor: pointer"
-            (click)="gotoairline(list,i)">
+          <div *ngFor="let airline of airlineData; let i = index" style="margin-right: 5%; cursor: pointer"
+            (click)="gotoairline(airline,i)">
             <div class="container1"></div>
             <div class="hero-text">
             </div>
-            <img [ngClass]="indexno == i ? 'listimg' : 'listimgdis'" src="{{ list.airlineimage }}" class="img" alt="" />
+            <img [ngClass]="indexno == i ? 'listimg' : 'listimgdis'" src="{{ airline.airlineimage }}" class="img"
+              alt="" />
           </div>
         </div>
         <!-- [(bsValue)]="myDateValue" #dp="bsDatepicker" -->
@@ -148,7 +149,7 @@
           <label>Select Payment Type</label>
         </div>
         <div class="main mymoveright">
-          <div *ngFor="let list of bankName; let i = index" style="margin-right: 5%; cursor: pointer"
+          <div *ngFor="let list of bankData; let i = index" style="margin-right: 5%; cursor: pointer"
             (click)="gotobank(list,i)">
             <div class="container1"></div>
             <div class="hero-text">
