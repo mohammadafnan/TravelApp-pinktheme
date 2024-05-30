@@ -175,9 +175,9 @@ export class CheckoutComponent implements OnInit {
     // this.myform
     //   .get("airlinename")
     //   .setValue(JSON.parse(localStorage.getItem("Selected airline name")));
-      // this.myform
-      // .get("bank")
-      // .setValue(JSON.parse(localStorage.getItem("Selected airline name")));
+    // this.myform
+    // .get("bank")
+    // .setValue(JSON.parse(localStorage.getItem("Selected airline name")));
   }
 
   age(age) {

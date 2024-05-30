@@ -137,7 +137,7 @@ bs-datepicker-navigation-view {
     box-shadow      : rgba(0, 0, 0, 0.2) 0px 10px 15px -7px !important;
     position        : relative;
     bottom          : 12px;
-    margin-top: 10px;
+    margin-top      : 10px;
 }
 
 .item {

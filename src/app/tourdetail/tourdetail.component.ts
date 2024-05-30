@@ -29,7 +29,7 @@ export class TourdetailComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private router: Router,
     public global: GlobalVariablesService
-  ) {}
+  ) { }
 
   currentid: any;
   ngOnInit() {
@@ -106,7 +106,7 @@ export class TourdetailComponent implements OnInit {
       JSON.stringify(this.Bagname)
     );
   }
-  Adultcount = 2;
+  Adultcount = 0;
 
   incrementAdult(Adultcount) {
     this.adultqty = Adultcount;

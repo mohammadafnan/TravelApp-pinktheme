@@ -12,7 +12,7 @@ export class SidebarComponent implements OnInit {
   // @Input() show: boolean = false;
   @Input() showname: string;
 
-  constructor(private router: Router, public global: GlobalVariablesService) {}
+  constructor(private router: Router, public global: GlobalVariablesService) { }
 
   ngOnInit() {
     // this.global.ishistory = false;

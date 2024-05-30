@@ -15,9 +15,9 @@ export class HeaderComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private router: Router,
     public global: GlobalVariablesService
-  ) {}
+  ) { }
   currentid: any;
-  ngOnInit() {}
+  ngOnInit() { }
   toggleSideBar() {
     this.global.showSideBar = !this.global.showSideBar;
   }

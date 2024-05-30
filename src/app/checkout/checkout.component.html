@@ -53,8 +53,8 @@
             </div>
             <div class="containerfromlocation ">
               <ng-autocomplete formControlName="fromlocation" [data]="global.states" [searchKeyword]="keyword"
-                style="    margin-bottom: 20px;" placeholder="Search City"
-                [historyHeading]="no" [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate">
+                style="    margin-bottom: 20px;" placeholder="Search City" [historyHeading]="no"
+                [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate">
               </ng-autocomplete>
 
               <ng-template #itemTemplate let-item>
