@@ -1,4 +1,4 @@
-<div class="scroll  mymoveright">
+<div class="scroll mymoveright">
   <!-- <div>
     <div class="topprofileimg">
       <img src="../../assets/images/user1.jpg" class="roundimg" />
@@ -8,7 +8,6 @@
       <div class="line2"></div>
     </div>
   </div> -->
-
 
   <app-sidebar></app-sidebar>
 
@@ -21,12 +20,17 @@
 
   <!-- <form> -->
 
-
-
-  <div class="containerfromlocation ">
-    <ng-autocomplete [data]="global.MainSearch" [searchKeyword]="keyword" placeholder="Search Country"
-      [historyHeading]="no" [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate"
-      (selected)='selectEvent($event)' (inputCleared)='onClear($event)'>
+  <div class="containerfromlocation">
+    <ng-autocomplete
+      [data]="global.MainSearch"
+      [searchKeyword]="keyword"
+      placeholder="Search Country"
+      [historyHeading]="no"
+      [itemTemplate]="itemTemplate"
+      [notFoundTemplate]="notFoundTemplate"
+      (selected)="selectEvent($event)"
+      (inputCleared)="onClear($event)"
+    >
       <!-- (inputChanged)='onChangeSearch($event)' -->
     </ng-autocomplete>
 
@@ -42,9 +46,6 @@
     </ng-template>
   </div>
 
-
-
-
   <!-- <div class="container">
     <div style="
       display: flex;
@@ -55,9 +56,6 @@
 
     </div>
   </div> -->
-
-
-
 
   <!-- <button type="submit" class="searchbtn">
           <i class="fa fa-search" ></i>
@@ -78,24 +76,45 @@
   </div> -->
 
   <div class="container">
-    <button [ngClass]="show == 'tourlist' ? 'btnn1' : 'btnn0'" (click)="gototourdata('tourlist')">
-      <i [ngClass]="show == 'tourlist' ? 'fa fa-plane enab' : 'fa fa-plane dis'"></i>
+    <button
+      [ngClass]="show == 'tourlist' ? 'btnn1' : 'btnn0'"
+      (click)="gototourdata('tourlist')"
+    >
+      <i
+        [ngClass]="show == 'tourlist' ? 'fa fa-plane enab' : 'fa fa-plane dis'"
+      ></i>
     </button>
 
-    <button [ngClass]="show == 'hotellist' ? 'btnn1' : 'btnn0'" (click)="gototourdata('hotellist')">
-      <i [ngClass]="
+    <button
+      [ngClass]="show == 'hotellist' ? 'btnn1' : 'btnn0'"
+      (click)="gototourdata('hotellist')"
+    >
+      <i
+        [ngClass]="
           show == 'hotellist' ? 'fa fa-building enab' : 'fa fa-building dis'
-        "></i>
+        "
+      ></i>
     </button>
-    <button [ngClass]="show == 'buslist' ? 'btnn1' : 'btnn0'" (click)="gototourdata('buslist')">
+    <button
+      [ngClass]="show == 'buslist' ? 'btnn1' : 'btnn0'"
+      (click)="gototourdata('buslist')"
+    >
       <i [ngClass]="show == 'buslist' ? 'fa fa-bus enab' : 'fa fa-bus dis'"></i>
     </button>
-    <button [ngClass]="show == 'offerlist' ? 'btnn1' : 'btnn0'" (click)="gototourdata('offerlist')"><i
-        [ngClass]="show == 'offerlist' ? 'fa fa-percent enab' : 'fa fa-percent dis'"></i></button>
+    <button
+      [ngClass]="show == 'offerlist' ? 'btnn1' : 'btnn0'"
+      (click)="gototourdata('offerlist')"
+    >
+      <i
+        [ngClass]="
+          show == 'offerlist' ? 'fa fa-percent enab' : 'fa fa-percent dis'
+        "
+      ></i>
+    </button>
   </div>
 
   <div class="container">
-    <div class="scrollmenu " *ngIf="show == 'tourlist'">
+    <div class="scrollmenu" *ngIf="show == 'tourlist'">
       <a (click)="tab(1)" [ngClass]="id == 1 ? 'a1' : 'a2'">New</a>
       <a (click)="tab(2)" [ngClass]="id == 2 ? 'a1' : 'a2'">Most viewed</a>
       <a (click)="tab(3)" [ngClass]="id == 3 ? 'a1' : 'a2'">Hot tour</a>
@@ -103,22 +122,23 @@
     </div>
   </div>
 
-
-  <div *ngIf="showloader" style="    display        : flex;
-  justify-content: center;">
+  <div *ngIf="showloader" style="display: flex; justify-content: center">
     <div class="loader"></div>
   </div>
   <div *ngIf="show == 'tourlist'">
-    <!-- *ngIf="tourData | filter: search as listdata" -->
+    <!-- *ngIf="CountryData | filter: search as listdata" -->
     <div class="main mymoveright">
-      <div *ngFor="let list of tourData | filter:searchInput; let i = index" style="margin-right: 5%; cursor: pointer"
-        (click)="gotodetail(list.countryId,i)">
+      <div
+        *ngFor="let list of CountryData | filter : searchInput; let i = index"
+        style="margin-right: 5%; cursor: pointer"
+        (click)="gotodetail(list.countryId, i)"
+      >
         <div class="container1"></div>
         <div class="hero-text">
           <h1 style="font-size: 26px; padding-left: 10%">
             {{ list.countryDisc }}
           </h1>
-          <h1 style=" font-size: 20px">
+          <h1 style="font-size: 20px">
             <i class="fa fa-map-marker"></i>{{ list.countryname }}
           </h1>
         </div>
@@ -128,16 +148,19 @@
   </div>
   <div>
     <!-- [ngClass]="{'my_class': step === 'step1', 'my_class2' : step === 'step2' }" -->
-    <!-- [ngClass]="{ nodata: tourData.length == 0 }" -->
-    <!-- <div [ngClass]="{'nodata': tourData.length == 0 }">
-      <label *ngIf="tourData.length === 0 ">No Match Found</label>
+    <!-- [ngClass]="{ nodata: CountryData.length == 0 }" -->
+    <!-- <div [ngClass]="{'nodata': CountryData.length == 0 }">
+      <label *ngIf="CountryData.length === 0 ">No Match Found</label>
     </div> -->
   </div>
   <div *ngIf="show == 'hotellist'">
     <!-- *ngIf="hotelData | filter: search as listdata" -->
     <div class="main mymoveright" *ngIf="hotelData as listdata">
-      <div *ngFor="let list of listdata | filter:searchInput; let i = index" style="margin-right: 5%; cursor: pointer"
-        (click)="gotodetail()">
+      <div
+        *ngFor="let list of listdata | filter : searchInput; let i = index"
+        style="margin-right: 5%; cursor: pointer"
+        (click)="gotodetail()"
+      >
         <div class="container1"></div>
         <div class="hero-text">
           <h1 style="font-size: 26px; padding-left: 10%">
@@ -154,9 +177,12 @@
 
   <div *ngIf="show == 'buslist'">
     <!-- *ngIf="busData | filter: search as listdata" -->
-    <div class="main mymoveright" *ngIf="busData  as listdata">
-      <div *ngFor="let list of listdata | filter:searchInput; let i = index" style="margin-right: 5%; cursor: pointer"
-        (click)="gotodetail()">
+    <div class="main mymoveright" *ngIf="busData as listdata">
+      <div
+        *ngFor="let list of listdata | filter : searchInput; let i = index"
+        style="margin-right: 5%; cursor: pointer"
+        (click)="gotodetail()"
+      >
         <div class="container1"></div>
         <div class="hero-text">
           <h1 style="font-size: 26px; padding-left: 10%">
@@ -171,14 +197,12 @@
     </div>
   </div>
   <div *ngIf="show == 'offerlist'" class="mymoveright">
-    <div style="display: flex; justify-content: center;align-items: center;">
-      <img src="./../../assets/images/offer2.jpg" width="100px" alt="" /><br>
+    <div style="display: flex; justify-content: center; align-items: center">
+      <img src="./../../assets/images/offer2.jpg" width="100px" alt="" /><br />
     </div>
-    <h3 style="text-align: center;">No offer here</h3>
-    <h4 style="text-align: center; color: gainsboro;    line-height: 0px;">Coming Soon</h4>
-
+    <h3 style="text-align: center">No offer here</h3>
+    <h4 style="text-align: center; color: gainsboro; line-height: 0px">
+      Coming Soon
+    </h4>
   </div>
-
-
-
 </div>

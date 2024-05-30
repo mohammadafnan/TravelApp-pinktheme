@@ -33,7 +33,7 @@ export class DashboardComponent implements OnInit {
   showloader: boolean = false;
   show: String = "tourlist";
   id: number;
-  tourData = [
+  CountryData = [
     {
       countryId: 1,
       countryDisc: "The Azerbaijan ",
@@ -137,10 +137,10 @@ export class DashboardComponent implements OnInit {
     this.global.isShowprofile = true;
     this.global.isShowbackbtn = false;
     this.global.currentRoute = this.router.routerState.snapshot.url;
-    this.tourdatacopy = Object.assign([], this.tourData);
+    this.tourdatacopy = Object.assign([], this.CountryData);
     this.hoteldatacopy = Object.assign([], this.hotelData);
     this.busdatacopy = Object.assign([], this.busData);
-    this.tourdatacopy = this.tourData;
+    this.tourdatacopy = this.CountryData;
 
     // this.global.cityCopy = this.global.city;
     // console.log(this.global.cityCopy, "citycopy")
@@ -199,7 +199,7 @@ export class DashboardComponent implements OnInit {
   //       SearchText = SearchText.toLowerCase();
   //       this.showloader = true;
 
-  //       this.tourData = this.tourdatacopy.filter(
+  //       this.CountryData = this.tourdatacopy.filter(
   //         (x) =>
   //           x.country.toLowerCase().indexOf(SearchText) >= 0 ||
   //           x.countryDisc.toLowerCase().indexOf(SearchText) >= 0
@@ -221,7 +221,7 @@ export class DashboardComponent implements OnInit {
     if (newid == -1) {
       this.showloader = true;
 
-      this.tourData = this.tourdatacopy;
+      this.CountryData = this.tourdatacopy;
       this.hotelData = this.hoteldatacopy;
       this.busData = this.busdatacopy;
       setTimeout(() => {
@@ -230,12 +230,12 @@ export class DashboardComponent implements OnInit {
       return;
     }
 
-    this.tourData = this.tourdatacopy;
+    this.CountryData = this.tourdatacopy;
     this.hotelData = this.hoteldatacopy;
     this.busData = this.busdatacopy;
     this.showloader = true;
 
-    let data = this.tourData.filter((a) => a.countryId == newid);
+    let data = this.CountryData.filter((a) => a.countryId == newid);
     // let data1 = this.hotelData.filter(a => a.id == newid);
     // let data2 = this.busData.filter(a => a.id == newid);
 
@@ -243,7 +243,7 @@ export class DashboardComponent implements OnInit {
       this.showloader = false;
     }, 300);
 
-    this.tourData = data;
+    this.CountryData = data;
     // this.hotelData = data1;
     // this.busData = data2;
   }

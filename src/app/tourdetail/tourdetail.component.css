@@ -206,7 +206,20 @@ div.scrollmenu {
     font-weight: 600;
     font-size: 16px;
 }
-
+.disbuy{
+    padding-top: 22px;
+    padding-bottom: 22px;
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    color: #F36F7C;
+    width: 100%;
+    /* transform    : translatey(-5px); */
+    font-weight: 600;
+    font-size: 16px;
+}
 ul {
     list-style: none;
 

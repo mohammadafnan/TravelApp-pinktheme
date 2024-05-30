@@ -11,6 +11,7 @@ export class TourdetailComponent implements OnInit {
   show: string = "Price";
   showloader: boolean = false;
   pritbn: any;
+  pricountryId: number;
   pricityprice: any;
   pricityname: any;
   pricountryname: any;
@@ -29,7 +30,7 @@ export class TourdetailComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private router: Router,
     public global: GlobalVariablesService
-  ) { }
+  ) {}
 
   currentid: any;
   ngOnInit() {
@@ -65,11 +66,16 @@ export class TourdetailComponent implements OnInit {
     this.show = text;
   }
 
-  showPrice(i, cityName, cityPrice, countryname) {
+  showPrice(i, cityName, cityPrice, countryname, countryId) {
     this.pritbn = i;
+    this.pricountryId = countryId;
     this.pricountryname = countryname;
     this.pricityname = cityName;
     this.pricityprice = cityPrice;
+    localStorage.setItem(
+      "Selected country id",
+      JSON.stringify(this.pricountryId)
+    );
     localStorage.setItem(
       "Selected country name",
       JSON.stringify(this.pricountryname)
@@ -101,10 +107,7 @@ export class TourdetailComponent implements OnInit {
   bagClass(i, bagname) {
     this.bag = i;
     this.Bagname = bagname;
-    localStorage.setItem(
-      "Selected bag",
-      JSON.stringify(this.Bagname)
-    );
+    localStorage.setItem("Selected bag", JSON.stringify(this.Bagname));
   }
   Adultcount = 0;
 
@@ -150,6 +153,15 @@ export class TourdetailComponent implements OnInit {
   decrementinfants() {
     if (this.infantscount > 0) {
       this.infantscount--;
+    }
+  }
+
+  gotoTop() {
+    try {
+      var scrollElem = document.querySelector("#moveTop");
+      scrollElem.scrollIntoView({ behavior: "smooth" });
+    } catch (x) {
+      console.log(x);
     }
   }
 }

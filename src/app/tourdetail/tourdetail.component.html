@@ -1,112 +1,147 @@
 <div class="scroll mymoveright">
-
-
   <app-sidebar></app-sidebar>
 
   <div>
-    <h2 style="padding-top: 70px;padding-left: 50px;"> Select Your Journeys!</h2>
-
+    <h2 style="padding-top: 70px; padding-left: 50px">Select Your Journeys!</h2>
   </div>
 
-  <div class="main mymoveright " *ngIf="global.cityCopy.length > 0">
-    <div class="card " *ngFor="let list of global.cityCopy ; let i = index">
-      <div style="float: left;   margin: 20px;">
-        <img src={{list.cityimage}} class="roundimg" />
+  <div class="main mymoveright" *ngIf="global.cityCopy.length > 0">
+    <div class="card" *ngFor="let list of global.cityCopy; let i = index">
+      <div style="float: left; margin: 20px">
+        <img src="{{ list.cityimage }}" class="roundimg" />
       </div>
-      <div style="    transform: translate(5px, -261px);">
-        <div class="b1">{{list.cityname}} </div>
-        <div class="b1" id="name" style="display: none">{{list.countryname}} </div>
-        <div class="b3" (click)="showPrice(i,list.cityname,list.cityprice,list.countryname)"> <label
-            [ngClass]="pritbn == i ? 'act' : 'dis'">{{list.cityprice}}</label>
+      <div style="transform: translate(5px, -261px)">
+        <div class="b1">{{ list.cityname }}</div>
+        <div class="b1">{{ list.countryId }}</div>
+
+        <div class="b1" id="name" style="display: none">
+          {{ list.countryname }}
         </div>
-        <div class="b2">{{list.cityrating}}<i class="fa fa-star"></i>
+        <div
+          class="b3"
+          (click)="
+            showPrice(i, list.cityname, list.cityprice, list.countryname)
+          "
+        >
+          <label [ngClass]="pritbn == i ? 'act' : 'dis'">{{
+            list.cityprice
+          }}</label>
         </div>
+        <div class="b2">{{ list.cityrating }}<i class="fa fa-star"></i></div>
       </div>
     </div>
   </div>
 
   <div class="container">
     <div class="scrollmenu">
-      <a (click)="showtab('About')" [ngClass]="{'botline1': show == 'About', 'botline2' : show != 'About' }">About</a>
-      <a (click)="showtab('Price')" [ngClass]="{'botline1': show == 'Price', 'botline2' : show != 'Price' }">
-        Detail </a>
+      <a
+        (click)="showtab('About')"
+        [ngClass]="{ botline1: show == 'About', botline2: show != 'About' }"
+        >About</a
+      >
+      <a
+        (click)="showtab('Price')"
+        [ngClass]="{ botline1: show == 'Price', botline2: show != 'Price' }"
+      >
+        Detail
+      </a>
       <!-- <a>Images</a> -->
     </div>
   </div>
 
   <div class="para mymoveleft" *ngIf="show == 'About'">
-    <p>Without a doubt, Turkey is one of the world’s hottest tourist destinations. Ranking as the 6th most visited
-      country in the world in 2011, the total number of international tourists nearly doubled between 2004 and 2011.
+    <p>
+      Without a doubt, Turkey is one of the world’s hottest tourist
+      destinations. Ranking as the 6th most visited country in the world in
+      2011, the total number of international tourists nearly doubled between
+      2004 and 2011.
     </p>
   </div>
   <div class="para mymoveright" *ngIf="show == 'Price'">
     <ul>
       <div>
-        <div style=" padding-bottom: 10px;
-        padding-left: 0px;
-        position: relative;
-        right: 35px;">Select Class / Travelers</div>
+        <div
+          style="
+            padding-bottom: 10px;
+            padding-left: 0px;
+            position: relative;
+            right: 35px;
+          "
+        >
+          Select Class / Travelers
+        </div>
         <div class="ticketclass">
-
-          <div *ngFor="let list of global.ticketclass ; let i = index">
-
-            <button (click)="ticketClass(i,list.class)"
-              [ngClass]="ticket == i ? 'actclas' : 'disclas'">{{list.class}}</button>
+          <div *ngFor="let list of global.ticketclass; let i = index">
+            <button
+              (click)="ticketClass(i, list.class)"
+              [ngClass]="ticket == i ? 'actclas' : 'disclas'"
+            >
+              {{ list.class }}
+            </button>
           </div>
-
         </div>
       </div>
-      <div style=" padding-top: 10px;">
-        <div style=" padding-bottom: 10px;
-        padding-left: 0px;
-        position: relative;
-        right: 35px;">Select Bag</div>
+      <div style="padding-top: 10px">
+        <div
+          style="
+            padding-bottom: 10px;
+            padding-left: 0px;
+            position: relative;
+            right: 35px;
+          "
+        >
+          Select Bag
+        </div>
         <div class="ticketclass">
-
-          <div *ngFor="let list of global.Baggage ; let i = index">
-
-            <button (click)="bagClass(i,list.bag)" [ngClass]="bag == i ? 'actclas' : 'disclas'">{{list.bag}} +
-              {{list.bagprice}}</button>
+          <div *ngFor="let list of global.Baggage; let i = index">
+            <button
+              (click)="bagClass(i, list.bag)"
+              [ngClass]="bag == i ? 'actclas' : 'disclas'"
+            >
+              {{ list.bag }} + {{ list.bagprice }}
+            </button>
           </div>
-
         </div>
       </div>
-      <li style="      padding-top: 20px;
-      " class="li">Meal included</li>
+      <li style="padding-top: 20px" class="li">Meal included</li>
       <!-- <li class="li">Select Baggage Included</li> -->
-      <li class="li"> Adults
+      <li class="li">
+        Adults
         <span class="qty">
           <button class="minus" (click)="decrementAdult(Adultcount)">-</button>
-          <span class="num">{{Adultcount}}</span>
+          <span class="num">{{ Adultcount }}</span>
           <button class="plus" (click)="incrementAdult(Adultcount)">+</button>
         </span>
-
       </li>
-      <li class="li"> Children <span class="qty">
+      <li class="li">
+        Children
+        <span class="qty">
           <button class="minus" (click)="decrementChild()">-</button>
-          <span class="num">{{Childcount}}</span>
+          <span class="num">{{ Childcount }}</span>
           <button class="plus" (click)="incrementChild()">+</button>
         </span>
       </li>
-      <li class="li"> Infants <span class="qty">
+      <li class="li">
+        Infants
+        <span class="qty">
           <button class="minus" (click)="decrementinfants()">-</button>
-          <span class="num">{{infantscount}}</span>
+          <span class="num">{{ infantscount }}</span>
           <button class="plus" (click)="incrementinfants()">+</button>
         </span>
       </li>
-
     </ul>
   </div>
 
-
-
-
   <div>
-
-
-    <div style="margin: 25px;">
-      <button class="buy" (click)="gotocheckout()">Book Now </button>
+    <div style="margin: 25px">
+      <!-- class="buy" -->
+      <button
+      [disabled]="!this.pricityprice || !this.tickerclassname ||  !this.Bagname || !this.Adultcount || !this.Childcount || !this.infantscount"
+        [ngClass]="!this.pricityprice || !this.tickerclassname ||  !this.Bagname || !this.Adultcount || !this.Childcount || !this.infantscount? 'disbuy' : 'buy'"
+        (click)="gotocheckout()"
+      >
+        Book Now
+      </button>
     </div>
   </div>
-
 </div>

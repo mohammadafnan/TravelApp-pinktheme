@@ -1,11 +1,11 @@
-<div style="    margin-top: 90px;    overflow: hidden !important;" class="mymoveright">
+<div style="    margin-top: 90px;    overflow: hidden !important;" class="mymoveright" id="moveTop"> 
   <app-sidebar></app-sidebar>
   <!-- <button (click)="Save(myDateValue)">Save</button> -->
   <!-- <i [ngClass]="show == 'tourlist' ? 'fa fa-plane enab' : 'fa fa-plane dis'"></i> -->
 
 
 
-  <div>
+  <div >
 
 
 
@@ -179,7 +179,7 @@
             <button [ngClass]="{
              logindis: myform.valid == false,
              login: myform.valid == true
-           }" [disabled]="!myform.valid" (click)="onSubmit(myform.value)">Booking Done</button>
+           }" [disabled]="!myform.valid" (click)="onSubmit(myform.value);gotoTop()">Booking Done</button>
           </div>
         </div>
       </div>

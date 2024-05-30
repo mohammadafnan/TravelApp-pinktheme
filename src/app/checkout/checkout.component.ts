@@ -100,6 +100,7 @@ export class CheckoutComponent implements OnInit {
       acountno: ["", Validators.required],
       title: ["", Validators.required],
       bank: ["", Validators.required],
+      countryId: [0,Validators.required],
       countryname: ["", Validators.required],
       cityname: ["", Validators.required],
       cityprice: ["", Validators.required],
@@ -151,6 +152,9 @@ export class CheckoutComponent implements OnInit {
   }
 
   setvalue() {
+    // this.myform
+    //   .get("countryId")
+    //   .setValue(JSON.parse(localStorage.getItem("Selected country id")));
     this.myform
       .get("countryname")
       .setValue(JSON.parse(localStorage.getItem("Selected country name")));
@@ -186,6 +190,15 @@ export class CheckoutComponent implements OnInit {
 
   step(stp) {
     this.showstep = stp;
+  }
+
+  gotoTop() {
+    try {
+      var scrollElem = document.querySelector("#moveTop");
+      scrollElem.scrollIntoView({ behavior: "smooth" });
+    } catch (x) {
+      console.log(x);
+    }
   }
 }
 
