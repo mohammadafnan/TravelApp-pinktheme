@@ -124,7 +124,7 @@ export class TourdetailComponent implements OnInit {
     this.adultqty = Adultcount;
     localStorage.setItem("Selected Adult Qty", JSON.stringify(this.adultqty));
     // console.log(this.pricityname + " Selected Adult Qty");
-    if (this.Adultcount > 2) {
+    if (this.Adultcount > 0) {
       this.Adultcount--;
     }
   }
