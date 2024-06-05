@@ -11,7 +11,7 @@ export class TourdetailComponent implements OnInit {
   show: string = "Price";
   showloader: boolean = false;
   pritbn: any;
-  pricountryId: number;
+  pricountryId: any  ;
   pricityprice: any;
   pricityname: any;
   pricountryname: any;
@@ -74,7 +74,7 @@ export class TourdetailComponent implements OnInit {
     this.pricityprice = cityPrice;
     localStorage.setItem(
       "Selected country id",
-      JSON.stringify(this.pricountryId)
+     (this.pricountryId)
     );
     localStorage.setItem(
       "Selected country name",

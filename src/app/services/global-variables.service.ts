@@ -62,7 +62,7 @@ export class GlobalVariablesService {
     {
       fromcity: "Azerbaijan",
       fromcountry: "Azerbaijan ",
-      flag: "https://img.icons8.com/arcade/64/F25081/experimental-marker-arcade.png",
+      flag: "https://fontawesome.com/icons/map-pin?f=classic&s=solid",
     },
     {
       fromcity: "Turkey",

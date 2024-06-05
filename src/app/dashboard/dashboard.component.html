@@ -36,7 +36,8 @@
 
     <ng-template #itemTemplate let-item>
       <div class="item">
-        <img src="{{ item.flag }}" height="25" />
+        <i class="fa fa-map-marker"></i>
+        <!-- <img src="{{ item.flag }}" height="25" /> -->
         <span [innerHTML]="item.fromcity"></span>
       </div>
     </ng-template>
@@ -126,10 +127,10 @@
     <div class="loader"></div>
   </div>
   <div *ngIf="show == 'tourlist'">
-    <!-- *ngIf="CountryData | filter: search as listdata" -->
+    <!-- *ngIf="countryData | filter: search as listdata" -->
     <div class="main mymoveright">
       <div
-        *ngFor="let list of CountryData | filter : searchInput; let i = index"
+        *ngFor="let list of countryData | filter : searchInput; let i = index"
         style="margin-right: 5%; cursor: pointer"
         (click)="gotodetail(list.countryId, i)"
       >
@@ -148,9 +149,9 @@
   </div>
   <div>
     <!-- [ngClass]="{'my_class': step === 'step1', 'my_class2' : step === 'step2' }" -->
-    <!-- [ngClass]="{ nodata: CountryData.length == 0 }" -->
-    <!-- <div [ngClass]="{'nodata': CountryData.length == 0 }">
-      <label *ngIf="CountryData.length === 0 ">No Match Found</label>
+    <!-- [ngClass]="{ nodata: countryData.length == 0 }" -->
+    <!-- <div [ngClass]="{'nodata': countryData.length == 0 }">
+      <label *ngIf="countryData.length === 0 ">No Match Found</label>
     </div> -->
   </div>
   <div *ngIf="show == 'hotellist'">
