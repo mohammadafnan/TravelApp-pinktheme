@@ -149,7 +149,7 @@ export class GlobalVariablesService {
 
   city = [
     {
-      id: 1,
+      cityId: 1,
       countryId: 1,
       countryname: "Azerbaijan",
       cityname: "Baku ",
@@ -158,7 +158,7 @@ export class GlobalVariablesService {
       cityimage: "../../assets/images/baku.png",
     },
     {
-      id: 2,
+      cityId: 2,
       countryId: 1,
       countryname: "Azerbaijan",
       cityname: "Yevlakh",
@@ -168,7 +168,7 @@ export class GlobalVariablesService {
         "https://images.pexels.com/photos/2850287/pexels-photo-2850287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
-      id: 3,
+      cityId: 3,
       countryId: 1,
       countryname: "Azerbaijan",
       cityname: "Ganja",
@@ -178,7 +178,7 @@ export class GlobalVariablesService {
         "https://images.pexels.com/photos/2693529/pexels-photo-2693529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
-      id: 4,
+      cityId: 4,
       countryId: 2,
       countryname: "Turkey",
       cityname: "Konya",
@@ -188,7 +188,7 @@ export class GlobalVariablesService {
         "https://images.pexels.com/photos/8120844/pexels-photo-8120844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
-      id: 5,
+      cityId: 5,
       countryId: 2,
       countryname: "Turkey",
       cityname: "Antalya",
@@ -198,7 +198,7 @@ export class GlobalVariablesService {
         "https://images.pexels.com/photos/2767815/pexels-photo-2767815.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
-      id: 6,
+      cityId: 6,
       countryId: 2,
       countryname: "Turkey",
       cityname: "Bursa",
@@ -208,7 +208,7 @@ export class GlobalVariablesService {
         "https://images.pexels.com/photos/5342345/pexels-photo-5342345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
-      id: 7,
+      cityId: 7,
       countryId: 2,
       countryname: "Turkey",
       cityname: "Instanbul ",
@@ -217,7 +217,7 @@ export class GlobalVariablesService {
       cityimage: "../../assets/images/turkey.png",
     },
     {
-      id: 8,
+      cityId: 8,
       countryId: 3,
       countryname: "Maldive",
       cityname: "Maldives isl 1",
@@ -226,7 +226,7 @@ export class GlobalVariablesService {
       cityimage: "../../assets/images/maldive.png",
     },
     {
-      id: 9,
+      cityId: 9,
       countryId: 3,
       countryname: "Maldive",
       cityname: "Maldives isl 2",
@@ -236,7 +236,7 @@ export class GlobalVariablesService {
         "https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
-      id: 10,
+      cityId: 10,
       countryId: 4,
       countryname: "Germany",
       cityname: "Berlin",
@@ -246,7 +246,7 @@ export class GlobalVariablesService {
         "https://images.pexels.com/photos/3466324/pexels-photo-3466324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
-      id: 11,
+      cityId: 11,
       countryId: 4,
       countryname: "Germany",
       cityname: "Humburg",
@@ -256,7 +256,7 @@ export class GlobalVariablesService {
         "https://images.pexels.com/photos/2506904/pexels-photo-2506904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
-      id: 12,
+      cityId: 12,
       countryId: 4,
       countryname: "Germany",
       cityname: "Munich",
@@ -266,7 +266,7 @@ export class GlobalVariablesService {
         "https://images.pexels.com/photos/1885810/pexels-photo-1885810.jpeg",
     },
     {
-      id: 13,
+      cityId: 13,
       countryId: 5,
       countryname: "Greece",
       cityname: "Athens",

@@ -266,7 +266,12 @@ a {
     color    : #F36F7C;
     display  : inline;
 }
-
+.fa-search {
+    padding  : 15px;
+    font-size: 20px;
+    color    : #000000;
+    display  : inline;
+}
 .main {
     display   : flex;
     position  : absolute;
@@ -275,7 +280,7 @@ a {
     overflow-y: hidden !important;
     margin-top: 5% !important;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 15px -7px !important;
-
+    margin-left: 10px !important;
 }
 
 .btn-primary:focus,
@@ -407,3 +412,5 @@ a {
     margin-right : 40px;
     margin-bottom: 40px;
 }
+
+

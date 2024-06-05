@@ -12,6 +12,7 @@ export class TourdetailComponent implements OnInit {
   showloader: boolean = false;
   pritbn: any;
   pricountryId: any  ;
+  pricityId: any  ;
   pricityprice: any;
   pricityname: any;
   pricountryname: any;
@@ -66,12 +67,17 @@ export class TourdetailComponent implements OnInit {
     this.show = text;
   }
 
-  showPrice(i, cityName, cityPrice, countryname, countryId) {
+  showPrice(i, cityName, cityPrice, countryname, countryId,cityId) {
     this.pritbn = i;
     this.pricountryId = countryId;
     this.pricountryname = countryname;
+    this.pricityId = cityId;
     this.pricityname = cityName;
     this.pricityprice = cityPrice;
+    localStorage.setItem(
+      "Selected city id",
+     (this.pricountryId)
+    );
     localStorage.setItem(
       "Selected country id",
      (this.pricountryId)

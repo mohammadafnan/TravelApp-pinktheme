@@ -25,7 +25,9 @@ export class HistoryComponent implements OnInit {
   }
   showhistory(i) {
     this.selectindex = i
-    console.log(this.selectindex)
+  this.flightdataCopy.countryId =    this.selectindex
+
+ alert(this.flightdataCopy.countryId)
     this.Show = !this.Show
   }
 }

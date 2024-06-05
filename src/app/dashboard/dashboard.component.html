@@ -21,7 +21,9 @@
   <!-- <form> -->
 
   <div class="containerfromlocation">
+    <!-- <i class="fa fa-search"></i> -->
     <ng-autocomplete
+    
       [data]="global.MainSearch"
       [searchKeyword]="keyword"
       placeholder="Search Country"
@@ -36,7 +38,9 @@
 
     <ng-template #itemTemplate let-item>
       <div class="item">
-        <i class="fa fa-map-marker"></i>
+        <i class="fa fa-map-marker"></i>    
+
+
         <!-- <img src="{{ item.flag }}" height="25" /> -->
         <span [innerHTML]="item.fromcity"></span>
       </div>

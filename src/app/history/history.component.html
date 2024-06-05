@@ -3,7 +3,7 @@
 </div>
 <div style="margin-top :100px;"></div>
 <div *ngFor="let flighthistory of this.flightdataCopy; let i = index" class="card wrap mymoveright">
-  <span class="left">{{flighthistory.fromlocation.fromcity}} <span
+  <span class="left">{{flighthistory.fromlocation.fromcity}} {{i}} <span
       class="fromcountry">{{flighthistory.fromlocation.fromcountry}}</span> <i Class="fa fa-plane "></i>
   </span>
   <span class="center">{{flighthistory.cityname }} <span class="fromcountry">

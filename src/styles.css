@@ -156,3 +156,10 @@ bs-datepicker-navigation-view {
 span {
     margin-left: 5px;
 }
+
+.autocomplete-container .input-container .x i {
+    color: rgba(0, 0, 0, .54);
+    font-size: 22px;
+    top: 12px !important;
+    position: relative !important;
+}
