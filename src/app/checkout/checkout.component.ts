@@ -156,9 +156,9 @@ export class CheckoutComponent implements OnInit {
     // this.myform
     //   .get("countryId")
     //   .setValue(JSON.parse(localStorage.getItem("Selected country id")));
-     this.myform
-      .get("cityId")
-      .setValue(JSON.parse(localStorage.getItem("Selected city id")));
+    //  this.myform
+    //   .get("cityId")
+    //   .setValue(JSON.parse(localStorage.getItem("Selected city id")));
     this.myform
       .get("countryname")
       .setValue(JSON.parse(localStorage.getItem("Selected country name")));
