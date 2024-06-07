@@ -137,11 +137,11 @@ export class GlobalVariablesService {
     },
     {
       id: 2,
-      bag: "1 Pc - 10 KG",
-      bagprice:"PKR 1500"
+      bag: "1 lag - 10 KG",
+      bagprice:"PKR 0"
     }, {
       id: 3,
-      bag: "1 Pc - 20 KG",
+      bag: "2 lag - 20 KG",
       bagprice:"PKR 2000"
     }, 
     

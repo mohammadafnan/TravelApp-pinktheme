@@ -375,7 +375,7 @@ input:disabled {
 .fa-plane {
     color    : #f36f7c;
     font-size: 20px;
-    transform: rotate(90deg);
+    /* transform: rotate(90deg); */
 }
 
 .fa-jhaaz {
@@ -425,8 +425,8 @@ span {
 } */
 
 
-.fa-plane {
+/* .fa-plane {
     padding: 15px !important;
     font-size: 20px !important;
     color: whitesmoke !important;
-}
+} */

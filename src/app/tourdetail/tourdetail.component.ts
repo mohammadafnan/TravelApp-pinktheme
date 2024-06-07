@@ -23,6 +23,7 @@ export class TourdetailComponent implements OnInit {
   tickerclassname: any;
   adultqty: any;
   Bagname: any;
+  Bagrpice:any
   bag: any;
 
   // activatedRoute: any;
@@ -110,10 +111,13 @@ export class TourdetailComponent implements OnInit {
       JSON.stringify(this.tickerclassname)
     );
   }
-  bagClass(i, bagname) {
+  bagClass(i, bagname,bagprice) {
     this.bag = i;
     this.Bagname = bagname;
+    this.Bagrpice = bagprice;
     localStorage.setItem("Selected bag", JSON.stringify(this.Bagname));
+    localStorage.setItem("Selected bagprice", JSON.stringify(this.Bagrpice));
+
   }
   Adultcount = 0;
 

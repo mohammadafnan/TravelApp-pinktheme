@@ -1,35 +1,52 @@
 <div class="mymoveright">
   <div>
-    <h2 style="padding-top: 0px;padding-left: 40px;">Welcome to Travella</h2>
+    <h2 style="padding-top: 0px; padding-left: 40px">Welcome to Travella</h2>
 
-    <h3 style="padding-top: 20px;padding-left: 40px;">Log In <span style="color: #F36F7C;">:)</span><br> </h3>
-
+    <h3 style="padding-top: 20px; padding-left: 40px">
+      Log In <span style="color: #f36f7c">:)</span><br />
+    </h3>
   </div>
   <form [formGroup]="profileForm">
     <div class="container">
-      <input type="text" formControlName="name" placeholder="User name"
-        (keydown.enter)='gotodashboard(profileForm.value)' />
+      <input
+        type="text"
+        formControlName="name"
+        placeholder="User name"
+        (keydown.enter)="gotodashboard(profileForm.value)"
+      />
     </div>
 
     <div class="container">
-      <input type="text" formControlName="password" placeholder="Password"
-        (keydown.enter)='gotodashboard(profileForm.value)' />
+      <input
+        type="text"
+        formControlName="password"
+        placeholder="Password"
+        (keydown.enter)="gotodashboard(profileForm.value)"
+      />
     </div>
   </form>
   <!-- <p>Form Value: {{ profileForm.value | json }}</p> -->
-  <div *ngIf="showloader" style="    display        : flex;
- justify-content: center;">
-    <div class="loader"></div>
+  <div *ngIf="showloader" style="display: flex; justify-content: center">
+    <div class="loader"> 
+    </div>
   </div>
-
-
 
   <div class="container">
-    <button class="login" (click)="gotodashboard(profileForm.value)">Login</button>
+    <button class="login" (click)="gotodashboard(profileForm.value)">
+      Login
+    </button>
   </div>
 
-
   <div>
-    <h4 style="padding-top: 20px;text-align: center;color: #F36F7C;cursor: pointer;">Create an account?</h4>
+    <h4
+      style="
+        padding-top: 20px;
+        text-align: center;
+        color: #f36f7c;
+        cursor: pointer;
+      "
+    >
+      Create an account?
+    </h4>
   </div>
 </div>

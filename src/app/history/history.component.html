@@ -1,34 +1,41 @@
 <div>
   <app-sidebar></app-sidebar>
 </div>
-<div style="margin-top :100px;"></div>
-<div *ngFor="let flighthistory of this.flightdataCopy; let i = index" class="card wrap mymoveright">
-  <span class="left">{{flighthistory.fromlocation.fromcity}} {{i}} <span
-      class="fromcountry">{{flighthistory.fromlocation.fromcountry}}</span> <i Class="fa fa-plane "></i>
+<div style="margin-top: 100px"></div>
+<div
+  *ngFor="let flighthistory of this.flightdataCopy; let i = index"
+  class="card wrap mymoveright"
+>
+  <span class="left">
+    {{ flighthistory.fromlocation.fromcity }}
+    <span class="fromcountry">
+      {{ flighthistory.fromlocation.fromcountry }}
+    </span>
+    <i Class="fa fa-plane "></i>
   </span>
-  <span class="center">{{flighthistory.cityname }} <span class="fromcountry">
-      {{ flighthistory.countryname}}</span></span>
-  <span class="right" (click)="showhistory(i)">
+  <span class="center">
+    {{ flighthistory.cityname }}
+    <span class="fromcountry">
+      {{ flighthistory.countryname }}
+    </span>
+  </span>
+  <span
+    class="right"
+    (click)="showhistory(i)"
+  >
     <img src="{{ flighthistory.airlineimg }}" class="img" alt="" />
-
-  </span>
-  <span *ngIf="this.Show " class="left left2"><i Class="fa fa-user "></i><span style="    color: grey;">{{flighthistory.adultqty}}</span> </span>
-  <span *ngIf="this.Show " class="center left2"><i Class="fa fa-suitcase "></i><span style="    color: grey;"> {{flighthistory.bagqty}}</span> </span>
-  <span *ngIf="this.Show " class="right left2"><i Class="fa fa-money "></i><span style="    color: rgb(0, 0, 0);"> {{flighthistory.cityprice}}</span> </span>
-
-  <!-- <span *ngIf="this.Show ">
-
-    <span class="left">{{flighthistory.adultqty}} <span
-      class="fromcountry">{{flighthistory.fromlocation.fromcountry}}</span> 
-  </span>
-  <span class="center">{{flighthistory.bagqty }} <span class="fromcountry">
-      {{ flighthistory.countryname}}</span></span>
-  <span class="right" (click)="showhistory(i)">
-    <span *ngIf="this.Show ">{{flighthistory.cityprice}}</span>
   </span>
   
-  </span> -->
-  <!-- <span *ngIf="this.Show ">{{flighthistory.cityprice}}</span> -->
-  <!-- <img *ngIf="this.Show " src="{{ flighthistory.airlineimg }}" class="img" alt="" /> -->
-
+  <span *ngIf="selectedIndex == i" class="left left2"
+    ><i Class="fa fa-user "></i
+    ><span style="color: grey">{{ flighthistory.adultqty }}</span>
+  </span>
+  <span *ngIf="selectedIndex == i" class="center left2"
+    ><i Class="fa fa-suitcase "></i
+    ><span style="color: grey"> {{ flighthistory.bagqty }}</span>
+  </span>
+  <span *ngIf="selectedIndex == i" class="right left2"
+    ><i Class="fa fa-money "></i
+    ><span style="color: rgb(0, 0, 0)"> {{ flighthistory.cityprice }}</span>
+  </span>
 </div>

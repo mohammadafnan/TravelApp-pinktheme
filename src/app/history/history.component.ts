@@ -8,26 +8,24 @@ import { GlobalVariablesService } from "../services/global-variables.service";
 })
 export class HistoryComponent implements OnInit {
   flightdataCopy: any = [];
-  selectindex: number;
-  constructor(public global: GlobalVariablesService) { }
-  Show: boolean = false;
+  selectedIndex: any = -1;
+  
+  constructor(public global: GlobalVariablesService) {}
+
   ngOnInit() {
     this.global.ishistory = true;
-    this.global.isShowprofile = false
+    this.global.isShowprofile = false;
     this.global.isHidden1 = false;
     this.global.isHidden = false;
     this.global.isShowbackbtn = true;
-
-    // JSON.parse(localStorage.getItem("Selected country name")); //retrieve the key
     this.flightdataCopy = JSON.parse(localStorage.getItem("flightdata"));
-    console.log("flightdataCopy Data", this.flightdataCopy);
-
   }
-  showhistory(i) {
-    this.selectindex = i
-  this.flightdataCopy.countryId =    this.selectindex
 
- alert(this.flightdataCopy.countryId)
-    this.Show = !this.Show
+  showhistory(i) {
+    if (this.selectedIndex == i) {
+      this.selectedIndex = -1;
+    } else {
+      this.selectedIndex = i;
+    }
   }
 }

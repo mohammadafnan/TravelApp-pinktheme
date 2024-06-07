@@ -46,15 +46,15 @@ body {
 
 /* loader code */
 .loader {
-    border           : 6px solid #f3f3f3;
+    border           : 3px solid #f36f7c;
     border-radius    : 50%;
-    border-top       : 6px solid #F36F7C;
+    border-top       : 3px solid #ffffff;
     /* margin-top    : 2%; */
     width            : 50px;
     height           : 50px;
     -webkit-animation: spin 2s linear infinite;
     /* Safari */
-    animation        : spin .5s linear infinite;
+    animation        : spin 2s linear infinite;
     position         : absolute;
     top              : 300px;
 }

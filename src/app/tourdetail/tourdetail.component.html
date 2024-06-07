@@ -96,7 +96,7 @@
         <div class="ticketclass">
           <div *ngFor="let list of global.Baggage; let i = index">
             <button
-              (click)="bagClass(i, list.bag)"
+              (click)="bagClass(i, list.bag, list.bagprice )"
               [ngClass]="bag == i ? 'actclas' : 'disclas'"
             >
               {{ list.bag }} + {{ list.bagprice }}
@@ -110,7 +110,7 @@
         Adults
         <span class="qty">
           <button class="minus" (click)="decrementAdult(Adultcount)">-</button>
-          <span class="num">{{ Adultcount }}</span>
+          <span class="num">{{ Adultcount  }}</span>
           <button class="plus" (click)="incrementAdult(Adultcount)">+</button>
         </span>
       </li>
@@ -137,8 +137,20 @@
     <div style="margin: 25px">
       <!-- class="buy" -->
       <button
-      [disabled]="!this.pricityprice || !this.tickerclassname ||  !this.Bagname || !this.Adultcount || !this.Childcount || !this.infantscount"
-        [ngClass]="!this.pricityprice || !this.tickerclassname ||  !this.Bagname || !this.Adultcount || !this.Childcount || !this.infantscount? 'disbuy' : 'buy'"
+        [disabled]="
+          !this.pricityprice ||
+          !this.tickerclassname ||
+          !this.Bagname ||
+          !this.Adultcount
+        "
+        [ngClass]="
+          !this.pricityprice ||
+          !this.tickerclassname ||
+          !this.Bagname ||
+          !this.Adultcount
+            ? 'disbuy'
+            : 'buy'
+        "
         (click)="gotocheckout()"
       >
         Book Now
