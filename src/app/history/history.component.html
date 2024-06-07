@@ -19,13 +19,26 @@
       {{ flighthistory.countryname }}
     </span>
   </span>
-  <span
-    class="right"
-    (click)="showhistory(i)"
-  >
+  <span class="right" (click)="showhistory(i)">
     <img src="{{ flighthistory.airlineimg }}" class="img" alt="" />
   </span>
-  
+
+
+  <!-- <div class="hiscard">
+    <div *ngIf="selectedIndex == i" class="center left2">
+      <i Class="fa fs fa-user "></i
+      ><span class="histext">{{ flighthistory.adultqty }}</span>
+    </div>
+    <div *ngIf="selectedIndex == i" class="center left2">
+      <i Class="fa fs fa-suitcase "></i
+      ><span class="histext"> {{ flighthistory.bagqty }}</span>
+    </div>
+    <div *ngIf="selectedIndex == i" class="center left2">
+      <i Class="fa fs fa-money "></i
+      ><span class="histext"> {{ flighthistory.cityprice }}</span>
+    </div>
+  </div> -->
+
   <span *ngIf="selectedIndex == i" class="left left2"
     ><i Class="fa fa-user "></i
     ><span style="color: grey">{{ flighthistory.adultqty }}</span>

@@ -5,7 +5,7 @@
     padding-bottom  : 50px;
     margin-left     : 10px;
     margin-right    : 10px;
-    border-radius   : 20px;
+    border-radius   : 10px;
     padding-left    : 20px;
     margin-top      : 20px;
     box-shadow      : rgb(100 100 111 / 20%) 0px 7px 29px 0px;
@@ -102,4 +102,19 @@
     padding-top: 10px;
     font-size: 16px !important;
     color    : #ff002d ;
+}
+
+.histext{
+    color: grey !important;
+    font-size: 20px ;
+}
+
+.fs{
+    font-size: 20px ;
+
+}
+
+.hiscard{
+    position: relative;
+    right: 10px;
 }
